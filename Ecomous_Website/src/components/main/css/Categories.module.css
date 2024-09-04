@@ -1,0 +1,151 @@
+.Categories {
+  margin-bottom: 2.5vw;
+}
+
+
+
+.SliderContainer {
+  display: grid;
+}
+
+@media (min-width: 769px) {
+  .SliderContainer {
+    grid-template-columns: 75% 25%;
+  }
+}
+
+.productSlider .slick-list {
+  margin: 0 -5px;
+}
+
+.productSlider>.slick-list>.slick-track>.slick-slide {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+
+
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-inline: clamp(20px, 3vw, 3rem);
+  gap: 1rem;
+}
+
+.arrows > div {
+  display: flex;
+  align-items: center;
+  order: 2;
+}
+
+.arrows span {
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.arrows span:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.arrows span:nth-child(2) {
+  margin-left: 8px;
+}
+
+.arrows > p {
+  font-size: 15px;
+  font-weight: 800;
+  order: 1;
+}
+
+.productSlider {
+  display: flex;
+  justify-content: center;
+  padding-inline: clamp(15px, 2.4vw, 3rem);
+  overflow-x: hidden;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .productSlider {
+    padding-right: 0;
+  }
+  .arrows {
+    justify-content: start;
+  }
+
+  .arrows > p {
+    order: 2;
+  }
+  .arrows > div {
+    order: 1;
+  }
+}
+
+.sliderFixed {
+  padding-left: 10px;
+  padding-right: clamp(20px, 3vw, 3rem);
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.sliderFixed > img {
+  border: 1px solid black;
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.FixedText p {
+  font-size: clamp(12px, 1.5vw, 60px);
+  margin-bottom: 1.3vw;
+  font-weight:500;
+  padding-right: 1rem;
+  color: white;
+}
+
+.FixedText span {
+  font-size: clamp(13px, 1vw, 20px);
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 1vw;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.FixedText {
+  position: absolute;
+  bottom: 10%;
+  left: 13%;
+}
+
+@media (max-width: 768px) {
+  .sliderFixed {
+    display: none;
+  }
+}
+
+
+
+.disable{
+  color: gray;
+  border: none !important;
+}

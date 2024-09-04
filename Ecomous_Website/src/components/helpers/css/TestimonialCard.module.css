@@ -1,0 +1,87 @@
+.reviewCard {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+  padding: 34px 20px 20px;
+}
+.reviewCard:hover .productInfoContainer span {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.reviewCard > p:nth-child(2) {
+  margin-block: 18px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.reviewCard > p:nth-child(3) {
+  margin-bottom: 26px;
+  font-size: 18px;
+}
+.userInfo > p:nth-child(1) {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.userInfo > p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(84, 84, 84);
+  margin-bottom: 28px;
+}
+.productInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ebebeb;
+  padding-top: 23px;
+}
+.productInfoContainer > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.productInfoContainer img {
+  max-height: 90px;
+  width: auto;
+  object-fit: cover;
+}
+.productInfoContainer > div:nth-child(1) > div {
+  padding-inline: 24px 20px;
+  font-size: 14px;
+}
+.productInfoContainer > div:nth-child(1) > div > p:nth-child(1) {
+  font-weight: 400;
+}
+.productInfoContainer > div:nth-child(1) > div > p:nth-child(2) {
+  margin-top: 13px;
+  font-weight: 600;
+}
+.productInfoContainer > span {
+  font-size: 1.2rem;
+  border: 1px solid black;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+}
+.productInfoContainer > span:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.ratingContainer {
+  display: flex;
+  gap: 5px;
+  color: #ff7b54;
+}
+@media (min-width: 768px) {
+  .userInfo > p:nth-child(2) {
+    margin-bottom: 32px;
+  }
+  .reviewCard > p:nth-child(2) {
+    margin-top: 15px;
+  }
+  .reviewCard {
+    padding: 44px 36px 24px;
+  }
+}

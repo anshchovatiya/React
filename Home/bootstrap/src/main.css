@@ -1,0 +1,124 @@
+/* :root{
+    padding: 2rem;
+} */
+
+.tittle {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.addToDo{
+  display: flex;
+  align-items: center;
+}
+
+.addToDo input {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+.data-rows {
+  margin-block: 10px;
+}
+
+.Clock {
+  text-align: center;
+}
+
+.bg-color {
+  margin-block: 0.25rem;
+  font-weight: 600;
+  flex: 1;
+}
+#display {
+  width: 100%;
+  background-color: transparent;
+}
+
+.List {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.List button:nth-child(3) {
+  margin-block: 0.25rem;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: rgb(230, 43, 43);
+  color: white;
+  border: none;
+  padding-inline: 30px;
+  &:hover {
+    background-color: red;
+  }
+}
+.List button:nth-child(2) {
+  margin-block: 0.25rem;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: rgb(22, 201, 61);
+  color: white;
+  border: none;
+  padding-inline: 30px;
+  &:hover {
+    background-color: rgb(59, 224, 37);
+  }
+}
+
+.FoodSubmit {
+  background-color: rgb(42, 209, 42);
+  color: white;
+  flex: 0;
+  padding-inline: 3rem;
+  border-radius: 5px;
+  border: none;
+  &:hover{
+    background-color: rgb(13, 131, 13);
+  }
+}
+
+#FoodInputTag {
+    width: 100%;
+}
+
+.FoodEntries {
+  display: flex;
+  gap: 1rem;
+ 
+}
+
+.todo-container{
+  margin: 5rem;
+}
+
+
+.EmptyTodoList{
+  margin-block: 2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.TodoAddButton{
+  background-color: rgb(65, 192, 65);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-block:4px;
+  &:hover{
+    background-color: green;
+  }
+}
+.TodoAddButton2{
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-block:4px;
+  &:hover{
+    background-color: rgb(128, 26, 0);
+  }
+}

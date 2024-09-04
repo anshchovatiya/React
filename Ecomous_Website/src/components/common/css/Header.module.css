@@ -1,0 +1,86 @@
+.headerContainer {
+  padding: clamp(15px, 2vw, 30px) clamp(15px, 2vw, 30px);
+  padding-top: 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  z-index: 899 !important;
+  width: 100%;
+  font-weight: 600;
+}
+
+.logo {
+  height: 21px;
+  justify-self: center;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 17px;
+  }
+}
+
+.navOption a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.navLinks {
+  display: none;
+  gap: 2vw;
+  font-size: 16px;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navOption span {
+  text-wrap: nowrap;
+}
+
+.navLinks a:hover {
+  color: crimson;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 1.3vw;
+  justify-self: end;
+  flex-wrap: nowrap;
+}
+.iconContainer span {
+  font-size: 22px;
+  &:hover {
+    color: crimson;
+    cursor: pointer;
+  }
+}
+
+.menuIcon {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 1150px) {
+  .menuIcon {
+    display: none;
+  }
+  .navLinks {
+    display: flex;
+  }
+  .logo {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .hider {
+    display: none;
+  }
+}
+
+

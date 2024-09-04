@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            --bs-list-group-border-color: white;
+            --bs-list-group-bg: #111;
+        }
+
+        #carouselExampleDark {
+            width: 80%;
+            color: white;
+            margin-top: 5rem;
+        }
+
+        #carouselExampleDark img {
+            height: 800px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .page1 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page2 {
+            width: fit-content;
+            height: 100vh;
+        }
+
+        .page3 {
+            min-height: 100vh;
+            padding: 3rem;
+        }
+    </style>
+</head>
+
+<body style="background-color: #111;">
+
+
+    <nav class="navbar w-100" style="background-color: yellowgreen;">
+        <!-- Navbar content -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#page3">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#page2">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="nav nav-pills flex-column flex-sm-row justify-content-center align-items-center"
+            style="height: 100px;">
+            <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+            <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Disabled</a>
+        </nav>
+
+    </nav>
+    <div class="spinner-grow m-3" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    <div class="spinner-grow m-3 text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    <div class="spinner-grow m-3 text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-border text-danger m-3" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+      <div class="spinner-border text-info m-3 "  role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <button class="btn btn-success m-5 mt-0 text-warning" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span class="visually-hidden" role="status">Loading...</span>
+      </button>
+      <button class="btn btn-danger m-5 mt-0 ms-2" type="button" disabled>
+        <span class="spinner-grow spinner-grow-sm text-success" aria-hidden="true"></span>
+        <span class="visually-hidden" role="status">Loading...</span>
+      </button>
+    <nav aria-label="Page navigation example" style="margin-top: 3rem;">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" id="prevBtn">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#page1" data-page="page1">1</a></li>
+            <li class="page-item"><a class="page-link" href="#page2" data-page="page2">2</a></li>
+            <li class="page-item"><a class="page-link" href="#page3" data-page="page3">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" id="nextBtn">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="page1" style="margin: 3rem;">
+        <div id="DeletePage1" data-bs-theme="dark">
+            <button type="button" class="btn-close" disabled aria-label="Close"></button>
+        </div>
+        <div id="carouselExampleDark" class="carousel slide container">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://images.unsplash.com/photo-1498477386155-805b90bf61f7?q=80&w=2154&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1509565840034-3c385bbe6451?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div id="page2" class="page2 container">
+
+        <p class="d-inline-flex gap-1">
+            <a class="btn btn-danger" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                aria-controls="multiCollapseExample2">Toggle second element</button>
+            <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
+                aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both
+                elements</button>
+        </p>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        Some placeholder content for the first collapse component of this multi-collapse example. This
+                        panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                        Some placeholder content for the second collapse component of this multi-collapse example. This
+                        panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Default dropstart button -->
+        <div class="btn-group dropstart">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropstart
+            </button>
+            <ul class="dropdown-menu">
+                <!-- Dropdown menu links -->
+                <li>first option</li>
+                <li>second option</li>
+                <li>third option</li>
+            </ul>
+        </div>
+
+        <!-- Split dropstart button -->
+        <div class="btn-group dropstart">
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropstart</span>
+            </button>
+            <ul class="dropdown-menu ">
+                <!-- Dropdown menu links -->
+                <li>first option</li>
+                <li>second option</li>
+                <li>third option</li>
+                <li>forth option</li>
+            </ul>
+            <button type="button" class="btn btn-secondary">
+                Split dropstart
+            </button>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Action
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">first link</a></li>
+                <li><a class="dropdown-item" href="#">action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">link</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown" style="margin-top: 1rem;">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+            </button>
+            <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">Action</button></li>
+                <li><button class="dropdown-item" type="button">Another action</button></li>
+                <li><button class="dropdown-item" type="button">Something else here</button></li>
+            </ul>
+        </div>
+
+
+        <ul class="list-group" style="color: white;--bs-body-color:red;margin-top: 3rem;">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+        </ul>
+
+        <div style="--bs-body-color:green; --bs-list-group-bg: white;">
+            <ul class="list-group list-group-horizontal" style="margin-top: 3rem;">
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">An item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">A second item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">A third item</li>
+            </ul>
+            <ul class="list-group list-group-horizontal-sm">
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">An item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">A second item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">A third item</li>
+            </ul>
+            <ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">An item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">A second item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">A third item</li>
+            </ul>
+            <ul class="list-group list-group-horizontal-lg">
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">An item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">A second item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: yellow;">A third item</li>
+            </ul>
+            <ul class="list-group list-group-horizontal-xl">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <ul class="list-group list-group-horizontal-xxl">
+                <li class="list-group-item" style=" --bs-list-group-border-color: pink;">An item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: pink;">An item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: pink;">A second item</li>
+                <li class="list-group-item" style=" --bs-list-group-border-color: pink;">A third item</li>
+            </ul>
+        </div>
+
+
+        <ul class="list-group" style="margin-top: 3rem;--bs-body-color:white">
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+                <label class="form-check-label stretched-link" for="firstCheckboxStretched">First checkbox</label>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+                <label class="form-check-label stretched-link" for="secondCheckboxStretched">Second checkbox</label>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+                <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Third checkbox</label>
+            </li>
+        </ul>
+
+
+
+
+
+
+    </div>
+
+    <div id="page3" class="page3">
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-5">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo">Open model</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true" style="background-color: rgba(255, 255, 255, 0.562);">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="background-color:royalblue; color: white;">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome to our website</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="recipient-name"
+                                        placeholder="Enter Text">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"
+                                        placeholder="Enter Description"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                Link with href
+            </a>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel" style="background-color: #111; color: white;">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" style="color: green;" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text,
+                        images, lists, etc.
+                    </div>
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Dropdown button
+                        </button>
+                        <ul class="dropdown-menu" style="background-color: greenyellow; color: white;">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">Toggle right offcanvas</button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" style="background-color: rosybrown; color: white;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo unde incidunt minus ut quis quae,
+                    dignissimos nesciunt minima voluptatem maxime. Beatae non distinctio earum voluptas iusto velit
+                    fugit
+                    tempora quaerat, culpa vero amet nesciunt atque iste quia obcaecati tempore asperiores deleniti
+                    omnis
+                    repudiandae praesentium voluptatum odit rem! Quaerat id quasi corporis fuga laborum incidunt sed,
+                    libero
+                    et fugiat aliquid necessitatibus beatae sequi architecto voluptatibus sint ipsa maiores eveniet
+                    facilis
+                    vitae sit. Vero illo exercitationem tenetur itaque et delectus aut in dolorem, ipsam numquam, illum
+                    earum minus commodi officiis non, quod officia eius aliquid ducimus blanditiis laboriosam
+                    dignissimos
+                    quis? Incidunt, est?
+                </div>
+            </div>
+            <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title"
+                data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle
+                popover</button>
+        </div>
+        <div class="mx-auto mt-5">
+
+
+            <h1 style="color: white; margin-block: 3rem; text-align: center;" >This is placeholder while card has not been fully loaded</h1>
+            
+            <div class="card w-25  mx-auto" aria-hidden="true">
+                <img src="..." class="card-img-top" alt="img alt text" height="300px"
+                    style="background-color: blanchedalmond; font-size: 3rem;">
+                <div class="card-body">
+                    <h5 class="card-title placeholder-glow">
+                        <span class="placeholder col-6"></span>
+                    </h5>
+                    <p class="card-text placeholder-glow">
+                        <span class="placeholder col-7"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+            <div class="progress-stacked mt-5 w-50 mx-auto">
+                <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                  <div class="progress-bar"></div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                  <div class="progress-bar bg-success"></div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                  <div class="progress-bar bg-info"></div>
+                </div>
+              </div>
+            <div class="progress-stacked mt-5 w-50 mx-auto">
+                <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                  <div class="progress-bar"></div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                  <div class="progress-bar bg-success"></div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                  <div class="progress-bar bg-info"></div>
+                </div>
+              </div>
+              <div class="progress w-50 mt-5 mx-auto" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="80">
+                <div class="progress-bar bg-danger" style="width: 80%">80%</div>
+              </div>
+              <div class="progress w-50 mt-5 mx-auto" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped bg-info" style="width: 50%"></div>
+              </div>
+
+
+
+              <div class="row" style="color: wheat; margin-top: 5rem;">
+                <div class="col-4">
+                  <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                      <a class="nav-link" href="#item-1-0" style="color: beige;">Item 1</a>
+                      <nav class="nav nav-pills flex-column" >
+                        <a class="nav-link ms-3 my-1" href="#item-1-1" style="color: wheat;">Item 1-1</a>
+                        <a class="nav-link ms-3 my-1" href="#item-1-2" style="color: yellow;">Item 1-2</a>
+                      </nav>
+                      <a class="nav-link" href="#item-2" style="color: yellowgreen;">Item 2</a>
+                      <a class="nav-link" href="#item-3">Item 3</a>
+                      <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                        <a class="nav-link ms-3 my-1" href="#item-3-2"style="color:white;">Item 3-2</a>
+                      </nav>
+                    </nav>
+                  </nav>
+                </div>
+              
+                <div class="col-8">
+                  <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+                    <div id="item-1-0">
+                      <h4>Item 1</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste quidem praesentium, libero sit nam, itaque, laborum consequatur repellat cumque repellendus quis dolore. Doloribus, exercitationem ratione dicta id maxime eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit praesentium unde deleniti dolor vero! Fuga aspernatur impedit explicabo doloremque ad ut iusto sint. Sequi dolore optio tempora beatae! Architecto dolorum et eveniet laboriosam rem? Assumenda omnis illum rem voluptatum quod eius eum. Dolores nulla sequi quod. Neque, fugit assumenda.</p>
+                    </div>
+                    <div id="item-1-1">
+                      <h5>Item 1-1</h5>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste quidem praesentium, libero sit nam, itaque, laborum consequatur repellat cumque repellendus quis dolore. Doloribus, exercitationem ratione dicta id maxime eius!</p>
+                    </div>
+                    <div id="item-1-2">
+                      <h5>Item 1-2</h5>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste quidem praesentium, libero sit nam, itaque, laborum consequatur repellat cumque repellendus quis dolore. Doloribus, exercitationem ratione dicta id maxime eius!</p>
+                    </div>
+                    <div id="item-2">
+                      <h4>Item 2</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste quidem praesentium, libero sit nam, itaque, laborum consequatur repellat cumque repellendus quis dolore. Doloribus, exercitationem ratione dicta id maxime eius!</p>
+                    </div>
+                    <div id="item-3">
+                      <h4>Item 3</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste quidem praesentium, libero sit nam, itaque, laborum consequatur repellat cumque repellendus quis dolore. Doloribus, exercitationem ratione dicta id maxime eius!</p>
+                    </div>
+                    <div id="item-3-1">
+                      <h5>Item 3-1</h5>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste quidem praesentium, libero sit nam, itaque, laborum consequatur repellat cumque repellendus quis dolore. Doloribus, exercitationem ratione dicta id maxime eius!</p>
+                    </div>
+                    <div id="item-3-2">
+                      <h5>Item 3-2</h5>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit iste quidem praesentium, libero sit nam, itaque, laborum consequatur repellat cumque repellendus quis dolore. Doloribus, exercitationem ratione dicta id maxime eius!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+         
+              <form>
+                <div class="mb-3" style="color: white;">
+                  <label for="selectToastPlacement">Toast placement</label>
+                  <select class="form-select mt-2" id="selectToastPlacement">
+                    <option value="" selected>Select a position...</option>
+                    <option value="top-0 start-0">Top left</option>
+                    <option value="top-0 start-50 translate-middle-x">Top center</option>
+                    <option value="top-0 end-0">Top right</option>
+                    <option value="top-50 start-0 translate-middle-y">Middle left</option>
+                    <option value="top-50 start-50 translate-middle">Middle center</option>
+                    <option value="top-50 end-0 translate-middle-y">Middle right</option>
+                    <option value="bottom-0 start-0">Bottom left</option>
+                    <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
+                    <option value="bottom-0 end-0">Bottom right</option>
+                  </select>
+                </div>
+              </form>
+              <div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts rounded-3">
+                <div class="toast-container p-3" id="toastPlacement">
+                  <div class="toast">
+                    <div class="toast-header">
+                      <img src="..." class="rounded me-2" alt="...">
+                      <strong class="me-auto">Bootstrap</strong>
+                      <small>11 mins ago</small>
+                    </div>
+                    <div class="toast-body">
+                      Hello, world! This is a toast message.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+        </div>
+
+
+       
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script>
+            document.getElementById("DeletePage1").addEventListener("click", (event) => {
+                event.target.parentElement.remove();
+            });
+            document.querySelectorAll(".list-group-item").forEach((current) => {
+                current.addEventListener("click", (ev) => {
+                    document.querySelectorAll(".list-group-item").forEach(item => {
+                        item.classList.remove("active");
+                    });
+                    ev.target.classList.add("active");
+                });
+            });
+
+
+            const navItems = document.querySelectorAll('.nav-link');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    // Remove 'active' class from all items
+                    navItems.forEach(nav => nav.classList.remove('active'));
+
+                    // Add 'active' class to the clicked item
+                    this.classList.add('active');
+                });
+            });
+
+
+
+
+        </script>
+</body>
+
+</html>

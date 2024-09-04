@@ -1,0 +1,9 @@
+.MainAppContainer{
+    padding: 3rem;
+}
+
+.MainAppContainer{
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+}

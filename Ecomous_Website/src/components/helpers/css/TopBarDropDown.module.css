@@ -1,0 +1,27 @@
+.dropdown {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translate(-50%);
+    text-align: left;
+    display: grid;
+    gap: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 999 !important;
+    text-wrap: nowrap;
+    background-color: white;
+    padding: 1rem;
+}
+
+.dropdown::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: white;
+    top: 0px;
+    left: 50%;
+    z-index: 5;
+}
+

@@ -1,0 +1,25 @@
+.headText{
+    text-align: center;
+    padding-inline: 30px;
+}
+
+.headText>h2{
+    margin-bottom: 1.3rem;
+    font-size: 42px;
+    font-weight: 400;
+}
+.headText>p{
+    font-weight:500;
+    margin-bottom: clamp(1rem,3vw,4rem);
+}
+
+@media (max-width:768px) {
+    .headText>h2{
+        font-size: 24px;
+        margin-bottom: 0.7rem;
+    }
+    .headText>p{
+        font-size: 13px;
+        font-weight: 400;
+    }
+}

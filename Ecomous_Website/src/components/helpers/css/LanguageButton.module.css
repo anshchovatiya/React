@@ -1,0 +1,25 @@
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 9999 !important;
+}
+
+.LanguageButton {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+}
+.LanguageButton img {
+  height: 14px;
+  margin-right: 0.2rem;
+}
+.LanguageButton > svg {
+  margin-left: 0.5rem;
+}
+
+.langText {
+  min-width: 60px;
+}

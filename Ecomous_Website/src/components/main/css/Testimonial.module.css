@@ -1,0 +1,13 @@
+.TestimonialContainer>div:nth-child(1){
+  margin-block: 30px;
+}
+
+@media (min-width: 1024px) {
+  .TestimonialContainer {
+    padding: 75px 0px 35px;
+    padding-top: 20px;
+  }
+  .TestimonialContainer>div:nth-child(1){
+    margin-block: 60px;
+  }
+}
