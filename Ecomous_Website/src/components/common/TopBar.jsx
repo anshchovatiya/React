@@ -28,7 +28,7 @@ const TopBar = () => {
           <FaPinterest className={styles.logos} />
         </a>
       </div>
-      <div className={styles.offersSlider}>
+      <div className={`${styles.offersSlider} min-1150:ml-24`}>
         <TopBarSlider />
       </div>
       <div className={`${styles.topBarLanguage} flex `}>

@@ -22,17 +22,16 @@ const CurrencySelector = () => {
     <Select
       value={selectedCurrency}
       onValueChange={(value) => setSelectedCurrency(value)}
-     
     >
       <SelectTrigger className="h-[14px] w-[200px] focus:shadow-none focus:ring-white text-nowrap max-w-52">
         <SelectValue placeholder="Select Currency" />
       </SelectTrigger>
-      <SelectContent className="z-[999]">
+      <SelectContent className="z-[999] my-2">
         <SelectGroup>
           <SelectItem value="apple">
             <div className="flex items-center  mr-2">
               <img src={currncy2} alt="" className="w-[30px] h-[15px]" />
-              <p className="text-[13px] leading-[15px] font-semibold">
+              <p className="text-[13px] leading-[15px] font-medium">
                 {" "}
                 EUR € | France
               </p>
@@ -41,7 +40,7 @@ const CurrencySelector = () => {
           <SelectItem value="banana">
             <div className="flex items-center  mr-2">
               <img src={currncy3} alt="" className="w-[30px] h-[15px]" />
-              <p className="text-[13px] leading-[15px] font-semibold">
+              <p className="text-[13px] leading-[15px] font-medium">
                 {" "}
                 EUR € | Germany
               </p>
@@ -50,7 +49,7 @@ const CurrencySelector = () => {
           <SelectItem value="USD">
             <div className="flex items-center gap-1 mr-2">
               <img src={currncy1} alt="" className="w-[30px] h-[15px]" />
-              <p className="text-[13px] leading-[15px] font-semibold">
+              <p className="text-[13px] leading-[15px] font-medium">
                 {" "}
                 USD $ | United States
               </p>
@@ -59,7 +58,7 @@ const CurrencySelector = () => {
           <SelectItem value="grapes">
             <div className="flex items-center  mr-2">
               <img src={currncy4} alt="" className="w-[30px] h-[15px]" />
-              <p className="text-[13px] leading-[15px] font-semibold">
+              <p className="text-[13px] leading-[15px] font-medium">
                 {" "}
                 VND ₫ | Vietnam
               </p>
@@ -81,10 +80,10 @@ const LanguageButton = () => {
       onValueChange={(value) => setSelectedLanguage(value)}
       className="w-[50px] overflow-hidden"
     >
-      <SelectTrigger className="h-[14px] w-[110px] focus:shadow-none focus:ring-white ">
+      <SelectTrigger className="h-[14px] w-[110px] focus:shadow-none focus:ring-white font-medium">
         <SelectValue placeholder="Select Currency" />
       </SelectTrigger>
-      <SelectContent className="z-[999]">
+      <SelectContent className="z-[999] my-2">
         <SelectGroup>
           <SelectItem value="English">
             <p>English</p>

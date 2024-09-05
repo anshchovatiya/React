@@ -10,7 +10,7 @@ import {
 import { BsTwitterX } from "react-icons/bs";
 import FooterAccording from "../helpers/FooterAccording";
 import FooterBottom from "../helpers/FooterBottom";
-import {LanguageButton} from "../helpers/LanguageButton";
+import { CurrencySelector, LanguageButton } from "../helpers/LanguageButton";
 
 const Footer = () => {
   return (
@@ -122,7 +122,7 @@ const Footer = () => {
             Sign up to get first dibs on new arrivals, sales, exclusive content,
             events and more!
           </p>
-          <form className="border grid grid-cols-2 rounded-[2px] mt-[27px] mb-[18px] text-[14px] font-normal  py-2  pl-[18px] pr-2 gap-2">
+          <form className="border grid grid-cols-2 rounded-[2px] mt-[27px] mb-[18px] text-[14px] font-normal  py-2  pl-[18px] pr-2 gap-2  overflow-hidden text-ellipsis">
             <input
               placeholder="Enter your email"
               type="email"
@@ -132,14 +132,17 @@ const Footer = () => {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="flex items-center px-5 bg-black text-white rounded-[3px] w-fit"
+                className="flex items-center px-[1vw] text-[clamp(11px,1vw,0.9rem)] bg-black text-white rounded-[3px] w-fit"
               >
                 <p className="inline">Subscribe</p>
                 <FiArrowUpRight className="text-[18px] inline-block ml-1" />
               </button>
             </div>
           </form>
-          <LanguageButton />
+          <div className="flex">
+            <CurrencySelector />
+            <LanguageButton />
+          </div>
         </div>
         <FooterAccording />
       </div>

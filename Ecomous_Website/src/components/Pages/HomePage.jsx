@@ -8,7 +8,6 @@ import TheLook from "../main/TheLook";
 import Testimonial from "../main/Testimonial";
 import ShopGram from "../main/ShopGram";
 import Footer from "../common/Footer";
-import {LanguageButton} from "../helpers/LanguageButton";
 
 const HomePage = () => {
   return (
@@ -16,12 +15,11 @@ const HomePage = () => {
       <HeroSectionSlider />
       <OffersMarquee />
       <Categories />
-      <BestSeller/>
-      <TheLook/>
-      <Testimonial/>
-      <ShopGram/>
-      <Footer/>
-
+      <BestSeller />
+      <TheLook />
+      <Testimonial />
+      <ShopGram />
+      <Footer />
     </>
   );
 };

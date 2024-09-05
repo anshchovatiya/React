@@ -16,6 +16,7 @@
     } */
   }
 
+
   :root {
     --my-product-color: #111111;
     --background: 0 0% 100%;
@@ -46,10 +47,17 @@
   }
 
   html,
-  body {
+  body,:root {
     height: 100%;
+    background-image: url("./");
     width: 100%;
   }
+
+  body{
+    @apply w-screen overflow-x-hidden
+  }
+
+
 
   button {
     background: none;

@@ -3,9 +3,6 @@
   padding-top: 1.8rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  position: absolute;
-  z-index: 899 !important;
-  width: 100%;
   font-weight: 600;
 }
 

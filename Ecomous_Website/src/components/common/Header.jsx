@@ -28,7 +28,7 @@ const Header = () => {
 
 
   return (
-    <div className={styles.headerContainer} ref={Header}>
+    <div className={`${styles.headerContainer} w-screen overflow-x-hidden`} ref={Header}>
       <span className={styles.menuIcon}><CgMenuLeft /></span>
       <img src={logo} alt="Ecomous logo" className={styles.logo} />
       <ul className={styles.navLinks}>
