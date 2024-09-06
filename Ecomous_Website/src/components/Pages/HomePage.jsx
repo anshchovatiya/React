@@ -19,7 +19,6 @@ const HomePage = () => {
       <TheLook />
       <Testimonial />
       <ShopGram />
-      <Footer />
     </>
   );
 };

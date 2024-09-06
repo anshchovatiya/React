@@ -20,7 +20,7 @@ const PageLayOut = () => {
         <Header />
       </div>
       <Outlet />
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 };
