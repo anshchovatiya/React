@@ -8,7 +8,7 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 
 const ShopGram = () => {
   return (
-    <div className="mt-12 lg:mt-0">
+    <div className="mt-12 lg:mt-0 overflow-x-hidden">
       <SectionHead
         tittle="Shop Gram"
         description="Inspire and let yourself be inspired, from one unique fashion to another."

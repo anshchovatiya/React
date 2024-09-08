@@ -5,18 +5,14 @@ const ProductDisplayCard = ({ product }) => {
   let [currentColorImage, setCurrentColorImage] = useState({
     ...product.colorWithImage[0],
   });
+  let [currentColor,setCurrentColor] = useState(null);
 
-  function handleColorMouseOver(obj, event) {
+  function handleMouseClick(obj, event) {
     setCurrentColorImage(obj);
-    event.target.classList.add("colorHover");
+    setCurrentColor(obj.color);
   }
-
-  function handleColorMouseLeave(event) {
-    event.target.classList.remove("colorHover");
-  }
-
   return (
-    <div>
+    <div className="pb-2">
       <div className={styles.ImageContainer} >
         <img  id="ProductImage"
           className={styles.ProductImage}
@@ -28,16 +24,16 @@ const ProductDisplayCard = ({ product }) => {
         <p>{product.tittle}</p>
         <p>&#36;{product.price}</p>
         <div className={styles.colorContainer}>
-          {product?.colorWithImage.map((current) => {
+          {product?.colorWithImage.map((current,index,array) => {
             return (
               <div
                 key={current.color}
-                className={styles.colorBox}
+                className={`${styles.colorBox} mx-1 mb-1 ${currentColor === current.color && "colorHover"}`}
                 style={{ "--my-product-color": current.color }}
-                onMouseOver={(event) => {
-                  handleColorMouseOver(current, event);
+                onClick={(event) => {
+                  handleMouseClick(current, event);
                 }}
-                onMouseLeave={handleColorMouseLeave}  
+             
               ></div>
             );
           })}

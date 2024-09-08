@@ -8,7 +8,7 @@ const HomeLayout = () => {
     <>
       <TopBar />
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 };
@@ -16,11 +16,10 @@ const HomeLayout = () => {
 const PageLayOut = () => {
   return (
     <>
-      <div className="relative bg-white *:!relative">
-        <Header />
-      </div>
+        <Header/>
+
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   );
 };

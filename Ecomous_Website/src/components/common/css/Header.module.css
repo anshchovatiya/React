@@ -1,10 +1,10 @@
 .headerContainer {
   padding: clamp(15px, 1.6vw, 30px) clamp(15px, 2vw, 30px);
-  padding-top: 1.8rem;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   font-weight: 600;
+  position: relative;
 }
 
 .logo {
@@ -28,14 +28,9 @@
   display: none;
   gap: 2vw;
   font-size: 16px;
+  position:relative;
 }
 
-.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
 
 .navOption span {
   text-wrap: nowrap;

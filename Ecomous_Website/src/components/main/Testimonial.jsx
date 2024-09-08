@@ -6,7 +6,7 @@ import TestimonialsBrands from "../helpers/TestimonialsBrands";
 const Testimonial = () => {
 
   return (
-    <div className={styles.TestimonialContainer}>
+    <div className={`${styles.TestimonialContainer} overflow-x-hidden`}>
       <SectionHead
         tittle="Happy Clients"
         description="Hear what they say about us"

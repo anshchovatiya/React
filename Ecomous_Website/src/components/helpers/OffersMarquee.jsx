@@ -4,7 +4,7 @@ import { AiFillThunderbolt } from "react-icons/ai";
 
 const OfferMarquee = () => {
   return (
-    <div className={styles.textWrapper}>
+    <div className={`${styles.textWrapper} overflow-x-hidden`}>
       <div>
         <span><AiFillThunderbolt /></span>
         <p>Spring Clearance Event: Save Up to 70%</p>

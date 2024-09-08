@@ -16,7 +16,6 @@
     } */
   }
 
-
   :root {
     --my-product-color: #111111;
     --background: 0 0% 100%;
@@ -47,36 +46,17 @@
   }
 
   html,
-  body,:root {
+  body,
+  :root {
     height: 100%;
     background-image: url("./");
     width: 100%;
   }
 
-  body{
-    @apply w-screen overflow-x-hidden
+  body {
+    @apply w-screen overflow-x-hidden;
   }
 
-
-
-  button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-
-  ul {
-    list-style-type: none;
-  }
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -115,6 +95,7 @@
     animation: slideDown 0.5s ease-in-out;
     background-color: white;
     z-index: 999;
+    pointer-events: all;
   }
 
   @keyframes slideDown {
@@ -143,7 +124,7 @@
   }
 
   .colorHover {
-    outline: 2px solid black;
+    outline: 1px solid black;
     scale: 0.7;
     outline-offset: 4px;
   }
@@ -155,28 +136,27 @@
     border-radius: 50%;
   }
 
-  .PhotoGalarySlider .slick-slide>div{
+  .PhotoGalarySlider .slick-slide > div {
     padding: 0 5px;
   }
-  .PhotoGalarySlider .slick-list{
+  .PhotoGalarySlider .slick-list {
     margin: 0 -5px;
   }
 
-  .instagramGradient:hover{
-
-      @apply text-[white];
-      background: #d6249f;
-      background: radial-gradient(
-        circle at 30% 107%,
-        #fdf497 0%,
-        #fdf497 5%,
-        #fd5949 45%,
-        #d6249f 60%,
-        #285aeb 90%
-      );
+  .instagramGradient:hover {
+    @apply text-[white];
+    background: #d6249f;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
   }
 
-  .Trigger svg{
+  .Trigger svg {
     @apply duration-500;
   }
 
@@ -184,60 +164,73 @@
     @apply rotate-45 ease-in-out inline-block;
   }
 
-
   .AccordionContent {
     @apply relative pt-0 overflow-hidden;
   }
-  
 
   .AccordionContent[data-state="open"] {
     animation: openContent 300ms ease-out;
   }
-  
+
   .AccordionContent[data-state="closed"] {
     animation: closedContent 300ms ease-out;
   }
-  
+
   @keyframes ping {
-    75%, 100% {
+    75%,
+    100% {
       transform: scale(2);
       opacity: 0;
     }
   }
-  
+
   @keyframes openContent {
     from {
-      height: 0
+      height: 0;
     }
     to {
-      height: var(--radix-accordion-content-height)
+      height: var(--radix-accordion-content-height);
     }
   }
-  
+
   @keyframes closedContent {
     from {
-      height: var(--radix-accordion-content-height)
+      height: var(--radix-accordion-content-height);
     }
     to {
-      height: 0
+      height: 0;
     }
   }
 
-  .BottomNav{
+  .BottomNav {
     box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.08);
   }
-}
 
-@layer base {
-  * {
-    @apply border-border;
+  .NavDropDown {
+    opacity: 0;
+    transform: translateY(20%);
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
   }
-  body {
-    @apply bg-background text-foreground;
+  .NavDropDrawer {
+    opacity: 0;
+    transform: translateY(20%);
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
   }
 
-  .NavDropDown{
-    animation: NavDropDownKeyFrame 0.2s ease-out;
+  .NavDropDownVisible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Allow interactions */
+    animation: NavDropDownKeyFrame 0.3s ease-in-out;
+  }
+
+  /* Optional: This ensures the dropdown remains hidden when not visible */
+  .NavDropDownHidden {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   @keyframes NavDropDownKeyFrame {
@@ -245,11 +238,147 @@
       opacity: 0;
       transform: translateY(20%);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
+
+  .NavDropDownDrawerVisible {
+    opacity: 1;
+    pointer-events: auto;
+    animation: NavDropDownDrawerVisible 0.3s ease-in-out;
+  }
+
+  @keyframes NavDropDownDrawerVisible {
+    from {
+      opacity: 0;
+      transform: translateY(20%) translateX(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) translateX(-50%);
+    }
+  }
+
+  .NavDropDownDrawerHidden {
+    opacity: 0;
+    transform: translateY(10%);
+    animation: NavDropDownDrawerInvisible 0.2s ease-in-out;
+  }
+
+  @keyframes NavDropDownDrawerInvisible {
+    from {
+      opacity: 1;
+      transform: translateY(0) translateX(-50%);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(10%) translateX(-50%);
+    }
+  }
+
+  .NewArrivalPagination {
+    @apply w-[45px] h-[39px] flex justify-center rounded-[3px] items-center text-black font-medium bg-white border border-solid border-[rgb(235,235,235)] text-[14px];
+  }
+  .NewArrivalPagination.active {
+    @apply bg-black text-white shadow-[rgba(0,0,0,0.2)_1px_1px_10px_0px];
+  }
+
+  .ShopListTittle {
+    @apply text-[13px] mb-[17px] font-bold;
+  }
+
+  .ShopListItem:not(:last-child) {
+    @apply mb-[14px];
+  }
+  .ShopListItem {
+    @apply text-[14px] font-medium hover:text-[crimson] cursor-pointer mr-1;
+  }
+
+
+
+  .ZoomSlider .splide__slide img {
+    width: 100%;
+    object-fit: cover !important;
+    height: auto; /* Ensure images fit properly */
+  }
+
+  .ZoomSlider {
+    overflow: hidden;
+  }
+  
+  .ImageZoomOverLayBox{
+    background-color: rgba(255, 255, 255, 0.104);
+    border-color:1px solid black !important;
+    @apply rounded-xl
+  }
+  
+  .powerAnimation{
+    animation: powerAnimation 1s infinite linear;
+  }
+  @keyframes powerAnimation {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+
+  .AlarmAnimation{
+    animation: AlarmAnimation 1s infinite linear;
+  }
+
+
+  @keyframes AlarmAnimation {
+      0%{
+        scale: 1;
+      }
+      55%{
+        scale: 1.2;
+      }
+      60%{
+        rotate: 15deg;
+      }
+      70%{
+        rotate: -15deg;
+      }
+      80%{
+        rotate: 15deg;
+      }
+      90%{
+        rotate: 0deg;
+      }
+      100%{
+        scale: 1;
+      }
+  }
+
+  .Description .ListTittle{
+    @apply text-[17px] font-medium my-[22px]
+  }
+  .Description .ListItem{
+    @apply text-[14px] font-medium leading-[25px] mb-[15px] text-[rgb(144,144,144)]
+  }
+
+  #DescriptionContainer{
+    animation: DescriptionContainer 0.8s ease-in-out ;
+  }
+
+  @keyframes DescriptionContainer {
+      0%{
+        transform: translateY(20%);
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+
 
 }

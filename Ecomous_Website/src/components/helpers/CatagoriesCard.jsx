@@ -4,7 +4,9 @@ import { FiArrowUpRight } from "react-icons/fi";
 const CatagoriesCard = ({ image, Text }) => {
   return (
     <div className={styles.CatagoriesCard}>
-      <img src={image} alt="product demo image" />
+      <div className="overflow-hidden">
+      <img src={image} alt="product demo image" className="hover:scale-[1.04] duration-1000"/>
+      </div>
       <button className={` Albert-normal ${styles.CardText}`}>
         <p>{Text}</p>
         <span><FiArrowUpRight /></span>

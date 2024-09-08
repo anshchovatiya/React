@@ -1,0 +1,12 @@
+1.Home --> completed
+2.Shop Default --> completed
+3.Product Default
+4.AboutUs
+5.ContactUs
+6.Faq
+7.View Cart
+8.Checkout
+9.Blog Grid Layout
+10.Login Page
+11.Wishlist Page
+12.404Error Page

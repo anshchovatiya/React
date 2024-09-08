@@ -8,6 +8,7 @@ import BottomNav from "./components/common/BottomNav";
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import {PageLayOut,HomeLayout} from "./components/layout/LayoutPaths";
 import ShopPage from "./components/Pages/ShopPage";
+import ProductPage from "./components/Pages/ProductPage";
 
 
 let Layout = createBrowserRouter([
@@ -38,6 +39,16 @@ let Layout = createBrowserRouter([
           {
             path:"",
             element:<ShopPage/>
+          },
+        ]
+  },
+  {
+    path:"/product",
+    element:<PageLayOut/>,
+    children : [
+          {
+            path:"",
+            element:<ProductPage/>
           },
         ]
   },

@@ -23,7 +23,7 @@ const CurrencySelector = () => {
       value={selectedCurrency}
       onValueChange={(value) => setSelectedCurrency(value)}
     >
-      <SelectTrigger className="h-[14px] w-[200px] focus:shadow-none focus:ring-white text-nowrap max-w-52">
+      <SelectTrigger className="h-[14px] w-[200px] focus:shadow-none focus:ring-white text-nowrap max-w-52 border-none">
         <SelectValue placeholder="Select Currency" />
       </SelectTrigger>
       <SelectContent className="z-[999] my-2">
@@ -80,7 +80,7 @@ const LanguageButton = () => {
       onValueChange={(value) => setSelectedLanguage(value)}
       className="w-[50px] overflow-hidden"
     >
-      <SelectTrigger className="h-[14px] w-[110px] focus:shadow-none focus:ring-white font-medium">
+      <SelectTrigger className="h-[14px] w-[110px] focus:shadow-none focus:ring-white font-medium border-none">
         <SelectValue placeholder="Select Currency" />
       </SelectTrigger>
       <SelectContent className="z-[999] my-2">

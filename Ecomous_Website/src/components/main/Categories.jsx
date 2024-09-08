@@ -37,7 +37,7 @@ function Categories() {
   };
 
   return (
-    <div className={`${styles.Categories} Categories`}>
+    <div className={`${styles.Categories} Categories overflow-x-hidden`}>
       <div className={styles.arrows}>
         <div>
           <span

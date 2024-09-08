@@ -8,7 +8,7 @@ import Header from "../common/Header";
 
 export default function HeroSection() {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className="absolute top-0 z-[999]">
         <Header />
       </div>

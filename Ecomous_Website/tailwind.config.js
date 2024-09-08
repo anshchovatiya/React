@@ -8,7 +8,8 @@ export default {
   theme: {
   	extend: {
   		screens: {
-  			'min-1150': '1150px'
+  			'min-1150': '1150px',
+  			'min-1400': '1400px'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

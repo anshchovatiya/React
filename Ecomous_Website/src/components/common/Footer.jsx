@@ -14,7 +14,7 @@ import { CurrencySelector, LanguageButton } from "../helpers/LanguageButton";
 
 const Footer = () => {
   return (
-    <div className=" max-w-[1500px] m-auto lg:px-12 px-[18px] ">
+    <div className=" max-w-[1500px] m-auto lg:px-12 px-[18px] overflow-x-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  px-[18px]  py-[40px] border border-l-0 border-r-0 mt-7 *:text-[14px]">
         <div className="*:leading-[30px]">
           <img src={logo} alt="logo" className="mb-4" />

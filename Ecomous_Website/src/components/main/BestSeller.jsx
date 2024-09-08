@@ -1,5 +1,4 @@
 import ProductDisplayCard from "../common/ProductDisplayCard";
-import BestSellerHead from "../helpers/SectionHead";
 import styles from "./css/BestSeller.module.css";
 import img1 from "../../assets/images/black-1.jpg";
 import img2 from "../../assets/images/orange-1.jpg";
@@ -7,6 +6,7 @@ import img3 from "../../assets/images/white-1.jpg";
 import SectionHead from "../helpers/SectionHead";
 
 const BestSeller = () => {
+  
   let Product1 = {
     id: 1,
     tittle: "Ribbed Tank Top",
@@ -20,7 +20,7 @@ const BestSeller = () => {
   };
 
   return (
-    <div className={styles.BestSellerContainer}>
+    <div className={`${styles.BestSellerContainer} overflow-x-hidden`}>
       <SectionHead
         tittle="Best Seller"
         description="Shop the Latest Styles: Stay ahead of the curve with our newest arrivals"
