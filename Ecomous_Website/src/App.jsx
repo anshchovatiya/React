@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import {PageLayOut,HomeLayout} from "./components/layout/LayoutPaths";
 import ShopPage from "./components/Pages/ShopPage";
 import ProductPage from "./components/Pages/ProductPage";
+import Introduction from "./components/Pages/Introduction";
 
 
 let Layout = createBrowserRouter([
@@ -49,6 +50,16 @@ let Layout = createBrowserRouter([
           {
             path:"",
             element:<ProductPage/>
+          },
+        ]
+  },
+  {
+    path:"/about",
+    element:<PageLayOut/>,
+    children : [
+          {
+            path:"",
+            element:<Introduction/>
           },
         ]
   },

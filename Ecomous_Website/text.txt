@@ -1,6 +1,6 @@
 1.Home --> completed
 2.Shop Default --> completed
-3.Product Default
+3.Product Default --> completed
 4.AboutUs
 5.ContactUs
 6.Faq

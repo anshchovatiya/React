@@ -1,5 +1,5 @@
 .headerContainer {
-  padding: clamp(15px, 1.6vw, 30px) clamp(15px, 2vw, 30px);
+  padding: clamp(15px, 2vw, 30px) clamp(15px, 2vw, 30px);
   display: grid;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);

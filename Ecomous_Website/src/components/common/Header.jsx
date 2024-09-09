@@ -65,9 +65,7 @@ const Header = () => {
     }, 500);
   }
 
-  function handleClickOnRouterLink() {
-    setCurrentDropDown(null);
-  }
+
 
   return (
     <div className={`${styles.headerContainer} w-screen`} ref={Header}>
@@ -117,7 +115,7 @@ const Header = () => {
           </a>
           <NavBarDrawer isVisible={currentDropDown === "pages"}>
             <ul className="*:text-nowrap">
-              <li className="ShopListItem">About Us</li>
+              <li className="ShopListItem" onClick={()=>currentDropDown(null)}><NavLink to={"/about"}>About us</NavLink></li>
               <li className="flex items-center justify-between ShopListItem">
                 <p>Brands</p>
                 <IoIosArrowForward />
@@ -230,7 +228,7 @@ const Header = () => {
               <ul>
                 <li
                   className="ShopListItem"
-                  onClick={()=>setCurrentDropDown(null)}
+                  onClick={() => setCurrentDropDown(null)}
                 >
                   <NavLink to={"/shop"}>Default</NavLink>
                 </li>
@@ -281,7 +279,7 @@ const Header = () => {
             <div>
               <h3 className="ShopListTittle">PRODUCT LAYOUT</h3>
               <ul>
-                <li className="ShopListItem" onClick={()=>setCurrentDropDown(null)}><NavLink to={"/product"}>Product Default</NavLink></li>
+                <li className="ShopListItem" onClick={() => setCurrentDropDown(null)}><NavLink to={"/product"}>Product Default</NavLink></li>
                 <li className="ShopListItem">Product grid 1</li>
                 <li className="ShopListItem">Product grid 2</li>
                 <li className="ShopListItem">Product stacked</li>
@@ -362,9 +360,8 @@ function DropDown({
 }) {
   return (
     <div
-      className={`hidden lg:block absolute top-full left-0 w-screen bg-white !z-[1000] min-1150:px-[60px]   py-[40px] ${
-        isVisible ? "NavDropDownVisible" : "NavDropDownHidden"
-      } NavDropDown`}
+      className={`hidden lg:block absolute top-full left-0 w-screen bg-white !z-[1000] min-1150:px-[60px]   py-[40px] ${isVisible ? "NavDropDownVisible" : "NavDropDownHidden"
+        } NavDropDown`}
       onMouseOver={() => handleNavMouseOver("home")}
       onMouseLeave={handleNavMouseOut}
     >
@@ -376,9 +373,8 @@ function DropDown({
 function NavBarDrawer({ isVisible, children }) {
   return (
     <div
-      className={`absolute top-[54px] -translate-x-1/2 ml-8 bg-white w-[280px] h-fit z-[999] shadow-[0_4px_8px_rgb(235,235,235)] py-[24px] px-[20px] ${
-        isVisible ? "NavDropDownDrawerVisible" : "NavDropDownDrawerHidden"
-      } NavDropDrawer`}
+      className={`absolute top-[54px] -translate-x-1/2 ml-8 bg-white w-[280px] h-fit z-[999] shadow-[0_4px_8px_rgb(235,235,235)] py-[24px] px-[20px] ${isVisible ? "NavDropDownDrawerVisible" : "NavDropDownDrawerHidden"
+        } NavDropDrawer`}
     >
       {children}
     </div>
