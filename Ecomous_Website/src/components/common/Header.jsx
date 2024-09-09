@@ -21,6 +21,7 @@ import img2 from "../../assets/images/orange-1.jpg";
 import img3 from "../../assets/images/white-1.jpg";
 import { NavLink } from "react-router-dom";
 
+
 let Product1 = {
   id: 1,
   tittle: "Ribbed Tank Top",
@@ -38,19 +39,31 @@ const Header = () => {
 
   let Header = useRef(null);
   let timeout = useRef(null);
-
   let oldScroll = window.scrollY;
-  window.onscroll = function (event) {
-    if (window.scrollY < 46) {
-      Header.current.classList.remove("sticky");
-    } else if (oldScroll < window.scrollY) {
-      Header.current.classList.remove("sticky");
-    } else {
-      Header.current.classList.add("sticky");
-    }
+  
 
-    oldScroll = window.scrollY;
-  };
+  
+  useEffect(()=>{
+
+    function HeaderOnScroll(event) {
+      if (window.scrollY < 46) {
+        Header.current.classList.remove("sticky");
+      } else if (oldScroll < window.scrollY) {
+        Header.current.classList.remove("sticky");
+      } else {
+        Header.current.classList.add("sticky");
+      }
+  
+      oldScroll = window.scrollY;
+    };
+
+    window.addEventListener("scroll",HeaderOnScroll);
+
+    return () => {
+      window.removeEventListener("scroll",HeaderOnScroll);
+    }
+  });
+
 
   // handle when mouse is on nav-text or nav content
   function handleNavMouseOver(cur) {
