@@ -7,7 +7,7 @@ import img5 from "../../assets/images/gallery-8.jpg";
 import { PiShoppingCartBold } from "react-icons/pi";
 import Slider from "react-slick";
 
-const ImageShowCase = () => {
+const ImageShowCase = ({className}) => {
   const settings = {
     infinite: false,
     speed: 500,
@@ -17,7 +17,7 @@ const ImageShowCase = () => {
   };
 
   return (
-    <div className="max-w-[1500px] mx-auto mb-8 px-[18px] lg:px-12">
+    <div className={`max-w-[1500px] mx-auto mb-8 px-[18px] lg:px-12 ${className}`}>
       <div className="grid w-full grid-cols-5 gap-2 *:*:rounded-[8px] *:*:h-full *:*:w-full *:overflow-hidden max-[1150px]:hidden">
         <div className="relative group">
           <img

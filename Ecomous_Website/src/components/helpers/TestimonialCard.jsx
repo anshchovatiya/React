@@ -3,17 +3,11 @@ import { GoArrowUpRight } from "react-icons/go";
 import styles from "./css/TestimonialCard.module.css";
 
 const TestimonialCard = ({ review }) => {
-  function renderStar() {
-    let stars = [];
-    for (let cur = 0; cur < review?.rating; cur++) {
-      stars.push(<FaStar key={cur} />);
-    }
-    return stars;
-  }
+
 
   return (
     <div className={styles.reviewCard}>
-      <div className={styles.ratingContainer}>{renderStar()}</div>
+      <div className={styles.ratingContainer}>{renderStar(review?.rating)}</div>
       <p>{review.tittle}</p>
       <p>&ldquo; {review.description} &rdquo;</p>
       <div className={styles.userInfo}>
@@ -35,3 +29,11 @@ const TestimonialCard = ({ review }) => {
 };
 
 export default TestimonialCard;
+
+export function renderStar(length) {
+    let stars = [];
+    for (let cur = 0; cur < length; cur++) {
+      stars.push(<FaStar key={cur} />);
+    }
+    return stars;
+  }
