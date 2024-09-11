@@ -1,0 +1,39 @@
+
+body,html{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+}
+
+.ThridComponent{
+  height: 100svh;
+  width: 100svw;
+  color:white;
+  background-color: #111;
+}
+
+.Trigger{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 500;
+  padding: 8px;
+}
+.Trigger button{
+  border:none;
+  background-color: royalblue;
+  color: white;
+}
+
+.Trigger input{
+  width: 200px;
+  margin-right: 1rem;
+  border:2px solid black;
+  border-radius: 5px;
+}

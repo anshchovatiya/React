@@ -1,7 +1,9 @@
 1.Home --> completed
 2.Shop Default --> completed
 3.Product Default --> completed
-4.AboutUs
+4.AboutUs --> completed
+
+
 5.ContactUs
 6.Faq
 7.View Cart
