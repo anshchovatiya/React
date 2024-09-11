@@ -21,7 +21,6 @@ import img2 from "../../assets/images/orange-1.jpg";
 import img3 from "../../assets/images/white-1.jpg";
 import { NavLink } from "react-router-dom";
 
-
 let Product1 = {
   id: 1,
   tittle: "Ribbed Tank Top",
@@ -40,30 +39,26 @@ const Header = () => {
   let Header = useRef(null);
   let timeout = useRef(null);
   let oldScroll = window.scrollY;
-  
 
-  
-  useEffect(()=>{
-
+  useEffect(() => {
     function HeaderOnScroll(event) {
-      if (window.scrollY < 46) {
+      if (window.scrollY < 0) {
         Header.current.classList.remove("sticky");
       } else if (oldScroll < window.scrollY) {
         Header.current.classList.remove("sticky");
       } else {
         Header.current.classList.add("sticky");
       }
-  
-      oldScroll = window.scrollY;
-    };
 
-    window.addEventListener("scroll",HeaderOnScroll);
+      oldScroll = window.scrollY;
+    }
+
+    window.addEventListener("scroll", HeaderOnScroll);
 
     return () => {
-      window.removeEventListener("scroll",HeaderOnScroll);
-    }
+      window.removeEventListener("scroll", HeaderOnScroll);
+    };
   });
-
 
   // handle when mouse is on nav-text or nav content
   function handleNavMouseOver(cur) {
@@ -78,6 +73,9 @@ const Header = () => {
     }, 500);
   }
 
+  function handleNavItemClick() {
+    setCurrentDropDown(null); // Hide the dropdown
+  }
 
 
   return (
@@ -127,15 +125,25 @@ const Header = () => {
             <IoIosArrowDown />
           </a>
           <NavBarDrawer isVisible={currentDropDown === "pages"}>
-            <ul className="*:text-nowrap">
-              <li className="ShopListItem" onClick={()=>currentDropDown(null)}><NavLink to={"/about"}>About us</NavLink></li>
+            <ul className={`*:text-nowrap`}>
+              <li
+                className="ShopListItem"
+                onClick={handleNavItemClick}
+              >
+                <NavLink to={"/about"}>About us</NavLink>
+              </li>
               <li className="flex items-center justify-between ShopListItem">
                 <p>Brands</p>
                 <IoIosArrowForward />
               </li>
-              <li className="flex items-center justify-between ShopListItem">
-                <p>Contact</p>
-                <IoIosArrowForward />
+              <li
+                className="*:flex *:justify-between ShopListItem"
+                onClick={handleNavItemClick}
+              >
+                <NavLink to={"/contact"}>
+                  <p>Contact</p>
+                  <IoIosArrowForward />
+                </NavLink>
               </li>
               <li className="flex items-center justify-between ShopListItem">
                 <p>FAQ</p>
@@ -292,7 +300,12 @@ const Header = () => {
             <div>
               <h3 className="ShopListTittle">PRODUCT LAYOUT</h3>
               <ul>
-                <li className="ShopListItem" onClick={() => setCurrentDropDown(null)}><NavLink to={"/product"}>Product Default</NavLink></li>
+                <li
+                  className="ShopListItem"
+                  onClick={() => setCurrentDropDown(null)}
+                >
+                  <NavLink to={"/product"}>Product Default</NavLink>
+                </li>
                 <li className="ShopListItem">Product grid 1</li>
                 <li className="ShopListItem">Product grid 2</li>
                 <li className="ShopListItem">Product stacked</li>
@@ -373,8 +386,9 @@ function DropDown({
 }) {
   return (
     <div
-      className={`hidden lg:block absolute top-full left-0 w-screen bg-white !z-[1000] min-1150:px-[60px]   py-[40px] ${isVisible ? "NavDropDownVisible" : "NavDropDownHidden"
-        } NavDropDown`}
+      className={`hidden lg:block absolute top-full left-0 w-screen bg-white !z-[1000] min-1150:px-[60px]   py-[40px] ${
+        isVisible ? "NavDropDownVisible" : "NavDropDownHidden"
+      } NavDropDown`}
       onMouseOver={() => handleNavMouseOver("home")}
       onMouseLeave={handleNavMouseOut}
     >
@@ -386,8 +400,9 @@ function DropDown({
 function NavBarDrawer({ isVisible, children }) {
   return (
     <div
-      className={`absolute top-[54px] -translate-x-1/2 ml-8 bg-white w-[280px] h-fit z-[999] shadow-[0_4px_8px_rgb(235,235,235)] py-[24px] px-[20px] ${isVisible ? "NavDropDownDrawerVisible" : "NavDropDownDrawerHidden"
-        } NavDropDrawer`}
+      className={`absolute top-[54px] -translate-x-1/2 ml-8 bg-white w-[280px] h-fit z-[999] shadow-[0_4px_8px_rgb(235,235,235)] py-[24px] px-[20px] ${
+        isVisible ? "NavDropDownDrawerVisible" : "NavDropDownDrawerHidden"
+      } NavDropDrawer`}
     >
       {children}
     </div>

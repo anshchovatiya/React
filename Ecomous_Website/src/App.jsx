@@ -10,6 +10,7 @@ import {PageLayOut,HomeLayout} from "./components/layout/LayoutPaths";
 import ShopPage from "./components/Pages/ShopPage";
 import ProductPage from "./components/Pages/ProductPage";
 import Introduction from "./components/Pages/Introduction";
+import ContactUs from "./components/Pages/ContactUs";
 
 
 let Layout = createBrowserRouter([
@@ -60,6 +61,16 @@ let Layout = createBrowserRouter([
           {
             path:"",
             element:<Introduction/>
+          },
+        ]
+  },
+  {
+    path:"/contact",
+    element:<PageLayOut/>,
+    children : [
+          {
+            path:"",
+            element:<ContactUs/>
           },
         ]
   },

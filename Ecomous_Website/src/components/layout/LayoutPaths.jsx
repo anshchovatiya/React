@@ -16,10 +16,13 @@ const HomeLayout = () => {
 const PageLayOut = () => {
   return (
     <>
-        <Header/>
-
-      <Outlet />
-      <Footer />
+      <div className="absolute top-0 z-[999]">
+        <Header />
+      </div>
+      <div className="mt-[55px] md:mt-[84px]">
+        <Outlet />
+        <Footer />
+      </div>
     </>
   );
 };

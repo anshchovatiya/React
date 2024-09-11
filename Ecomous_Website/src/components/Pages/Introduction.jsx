@@ -20,7 +20,7 @@ const Introduction = () => {
             tittle="Shop Gram"
             description="Inspire and let yourself be inspired, from one unique fashion to another."
           />
-          <ImageShowCase className="mt-8"/>
+          <ImageShowCase className="mt-8" />
         </div>
       </div>
     </>
