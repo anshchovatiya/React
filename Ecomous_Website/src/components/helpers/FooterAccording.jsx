@@ -1,6 +1,5 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import { GoPlus } from "react-icons/go";
-import { FiMinus } from "react-icons/fi";
 import { FiArrowUpRight } from "react-icons/fi";
 import {LanguageButton} from "./LanguageButton";
 

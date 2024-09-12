@@ -145,10 +145,16 @@ const Header = () => {
                   <IoIosArrowForward />
                 </NavLink>
               </li>
-              <li className="flex items-center justify-between ShopListItem">
-                <p>FAQ</p>
-                <IoIosArrowForward />
+              <li
+                className="*:flex *:justify-between ShopListItem"
+                onClick={handleNavItemClick}
+              >
+                <NavLink to={"/faq"}>
+                  <p>FAQ</p>
+                  <IoIosArrowForward />
+                </NavLink>
               </li>
+            
               <li className="flex items-center justify-between ShopListItem">
                 <p>Store</p>
                 <IoIosArrowForward />

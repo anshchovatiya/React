@@ -11,6 +11,7 @@ import ShopPage from "./components/Pages/ShopPage";
 import ProductPage from "./components/Pages/ProductPage";
 import Introduction from "./components/Pages/Introduction";
 import ContactUs from "./components/Pages/ContactUs";
+import FaqSection from "./components/Pages/FaqSection";
 
 
 let Layout = createBrowserRouter([
@@ -71,6 +72,16 @@ let Layout = createBrowserRouter([
           {
             path:"",
             element:<ContactUs/>
+          },
+        ]
+  },
+  {
+    path:"/faq",
+    element:<PageLayOut/>,
+    children : [
+          {
+            path:"",
+            element:<FaqSection/>
           },
         ]
   },
