@@ -5,7 +5,9 @@
 
 
 5.ContactUs
-6.Faq
+
+6.Faq    
+
 7.View Cart
 8.Checkout
 9.Blog Grid Layout
