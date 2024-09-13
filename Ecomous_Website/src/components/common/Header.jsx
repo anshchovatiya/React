@@ -160,7 +160,7 @@ const Header = () => {
                 <IoIosArrowForward />
               </li>
               <li className="ShopListItem">Timeline</li>
-              <li className="ShopListItem">View Cart</li>
+              <li className="ShopListItem" onClick={handleNavItemClick}><NavLink to={"/cart"}>View Cart</NavLink></li>
               <li className="ShopListItem">Check Out</li>
               <li className="flex items-center justify-between ShopListItem">
                 <p>Payment</p>

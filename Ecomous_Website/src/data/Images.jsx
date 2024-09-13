@@ -47,4 +47,4 @@ export const ZoomSectionImages = [
   { image: ZoomSectionImages8, name: "ZoomSectionImages8" },
   { image: ZoomSectionImages9, name: "ZoomSectionImages9" },
   { image: ZoomSectionImages10, name: "ZoomSectionImages10" },
-];
+]; 
