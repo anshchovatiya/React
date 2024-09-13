@@ -397,5 +397,9 @@
       }
   }
 
+  .CartProducts>div:not(:first-child,:last-child){
+    @apply border-b border-dashed;
+  }
+
 
 }
