@@ -401,5 +401,8 @@
     @apply border-b border-dashed;
   }
 
+  .CountrySelector::-webkit-scrollbar{
+    width:8px;
+  }
 
 }

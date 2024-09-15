@@ -5,8 +5,8 @@ import "./index.css";
 
 import HomePage from "./components/pages/HomePage";
 import BottomNav from "./components/common/BottomNav";
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import {PageLayOut,HomeLayout} from "./components/layout/LayoutPaths";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { PageLayOut, HomeLayout } from "./components/layout/LayoutPaths";
 import ShopPage from "./components/Pages/ShopPage";
 import ProductPage from "./components/Pages/ProductPage";
 import Introduction from "./components/Pages/Introduction";
@@ -14,92 +14,53 @@ import ContactUs from "./components/Pages/ContactUs";
 import FaqSection from "./components/Pages/FaqSection";
 import ShopCart from "./components/Pages/ShopCart";
 
-
 let Layout = createBrowserRouter([
   {
-    path:"/",
-    element:<HomeLayout/>,
-    children : [
-          {
-            path:"",
-            element:<HomePage/>
-          },
-        ]
+    path: "/",
+    element: <HomeLayout />,
+    children: [
+      {
+        index:true,
+        path: "",
+        element: <HomePage />,
+      },
+      {
+        path: "home",
+        element: <HomePage />,
+      },
+    ],
   },
   {
-    path:"/home",
-    element:<HomeLayout/>,
-    children : [
-          {
-            path:"",
-            element:<HomePage/>
-          },
-        ]
+    path: "/",
+    element: <PageLayOut />,
+    children: [
+      {
+        path: "shop",
+        element: <ShopPage />,
+      },
+      {
+        path: "product",
+        element: <ProductPage />,
+      },
+      {
+        path: "about",
+        element: <Introduction />,
+      },
+      {
+        path: "contact",
+        element: <ContactUs />,
+      },
+      {
+        path: "faq",
+        element: <FaqSection />,
+      },
+      {
+        path: "cart",
+        element: <ShopCart />,
+      },
+    ],
   },
-  {
-    path:"/shop",
-    element:<PageLayOut/>,
-    children : [
-          {
-            path:"",
-            element:<ShopPage/>
-          },
-        ]
-  },
-  {
-    path:"/product",
-    element:<PageLayOut/>,
-    children : [
-          {
-            path:"",
-            element:<ProductPage/>
-          },
-        ]
-  },
-  {
-    path:"/about",
-    element:<PageLayOut/>,
-    children : [
-          {
-            path:"",
-            element:<Introduction/>
-          },
-        ]
-  },
-  {
-    path:"/contact",
-    element:<PageLayOut/>,
-    children : [
-          {
-            path:"",
-            element:<ContactUs/>
-          },
-        ]
-  },
-  {
-    path:"/faq",
-    element:<PageLayOut/>,
-    children : [
-          {
-            path:"",
-            element:<FaqSection/>
-          },
-        ]
-  },
-  {
-    path:"/cart",
-    element:<PageLayOut/>,
-    children : [
-          {
-            path:"",
-            element:<ShopCart/>
-          },
-        ]
-  },
-
-
-])
-
+]);
 
 function App() {
   return (
