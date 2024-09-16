@@ -13,6 +13,7 @@ import Introduction from "./components/Pages/Introduction";
 import ContactUs from "./components/Pages/ContactUs";
 import FaqSection from "./components/Pages/FaqSection";
 import ShopCart from "./components/Pages/ShopCart";
+import Checkout from "./components/Pages/Checkout";
 
 let Layout = createBrowserRouter([
   {
@@ -21,7 +22,6 @@ let Layout = createBrowserRouter([
     children: [
       {
         index:true,
-        path: "",
         element: <HomePage />,
       },
       {
@@ -57,6 +57,10 @@ let Layout = createBrowserRouter([
       {
         path: "cart",
         element: <ShopCart />,
+      },
+      {
+        path: "checkout",
+        element: <Checkout/>,
       },
     ],
   },

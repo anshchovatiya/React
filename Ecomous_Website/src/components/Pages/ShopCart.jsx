@@ -245,7 +245,7 @@ function CartSection() {
                           ]
                             .sort()
                             .map((country) => (
-                              <option value={country}>{country}</option>
+                              <option value={country} selected={(country === "India") ? true : false}>{country}</option>
                             ))}
                         </select>
                       </div>
@@ -326,7 +326,7 @@ const ShopCart = () => {
       />
         <TestimonialSlider />
       </div>
-      <CardShowCaseSlider tittle="People Also Bought" products={Products} className="my-[15px] md:mt-[40px] md:px-14"/>
+      <CardShowCaseSlider tittle="People Also Bought" products={Products} className="my-[15px] md:mt-[40px]  max-w-[1500px] px-[15px] lg:px-12 mx-auto"/>
     </div>
   );
 };
