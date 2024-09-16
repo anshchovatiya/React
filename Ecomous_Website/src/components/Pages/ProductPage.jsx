@@ -1,4 +1,3 @@
-import React from "react";
 import ZoomSection from "../main/ZoomSection";
 import InfoBox from "../helpers/InfoBox";
 import CardShowCaseSlider from "../helpers/CardShowCaseSlider";
@@ -23,7 +22,7 @@ const ProductPage = () => {
     <div className="max-w-[1440px] m-auto overflow-x-hidden">
       <ZoomSection />
       <InfoBox />
-      <CardShowCaseSlider tittle="People Also Bought" products={Product} />
+      <CardShowCaseSlider tittle="People Also Bought" products={Product} className="my-[15px] md:mt-[40px]"/>
       <CardShowCaseSlider tittle="Recently Viewed" products={Product} className="my-[15px] md:mt-[40px]"/>
     </div>
   );

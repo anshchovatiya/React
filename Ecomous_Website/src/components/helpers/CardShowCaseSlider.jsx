@@ -1,8 +1,7 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import React from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ProductDisplayCard from "../common/ProductDisplayCard";
-const CardShowCaseSlider = ({ tittle, products,className }) => {
+const   CardShowCaseSlider = ({ tittle, products,className }) => {
   const setting = {
     perPage: 4,
     perMove:2,

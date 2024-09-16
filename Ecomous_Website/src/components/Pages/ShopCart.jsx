@@ -8,6 +8,12 @@ import { RiTruckLine } from "react-icons/ri";
 import { GoPlus } from "react-icons/go";
 import * as Accordion from "@radix-ui/react-accordion";
 import { PaymentMethodIcons } from "../helpers/FooterBottom";
+import TestimonialSlider from "../helpers/TestimonialSlider";
+import SectionHead from "../helpers/SectionHead";
+import CardShowCaseSlider from "../helpers/CardShowCaseSlider";
+import slideImage1 from "../../assets/images/black-1.jpg";
+import slideImage2 from "../../assets/images/orange-1.jpg";
+import slideImage3 from "../../assets/images/white-1.jpg";
 
 let PRODUCTS = [
   {
@@ -35,6 +41,18 @@ let PRODUCTS = [
     Quantity: 1,
   },
 ];
+
+const Products = {
+  id: 1,
+  tittle: "Ribbed Tank Top",
+  price: "16.35",
+  colorWithImage: [
+    { color: "#ffa500", image: slideImage2 },
+    { color: "#000000", image: slideImage1 },
+    { color: "#ffffff", image: slideImage3 },
+  ],
+  sizes: ["S", "M", "L", "XL"],
+};
 
 const ProgressBar = ({ progress }) => {
   return (
@@ -298,9 +316,17 @@ function CartSection() {
 
 const ShopCart = () => {
   return (
-    <div>
+    <div className="px-[8px]">
       <PageHeader tittle={"Shopping Cart"} />
       <CartSection />
+      <div className="mt-5">
+      <SectionHead
+        tittle="Happy Clients"
+        description="Hear what they say about us"
+      />
+        <TestimonialSlider />
+      </div>
+      <CardShowCaseSlider tittle="People Also Bought" products={Products} className="my-[15px] md:mt-[40px] md:px-14"/>
     </div>
   );
 };
