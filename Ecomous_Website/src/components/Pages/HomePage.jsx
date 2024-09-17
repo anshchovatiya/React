@@ -7,7 +7,6 @@ import BestSeller from "../main/BestSeller";
 import TheLook from "../main/TheLook";
 import Testimonial from "../main/Testimonial";
 import ShopGram from "../main/ShopGram";
-import Footer from "../common/Footer";
 
 const HomePage = () => {
   return (

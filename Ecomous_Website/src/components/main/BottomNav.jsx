@@ -7,7 +7,7 @@ import { GrSearch } from "react-icons/gr";
 
 const BottomNav = () => {
   return (
-    <div className="BottomNav grid grid-cols-5 fixed w-full bottom-0 place-items-center bg-white py-3 md:hidden">
+    <div className="BottomNav grid grid-cols-5 fixed w-screen bottom-0 place-items-center bg-white py-3 md:hidden z-[800]">
       <div className="grid gap-[9px]">
         <div className="flex justify-center">
           <FaShop />

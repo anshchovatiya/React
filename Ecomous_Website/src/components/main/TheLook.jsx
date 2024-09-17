@@ -1,6 +1,5 @@
 import LookImageSection from "../helpers/LookImageSection";
 import SectionHead from "../helpers/SectionHead";
-import styles from "./css/TheLook.module.css";
 
 const TheLook = () => {
   return (

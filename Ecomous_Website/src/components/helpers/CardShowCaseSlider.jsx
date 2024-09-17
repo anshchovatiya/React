@@ -1,21 +1,21 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import ProductDisplayCard from "../common/ProductDisplayCard";
-const   CardShowCaseSlider = ({ tittle, products,className }) => {
+import ProductDisplayCard from "./ProductDisplayCard";
+const CardShowCaseSlider = ({ tittle, products, className }) => {
   const setting = {
     perPage: 4,
-    perMove:2,
-    gap:"30px",
+    perMove: 2,
+    gap: "30px",
     dots: false,
-    pagination:false,
-    breakpoints:{
-      768:{
-        perPage:2
+    pagination: false,
+    breakpoints: {
+      768: {
+        perPage: 2,
       },
-      1024:{
-        perPage:3
-      }
-    }
+      1024: {
+        perPage: 3,
+      },
+    },
   };
 
   return (
@@ -24,7 +24,12 @@ const   CardShowCaseSlider = ({ tittle, products,className }) => {
         {tittle}
       </p>
       <div>
-        <Splide hasTrack={false} aria-label="..." options={setting} className="group cursor-pointer">
+        <Splide
+          hasTrack={false}
+          aria-label="..."
+          options={setting}
+          className="group cursor-pointer"
+        >
           <div className="custom-wrapper">
             <div className="splide__arrows">
               <button className="splide__arrow splide__arrow--next hover:bg-white !top-[calc(50%-50px)] !h-[50px] !w-[50px] !hidden group-hover:!flex">

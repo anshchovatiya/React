@@ -2,6 +2,12 @@
   margin-block: 30px;
 }
 
+.TestimonialContainer{
+  height: fit-content !important;
+  overflow: hidden;
+}
+
+
 @media (min-width: 1024px) {
   .TestimonialContainer {
     padding: 75px 0px 35px;

@@ -4,7 +4,7 @@ import HeroSlide from "../helpers/HeroSlide";
 import HeroImage1 from "../../assets/images/fashion-slideshow-01.jpg";
 import HeroImage2 from "../../assets/images/fashion-slideshow-02.jpg";
 import HeroImage3 from "../../assets/images/fashion-slideshow-03.jpg";
-import Header from "../common/Header";
+import Header from "../main/Header";
 
 export default function HeroSection() {
   return (

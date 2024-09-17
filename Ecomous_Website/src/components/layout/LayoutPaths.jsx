@@ -1,7 +1,9 @@
-import Header from "../common/Header";
-import TopBar from "../common/TopBar";
-import Footer from "../common/Footer";
+import Header from "../main/Header";
+import Footer from "../main/Footer";
 import { Outlet } from "react-router-dom";
+import BottomNav from "../main/BottomNav";
+
+import { TopBar } from "../../data/components";
 
 const HomeLayout = () => {
   return (
@@ -9,6 +11,7 @@ const HomeLayout = () => {
       <TopBar />
       <Outlet />
       <Footer />
+      <BottomNav />
     </>
   );
 };
@@ -22,6 +25,7 @@ const PageLayOut = () => {
       <div className="mt-[55px] md:mt-[84px]">
         <Outlet />
         <Footer />
+        <BottomNav />
       </div>
     </>
   );

@@ -3,18 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar{
-  scrollbar-width: thin;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 8px;
-}
 
 
 @layer base {
@@ -25,6 +13,25 @@
     box-sizing: border-box;
     user-select: none;
     font-family: "Albert Sans", sans-serif;
+  }
+  
+  ::-webkit-scrollbar{
+    scrollbar-width: thin;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 8px;
+  }
+  
+  @media (max-width:768px) {
+    ::-webkit-scrollbar{
+      scrollbar-width: 0px;
+    }
   }
   
 
@@ -62,11 +69,11 @@
   :root {
     height: 100%;
     width: 100%;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply w-screen overflow-x-hidden;
+    @apply !w-screen overflow-x-hidden;
   }
 
   .dark {
@@ -404,11 +411,18 @@
   .CountrySelector::-webkit-scrollbar{
     width:8px;
   }
-  .BillingDetails::-webkit-scrollbar{
+  .BillingDetails::-webkit-scrollbar,.HeaderMenuSheet::-webkit-scrollbar{
     width: 3px;
   }
 
 
- 
+  .detailsInput{
+    @apply focus:outline border w-full rounded py-3 px-4 placeholder:text-sm
+  }
+
+
+  .HeaderMenu .sheet-close{
+    display: none !important;
+  }
 
 }

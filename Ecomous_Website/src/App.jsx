@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 
 import HomePage from "./components/pages/HomePage";
-import BottomNav from "./components/common/BottomNav";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PageLayOut, HomeLayout } from "./components/layout/LayoutPaths";
 import ShopPage from "./components/Pages/ShopPage";
@@ -14,14 +13,26 @@ import ContactUs from "./components/Pages/ContactUs";
 import FaqSection from "./components/Pages/FaqSection";
 import ShopCart from "./components/Pages/ShopCart";
 import Checkout from "./components/Pages/Checkout";
+import BlogGrid from "./components/Pages/BlogGrid";
+import Login from "./components/Pages/Login";
+import Register from "./components/Pages/Register";
+import WishList from "./components/Pages/WhisList";
+import ErrorPage from "./components/Pages/ErrorPage";
+import { AccountDashboard } from "./components/helpers/AccountDashboard";
+import AccountOrders from "./components/helpers/AccountOrders";
+import AccountAddress from "./components/helpers/AccountAddress";
+import AccountDetails from "./components/helpers/AccountDetails";
+import AccountWhishList from "./components/helpers/AccountWhishlist";
+import UserInfo from "./components/Pages/UserInfo";
 
 let Layout = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
+    errorElement : <ErrorPage/>,
     children: [
       {
-        index:true,
+        index: true,
         element: <HomePage />,
       },
       {
@@ -60,7 +71,53 @@ let Layout = createBrowserRouter([
       },
       {
         path: "checkout",
-        element: <Checkout/>,
+        element: <Checkout />,
+      },
+      {
+        path: "blog",
+        element: <BlogGrid />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+      {
+        path: "wishlist",
+        element: <WishList />,
+      },
+      {
+        path: "account",
+        element: <UserInfo />,
+        children: [
+          {
+            index: true,
+            element: <AccountDashboard />,
+          },
+          {
+            path: "dashboard",
+            element: <AccountDashboard />,
+          },
+          {
+            path: "orders",
+            element: <AccountOrders />,
+          },
+          {
+            path: "address",
+            element: <AccountAddress />,
+          },
+          {
+            path: "details",
+            element: <AccountDetails />,
+          },
+          {
+            path: "wishlist",
+            element: <AccountWhishList />,
+          },
+        ],
       },
     ],
   },

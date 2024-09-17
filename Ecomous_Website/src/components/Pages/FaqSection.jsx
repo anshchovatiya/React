@@ -1,8 +1,7 @@
 import React from "react";
 import PageHeader from "../helpers/PageHeader";
-import * as Accordion from "@radix-ui/react-accordion";
-import { IoIosArrowDown } from "react-icons/io";
 import { GoArrowUpRight } from "react-icons/go";
+import FaqParseMaker from "../helpers/FaqParseMaker";
 
 let FAQ = [
   {
@@ -82,40 +81,6 @@ let FAQ = [
   },
 ];
 
-function FaqBox({ information }) {
-  return (
-    <div className="mb-[40px] md:mb-[60px]">
-      <h4 className="text-[18px] md:text-[28px] mb-[10px] md:mb-[28px] ">
-        {information.tittle}
-      </h4>
-      <Accordion.Root className="AccordionRoot" type="single" collapsible>
-        {information?.faqPairs.map((CurrentFaq, index) => {
-          return (
-            <Accordion.Item
-              className="AccordionItem mt-[30px] mb-[15px] border-b pb-2.5"
-              value={`item-${index + 1}`}
-            >
-              <Accordion.AccordionHeader>
-                <Accordion.AccordionTrigger className="TriggerFaq font-medium flex justify-between gap-2 w-full hover:text-[crimson]">
-                  <span className="text-[14px] text-left lg:text-[16px] ">
-                    {CurrentFaq?.question}
-                  </span>
-                  <IoIosArrowDown className="text-[19px]" />
-                </Accordion.AccordionTrigger>
-              </Accordion.AccordionHeader>
-              <Accordion.AccordionContent className="AccordionContent">
-                <div className="py-5 lg:py-6 text-[14px]">
-                  {CurrentFaq?.answer}
-                </div>
-              </Accordion.AccordionContent>
-            </Accordion.Item>
-          );
-        })}
-      </Accordion.Root>
-    </div>
-  );
-}
-
 const FaqSection = () => {
   return (
     <div>
@@ -123,7 +88,7 @@ const FaqSection = () => {
       <div className="lg:flex justify-between items-start max-w-[1500px] px-[18px] lg:px-12 m-auto pt-[35px] pb-[22px] md:pt-[68px] lg:pt-[80px] ">
         <div className="lg:w-[58%]">
           {FAQ.map((currentSection) => {
-            return <FaqBox information={currentSection} />;
+            return <FaqParseMaker information={currentSection} />;
           })}
         </div>
         <div className="lg:w-[33%]  bg-[rgb(242,242,242)] p-[30px_31px_55px_35px]">
@@ -144,13 +109,10 @@ const FaqSection = () => {
               Contact Us
             </button>
             <div className="flex items-center  gap-2 border-b border-black hover:text-[crimson] hover:border-[crimson]">
-              <a
-                href="#"
-                className="text-[14px] font-medium"
-              >
+              <a href="#" className="text-[14px] font-medium">
                 Live chat
               </a>
-              <GoArrowUpRight/>
+              <GoArrowUpRight />
             </div>
           </div>
         </div>

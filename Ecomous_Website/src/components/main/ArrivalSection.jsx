@@ -1,7 +1,7 @@
 import FilterSideBar from "../helpers/FilterSideBar";
 import { FaCircle } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { IoIosArrowDown, IoIosArrowForward} from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import {
   Select,
   SelectContent,
@@ -10,24 +10,22 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@radix-ui/react-select";
-import ProductDisplayCard from "../common/ProductDisplayCard";
+import ProductDisplayCard from "../helpers/ProductDisplayCard";
 import img1 from "../../assets/images/black-1.jpg";
 import img2 from "../../assets/images/orange-1.jpg";
 import img3 from "../../assets/images/white-1.jpg";
 
-
-
-  let Product1 = {
-    id: 1,
-    tittle: "Ribbed Tank Top",
-    price: "16.35",
-    colorWithImage: [
-      { color: "#ffa500", image: img2 },
-      { color: "#000000", image: img1 },
-      { color: "#ffffff", image: img3 },
-    ],
-    sizes: ["S", "M", "L", "XL"],
-  };
+let Product1 = {
+  id: 1,
+  tittle: "Ribbed Tank Top",
+  price: "16.35",
+  colorWithImage: [
+    { color: "#ffa500", image: img2 },
+    { color: "#000000", image: img1 },
+    { color: "#ffffff", image: img3 },
+  ],
+  sizes: ["S", "M", "L", "XL"],
+};
 
 // generate grid dots
 function GridDots({ dots, isActive }) {
@@ -107,8 +105,7 @@ function FilterSelect() {
 const ArrivalSection = () => {
   let [Columns, setColumns] = useState(4);
 
-
-  useEffect (() => {
+  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setColumns(2);
@@ -129,9 +126,8 @@ const ArrivalSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   return (
-    <div className="mt-[45px] mb-[70px] overflow-x-hidden">
+    <div className="mt-[45px] mb-[70px] overflow-x-hidden px-[15px] md:px-[50px]">
       <div className="flex justify-between items-center">
         <FilterSideBar />
         <div className="flex gap-[2vw] pl-[8vw]">
@@ -170,8 +166,10 @@ const ArrivalSection = () => {
           <FilterSelect />
         </div>
       </div>
-      <div className={`grid grid-cols-${Columns} gap-[30px] my-[30px] min-1150:px-[30px]`}>
-      <ProductDisplayCard product={Product1} />
+      <div
+        className={`grid grid-cols-${Columns} gap-[30px] my-[30px] min-1150:px-[30px]`}
+      >
+        <ProductDisplayCard product={Product1} />
         <ProductDisplayCard product={Product1} />
         <ProductDisplayCard product={Product1} />
         <ProductDisplayCard product={Product1} />
@@ -185,12 +183,12 @@ const ArrivalSection = () => {
         <button className="NewArrivalPagination">2</button>
         <button className="NewArrivalPagination">3</button>
         <button className="NewArrivalPagination">4</button>
-        <button className="NewArrivalPagination"><IoIosArrowForward/></button>
+        <button className="NewArrivalPagination">
+          <IoIosArrowForward />
+        </button>
       </div>
     </div>
   );
 };
 
 export default ArrivalSection;
-
-

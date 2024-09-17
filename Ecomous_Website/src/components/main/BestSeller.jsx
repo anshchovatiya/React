@@ -1,4 +1,4 @@
-import ProductDisplayCard from "../common/ProductDisplayCard";
+import ProductDisplayCard from "../helpers/ProductDisplayCard";
 import styles from "./css/BestSeller.module.css";
 import img1 from "../../assets/images/black-1.jpg";
 import img2 from "../../assets/images/orange-1.jpg";
