@@ -483,13 +483,14 @@ function MenubarIcon() {
                           { name: "Home Setup Gear", link: "/home" },
                           { name: "Home Dog Accessories", link: "/home" },
                           { name: "Home Kitchen Wear", link: "/home" },
-                        ].map((current) => {
+                        ].map((current, index) => {
                           return (
                             <>
                               <NavLink
                                 onClick={handleNavLinkClick}
                                 className="block hover:text-[crimson] cursor-pointer"
                                 to={current.link}
+                                key={current + index}
                               >
                                 {current.name}
                               </NavLink>

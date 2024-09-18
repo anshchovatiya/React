@@ -1,11 +1,11 @@
 import styles from "./css/CatagoriesCard.module.css";
 import { FiArrowUpRight } from "react-icons/fi";
 
-const CatagoriesCard = ({ image, Text }) => {
+const CatagoriesCard = ({ image, altText, Text }) => {
   return (
     <div className={styles.CatagoriesCard}>
       <div className="overflow-hidden">
-      <img src={image} alt="product demo image" className="hover:scale-[1.04] duration-1000"/>
+      <img src={image} alt={altText} className="hover:scale-[1.04] duration-1000"/>
       </div>
       <button className={` Albert-normal ${styles.CardText}`}>
         <p>{Text}</p>

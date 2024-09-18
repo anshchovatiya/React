@@ -1,19 +1,12 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import styles from "./css/Categories.module.css";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
-import CatagoriesCard from "../helpers/CatagoriesCard";
-import productDemoImage1 from "../../assets/images/collection-17.jpg";
-import productDemoImage2 from "../../assets/images/collection-14.jpg";
-import productDemoImage3 from "../../assets/images/collection-15.jpg";
-import productDemoImage4 from "../../assets/images/collection-18.jpg";
-import productDemoImage5 from "../../assets/images/collection-20.jpg";
-import productDemoImage6 from "../../assets/images/Discover-image.avif";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { ImArrowUpRight2 } from "react-icons/im";
+import { HomeCategoriesData } from "../../data/constants";
+import { CatagoriesCard } from "../../data/imports";
 
 function Categories() {
-
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const slider = useRef(null);
@@ -81,24 +74,20 @@ function Categories() {
           ref={slider}
           beforeChange={handleBeforeChange}
         >
-          <div>
-            <CatagoriesCard image={productDemoImage1} Text="Clothing" />
-          </div>
-          <div>
-            <CatagoriesCard image={productDemoImage2} Text="Sunglasses" />
-          </div>
-          <div>
-            <CatagoriesCard image={productDemoImage3} Text="Bags" />
-          </div>
-          <div>
-            <CatagoriesCard image={productDemoImage4} Text="Fashion" />
-          </div>
-          <div>
-            <CatagoriesCard image={productDemoImage5} Text="Accessories" />
-          </div>
+          {HomeCategoriesData.map((product, index) => {
+            return (
+              <div key={product.category + index}>
+                <CatagoriesCard
+                  image={product.link}
+                  altText={product.altText}
+                  Text={product.category}
+                />
+              </div>
+            );
+          })}
         </Slider>
         <div className={styles.sliderFixed}>
-          <img src={productDemoImage6} alt="product demo image" />
+          <img src="./images/home-categories-06.avif" alt="Wide variety of products" />
           <div className={` Albert-normal ${styles.FixedText}`}>
             <p>Discover all new items</p>
             <span>

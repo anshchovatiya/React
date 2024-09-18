@@ -425,4 +425,18 @@
     display: none !important;
   }
 
+
+  .ProductCardSize{
+    animation: ProductCardSize 0.7s ease-in-out both;
+  }
+  
+  @keyframes ProductCardSize {
+    0%{
+      transform: translateY(90px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+
 }

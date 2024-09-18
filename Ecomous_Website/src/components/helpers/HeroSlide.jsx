@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./css/HeroSlide.module.css";
 import { FaAngleRight } from "react-icons/fa";
 
-const HeroSlide = ({ image, tittle, description }) => {
+const HeroSlide = ({ imagePath, tittle, description, altText }) => {
   tittle = tittle.split(" ");
   return (
     <div className={styles.HeroContainer}>
-      <img src={image} alt="Demo image" />
+      <img src={imagePath} alt={altText} />
       <div className={styles.HeroTextBox} >
         <h2>
           {tittle[0]} <br /> {tittle[1]}

@@ -16,7 +16,7 @@ import Checkout from "./components/Pages/Checkout";
 import BlogGrid from "./components/Pages/BlogGrid";
 import Login from "./components/Pages/Login";
 import Register from "./components/Pages/Register";
-import WishList from "./components/Pages/WhisList";
+import WishList from "./components/Pages/WishList";
 import ErrorPage from "./components/Pages/ErrorPage";
 import { AccountDashboard } from "./components/helpers/AccountDashboard";
 import AccountOrders from "./components/helpers/AccountOrders";
@@ -29,7 +29,7 @@ let Layout = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
-    errorElement : <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
