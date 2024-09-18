@@ -766,7 +766,7 @@ function MenubarIcon() {
                   </AccordionItem>
                   <AccordionItem value="item-4">
                     <AccordionTrigger className="flex items-center py-3">
-                      <div className="text-black">Home</div>
+                      <div className="text-black">Pages</div>
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="leading-[28px]">

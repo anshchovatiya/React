@@ -1,4 +1,3 @@
-import React from "react";
 import PageHeader from "../helpers/PageHeader";
 import img1 from "../../assets/images/blog-3.jpg";
 import { HiMiniArrowUpRight } from "react-icons/hi2";

@@ -2,8 +2,9 @@ import Header from "../main/Header";
 import Footer from "../main/Footer";
 import { Outlet } from "react-router-dom";
 import BottomNav from "../main/BottomNav";
+import TopBar from "../main/TopBar";
 
-import { TopBar } from "../../data/components";
+
 
 const HomeLayout = () => {
   return (
