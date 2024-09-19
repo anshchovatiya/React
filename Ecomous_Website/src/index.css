@@ -438,5 +438,30 @@
       transform: translateY(0px);
     }
   }
+  
+  .ProductCardIcons>div:nth-child(1){
+    animation: ProductCardIcons 1s ease-in-out both  0.7s;
+  }
+  .ProductCardIcons>div:nth-child(2){
+    animation: ProductCardIcons 1s ease-in-out both  0.9s;
+  }
+  .ProductCardIcons>div:nth-child(3){
+    animation: ProductCardIcons 1s ease-in-out both  1.1s;
+  }
+  .ProductCardIcons>div:nth-child(4){
+    animation: ProductCardIcons 1s ease-in-out both  1.3s;
+  }
+  
+  @keyframes ProductCardIcons {
+    0%{
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
 
 }

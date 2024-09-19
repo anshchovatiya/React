@@ -1,6 +1,4 @@
-import { Categories } from "./imports"
-
-// hero section main slider content
+// Hero section main slider content
 export const HeroSliderData = [
     {
         path : "./images/hero-section-image-01.jpg",
@@ -22,16 +20,14 @@ export const HeroSliderData = [
     }
 ]
 
-
-// hero section marquee content
+// Hero section marquee content
 export const HeroMarqueeData = [
     "Spring Clearance Event: Save Up to 70%",
     "Don't miss out—grab your favorite styles at up to 50% off!",
     "Huge savings on top fashion – get up to 60% off!",
 ]
 
-
-// categories section content on home page
+// Categories section content on home page
 export const HomeCategoriesData = [
     {
         link:"./images/home-categories-01.jpg",
@@ -58,4 +54,21 @@ export const HomeCategoriesData = [
         altText : "Fashionable accessories display",
         category : "Accessories"
     },
+]
+
+// Best seller products
+export const BestSellerProduct = [
+{
+      
+    id: 1,
+    tittle: "Ribbed Tank Top",
+    price: "16.35",
+    colorWithImage: [
+      { color: "#ffa500", link:"",altText:""},
+      { color: "#000000", link:"",altText:""},
+      { color: "#ffffff", link:"",altText:""},
+    ],
+    sizes: ["S", "M", "L", "XL"],
+
+}    
 ]

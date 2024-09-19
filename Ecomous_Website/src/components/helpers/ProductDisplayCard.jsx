@@ -32,22 +32,22 @@ const ProductDisplayCard = ({ product }) => {
               alt=""
               className="h-full w-full object-cover"
             />
-            <div className="absolute bottom-3 lg:bottom-4 left-0 w-full po">
-              <div className="flex justify-center gap-2 *:p-3 *:rounded *:font-bold ">
-                <div className=" bg-white hover:bg-black hover:text-white duration-300">
-                <FiShoppingBag />
+            <div className="absolute bottom-[4.3%] left-0 w-full po">
+              <div className="group-hover:flex justify-center gap-2 *:p-[5%] text-sm *:bg-white *:rounded *:font-bold *:mb-3 hidden ProductCardIcons px-4">
+                <div className="  hover:bg-black hover:text-white duration-300">
+                  <FiShoppingBag />
                 </div>
-                <div className="bg-white hover:bg-black hover:text-white duration-300">
+                <div className=" hover:bg-black hover:text-white duration-300">
                   <FaRegHeart />
                 </div>
-                <div className="bg-white hover:bg-black hover:text-white duration-300">
+                <div className=" hover:bg-black hover:text-white duration-300">
                   <TbArrowsCross />
                 </div>
-                <div className="bg-white hover:bg-black hover:text-white duration-300">
-                <LuEye />
+                <div className=" hover:bg-black hover:text-white duration-300">
+                  <LuEye />
                 </div>
               </div>
-              <div className="hidden bg-[#0000003d] group-hover:flex justify-center gap-3 text-xs py-2 lg:py-3 text-white font-semibold  ProductCardSize">
+              <div className="hidden bg-[#0000003d] group-hover:flex justify-center gap-3 text-xs py-2  text-white font-semibold  ProductCardSize">
                 {product.sizes.map((size) => {
                   return <span key={size}>{size}</span>;
                 })}
@@ -64,9 +64,8 @@ const ProductDisplayCard = ({ product }) => {
             return (
               <div
                 key={current.color}
-                className={`${styles.colorBox} mx-1 mb-1 ${
-                  currentColor === current.color && "colorHover"
-                }`}
+                className={`${styles.colorBox} mx-1 mb-1 ${currentColor === current.color && "colorHover"
+                  }`}
                 style={{ "--my-product-color": current.color }}
                 onClick={(event) => {
                   handleMouseClick(current, event);
