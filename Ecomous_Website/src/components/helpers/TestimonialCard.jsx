@@ -16,7 +16,7 @@ const TestimonialCard = ({ review }) => {
       </div>
       <div className={styles.productInfoContainer}>
         <div>
-          <img src={review.productImage} alt="product image" />
+          <img src={review.productImage.link} alt={review.productImage.altText} />
           <div>
             <p>{review.productName}</p>
             <p>&#36;{review.price}</p>

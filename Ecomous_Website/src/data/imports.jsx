@@ -16,7 +16,6 @@ import WishList from "../components/Pages/WishList";
 
 // Main Component imports
 import HeroSectionSlider from "../components/main/HeroSection";
-import OffersMarquee from "../components/helpers/OffersMarquee";
 import Categories from "../components/main/Categories";
 import BestSeller from "../components/main/BestSeller";
 import TheLook from "../components/main/TheLook";
@@ -24,10 +23,15 @@ import Testimonial from "../components/main/Testimonial";
 import ShopGram from "../components/main/ShopGram";
 import Header from "../components/main/Header";
 
-
 // helpers Component import
 import HeroSlide from "../components/helpers/HeroSlide";
 import CatagoriesCard from "../components/helpers/CatagoriesCard";
+import ProductDisplayCard from "../components/helpers/ProductDisplayCard";
+import SectionHead from "../components/helpers/SectionHead";
+import LookImageSection from "../components/helpers/LookImageSection"
+import TestimonialSlider from "../components/helpers/TestimonialSlider";
+import TestimonialsBrands from "../components/helpers/TestimonialsBrands";
+import OffersMarquee from "../components/helpers/OffersMarquee";
 
 // page components exports
 export {
@@ -50,7 +54,6 @@ export {
 // main components exports
 export {
   HeroSectionSlider,
-  OffersMarquee,
   Categories,
   BestSeller,
   TheLook,
@@ -59,10 +62,5 @@ export {
   Header,
 };
 
-
 // helper components exports
-export {
-    HeroSlide,
-    CatagoriesCard
-
-}
+export { HeroSlide, CatagoriesCard, ProductDisplayCard,SectionHead,LookImageSection,OffersMarquee,TestimonialSlider,TestimonialsBrands};

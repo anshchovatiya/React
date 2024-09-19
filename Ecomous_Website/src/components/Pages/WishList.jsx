@@ -68,9 +68,9 @@ const WishList = () => {
     <div>
       <PageHeader tittle="Your Wishlist" />
       <div className="max-w-[1500px] m-auto lg:px-12 px-[18px] overflow-x-hidden grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8 md:my-11">
-        {Product.map((current, index) => {
+        {/* {Product.map((current, index) => {
           return <ProductDisplayCard product={current} key={current + index} />;
-        })}
+        })} */}
       </div>
     </div>
   );

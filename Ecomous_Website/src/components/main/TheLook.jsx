@@ -1,5 +1,5 @@
-import LookImageSection from "../helpers/LookImageSection";
-import SectionHead from "../helpers/SectionHead";
+
+import {SectionHead,LookImageSection} from "../../data/imports"
 
 const TheLook = () => {
   return (

@@ -1,17 +1,13 @@
 import Slider from "react-slick";
 import styles from "./css/TestimonialSlider.module.css";
 import TestimonialCard from "./TestimonialCard";
-import img1 from "../../assets/images/orange-1.jpg";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
-
+import {TestimonialsHomeData} from "../../data/constants";
 const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
-    <div
-      onClick={onClick}
-      className={`arrow  ${styles.slideButton}`}
-    >
+    <div onClick={onClick} className={`arrow  ${styles.slideButton}`}>
       <FaChevronLeft />
     </div>
   );
@@ -20,10 +16,7 @@ const SamplePrevArrow = (props) => {
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div
-      onClick={onClick}
-      className={`arrow  ${styles.slideButton}`}
-    >
+    <div onClick={onClick} className={`arrow  ${styles.slideButton}`}>
       <FaChevronRight />
     </div>
   );
@@ -37,20 +30,6 @@ const TestimonialSlider = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
   };
-
-
-  let testimonials = {
-    rating: 5,
-    tittle: "Best Online Fashion Site",
-    description:
-      " I always find something stylish and affordable on this  web fashion site",
-    author: "Robert Smith",
-    location: "Customer from USA",
-    productImage: img1,
-    productName: "Jersey thong body",
-    price: "105.95",
-  };
-
 
 
   // handle buttons of changing slides
@@ -71,7 +50,6 @@ const TestimonialSlider = () => {
     }
   };
 
-
   return (
     <Slider
       nextArrow={<SampleNextArrow to="prev" />}
@@ -89,30 +67,19 @@ const TestimonialSlider = () => {
         {
           breakpoint: 1150,
           settings: {
-            dots:true,
+            dots: true,
             slidesToShow: 2,
           },
         },
       ]}
     >
-      <div className={styles.Testimonial}>
-        <TestimonialCard review={testimonials} />
-      </div>
-      <div className={styles.Testimonial}>
-        <TestimonialCard review={testimonials} />
-      </div>
-      <div className={styles.Testimonial}>
-        <TestimonialCard review={testimonials} />
-      </div>
-      <div className={styles.Testimonial}>
-        <TestimonialCard review={testimonials} />
-      </div>
-      <div className={styles.Testimonial}>
-        <TestimonialCard review={testimonials} />
-      </div>
-      <div className={styles.Testimonial}>
-        <TestimonialCard review={testimonials} />
-      </div>
+      {TestimonialsHomeData.map((currentTestimonial) => {
+        return (
+          <div className={styles.Testimonial}>
+            <TestimonialCard review={currentTestimonial} />
+          </div>
+        );
+      })}
     </Slider>
   );
 };

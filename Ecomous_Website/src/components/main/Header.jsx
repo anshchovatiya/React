@@ -401,8 +401,8 @@ const Header = () => {
           <div>
             <h3 className="ShopListTittle">BEST SELLER</h3>
             <div className="flex gap-6">
-              <ProductDisplayCard product={Product1} />
-              <ProductDisplayCard product={Product1} />
+              {/* <ProductDisplayCard product={Product1} />
+              <ProductDisplayCard product={Product1} /> */}
             </div>
           </div>
         </div>

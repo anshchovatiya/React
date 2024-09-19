@@ -7,7 +7,7 @@ const ShopPage = () => {
     <>
       <PageHeader tittle={"New Arrival"} description={"Shop through our latest selection of Fashion"}/>
     <div className='max-w-[1540px] m-auto'>
-      <ArrivalSection/>
+      {/* <ArrivalSection/> */}
     </div>
     </>
   )
