@@ -28,10 +28,12 @@ import HeroSlide from "../components/helpers/HeroSlide";
 import CatagoriesCard from "../components/helpers/CatagoriesCard";
 import ProductDisplayCard from "../components/helpers/ProductDisplayCard";
 import SectionHead from "../components/helpers/SectionHead";
-import LookImageSection from "../components/helpers/LookImageSection"
+import LookImageSection from "../components/helpers/LookImageSection";
 import TestimonialSlider from "../components/helpers/TestimonialSlider";
 import TestimonialsBrands from "../components/helpers/TestimonialsBrands";
 import OffersMarquee from "../components/helpers/OffersMarquee";
+import ServicesBox from "../components//helpers/ServicesBox";
+import ImageShowCase from "../components/helpers/ImageShowCase";
 
 // page components exports
 export {
@@ -63,4 +65,15 @@ export {
 };
 
 // helper components exports
-export { HeroSlide, CatagoriesCard, ProductDisplayCard,SectionHead,LookImageSection,OffersMarquee,TestimonialSlider,TestimonialsBrands};
+export {
+  HeroSlide,
+  CatagoriesCard,
+  ProductDisplayCard,
+  SectionHead,
+  LookImageSection,
+  OffersMarquee,
+  TestimonialSlider,
+  TestimonialsBrands,
+  ServicesBox,
+  ImageShowCase
+};
