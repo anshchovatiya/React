@@ -12,6 +12,11 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+      border-radius: 8px !important;
+    }
 }
 
 body {
@@ -24,4 +29,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .CardContainer{
+    scrollbar-width: thin;
+  }
+
 }
+
+
+
+@layer components{
+}
+
