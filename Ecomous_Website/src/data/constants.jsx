@@ -417,3 +417,18 @@ export const ShopGramSectionData = [
     }
   ];
   
+// NavBar Main Options content on home page
+export const NavMainOptionsData = [
+   {
+    name:"Home",
+    linkText : "home"
+   },
+   {
+    name:"Shop",
+    linkText : "shop"
+   },
+   {
+    name:"Product",
+    linkText : "product"
+   },
+]

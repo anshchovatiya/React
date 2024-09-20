@@ -14,6 +14,7 @@ import ProductDisplayCard from "../helpers/ProductDisplayCard";
 import img1 from "../../assets/images/black-1.jpg";
 import img2 from "../../assets/images/orange-1.jpg";
 import img3 from "../../assets/images/white-1.jpg";
+import { BestSellerProductData } from "../../data/constants";
 
 let Product1 = {
   id: 1,
@@ -26,6 +27,7 @@ let Product1 = {
   ],
   sizes: ["S", "M", "L", "XL"],
 };
+
 
 // generate grid dots
 function GridDots({ dots, isActive }) {
@@ -169,14 +171,11 @@ const ArrivalSection = () => {
       <div
         className={`grid grid-cols-${Columns} gap-[30px] my-[30px] min-1150:px-[30px]`}
       >
-        <ProductDisplayCard product={Product1} />
-        <ProductDisplayCard product={Product1} />
-        <ProductDisplayCard product={Product1} />
-        <ProductDisplayCard product={Product1} />
-        <ProductDisplayCard product={Product1} />
-        <ProductDisplayCard product={Product1} />
-        <ProductDisplayCard product={Product1} />
-        <ProductDisplayCard product={Product1} />
+        {
+          BestSellerProductData.map((currentItem)=>{
+            return  <ProductDisplayCard product={currentItem} key={currentItem.id} />
+          })
+        }
       </div>
       <div className="flex gap-[1vw] justify-center mt-[50px]">
         <button className="NewArrivalPagination active">1</button>

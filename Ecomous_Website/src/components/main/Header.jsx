@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import styles from "./css/Header.module.css";
 import { IoIosArrowDown } from "react-icons/io";
@@ -27,8 +27,6 @@ import {
   Sheet,
   SheetContent,
   SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { FaQuestion } from "react-icons/fa6";
@@ -36,6 +34,7 @@ import img1 from "../../assets/images/black-1.jpg";
 import img2 from "../../assets/images/orange-1.jpg";
 import img3 from "../../assets/images/white-1.jpg";
 import { NavLink } from "react-router-dom";
+import { NavMainOptionsData } from "../../data/constants";
 
 let Product1 = {
   id: 1,
@@ -50,27 +49,27 @@ let Product1 = {
 };
 
 const Header = () => {
+
+  // track status of current drop-down
   let [currentDropDown, setCurrentDropDown] = useState(null);
 
   let Header = useRef(null);
   let timeout = useRef(null);
-  let oldScroll = window.scrollY;
+  let oldScroll = useRef(window.scrollY);
 
   // control sticky positioning of header
   useEffect(() => {
-    function HeaderOnScroll(event) {
+    function HeaderOnScroll() {
       if (window.scrollY < 68) {
         Header.current.classList.remove("sticky");
-      } else if (oldScroll < window.scrollY) {
+      } else if (oldScroll.current < window.scrollY) {
         Header.current.classList.remove("sticky");
       } else {
         Header.current.classList.add("sticky");
       }
-      oldScroll = window.scrollY;
+      oldScroll.current = window.scrollY;
     }
-
     window.addEventListener("scroll", HeaderOnScroll);
-
     return () => {
       window.removeEventListener("scroll", HeaderOnScroll);
     };
@@ -99,36 +98,20 @@ const Header = () => {
       <MenubarIcon />
       <img src={logo} alt="Ecomous logo" className={styles.logo} />
       <ul className={styles.navLinks}>
-        <li
-          className={styles.navOption}
-          onMouseOver={() => handleNavMouseOver("home")}
-          onMouseLeave={handleNavMouseOut}
-        >
-          <a href="#">
-            <span>Home</span>
-            <IoIosArrowDown />
-          </a>
-        </li>
-        <li
-          className={styles.navOption}
-          onMouseOver={() => handleNavMouseOver("shop")}
-          onMouseLeave={handleNavMouseOut}
-        >
-          <a href="#">
-            <span>Shop</span>
-            <IoIosArrowDown />
-          </a>
-        </li>
-        <li
-          className={styles.navOption}
-          onMouseOver={() => handleNavMouseOver("product")}
-          onMouseLeave={handleNavMouseOut}
-        >
-          <a href="#">
-            <span>Product</span>
-            <IoIosArrowDown />
-          </a>
-        </li>
+
+        {NavMainOptionsData.map((currentNavItem , index) => {
+          return (<li key={currentNavItem + index}
+            className={styles.navOption}
+            onMouseOver={() => handleNavMouseOver(currentNavItem.linkText)}
+            onMouseLeave={handleNavMouseOut}
+          >
+            <a href="#">
+              <span>{currentNavItem.name}</span>
+              <IoIosArrowDown />
+            </a>
+          </li>);
+        })}
+
         <li
           className={`${styles.navOption} relative`}
           onMouseOver={() => handleNavMouseOver("pages")}
@@ -422,9 +405,8 @@ function DropDown({
 }) {
   return (
     <div
-      className={`hidden lg:block absolute top-full left-0 w-screen bg-white !z-[1000] min-1150:px-[60px]   py-[40px] ${
-        isVisible ? "NavDropDownVisible" : "NavDropDownHidden"
-      } NavDropDown`}
+      className={`hidden lg:block absolute top-full left-0 w-screen bg-white !z-[1000] min-1150:px-[60px]   py-[40px] ${isVisible ? "NavDropDownVisible" : "NavDropDownHidden"
+        } NavDropDown`}
       onMouseOver={() => handleNavMouseOver("home")}
       onMouseLeave={handleNavMouseOut}
     >
@@ -436,9 +418,8 @@ function DropDown({
 function NavBarDrawer({ isVisible, children }) {
   return (
     <div
-      className={`absolute top-[54px] -translate-x-1/2 ml-8 bg-white w-[280px] h-fit z-[999] shadow-[0_4px_8px_rgb(235,235,235)] py-[24px] px-[20px] ${
-        isVisible ? "NavDropDownDrawerVisible" : "NavDropDownDrawerHidden"
-      } NavDropDrawer`}
+      className={`absolute top-[54px] -translate-x-1/2 ml-8 bg-white w-[280px] h-fit z-[999] shadow-[0_4px_8px_rgb(235,235,235)] py-[24px] px-[20px] ${isVisible ? "NavDropDownDrawerVisible" : "NavDropDownDrawerHidden"
+        } NavDropDrawer`}
     >
       {children}
     </div>

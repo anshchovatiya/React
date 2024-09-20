@@ -33,7 +33,7 @@ const ProductDisplayCard = ({ product }) => {
             <img
               src={product.hoverImage.link}
               alt={product.hoverImage.altText}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover"  
             />
             <div className="absolute bottom-[4.3%] left-0 w-full">
               <div className="group-hover:flex justify-center gap-2 *:p-[5%] text-sm *:bg-white *:rounded *:font-bold *:mb-3 hidden ProductCardIcons px-4">
