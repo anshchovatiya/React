@@ -6,9 +6,9 @@ import { ShopGramSectionData } from "../../data/constants";
 
 
 function renderShopGramItems(){
- return  ShopGramSectionData.map((currentItem) => {
+ return  ShopGramSectionData.map((currentItem,index) => {
     return (
-      <div className="relative group overflow-hidden rounded-[8px]">
+      <div className="relative group overflow-hidden rounded-[8px]" key={currentItem.alt+index}>
         <img
           className="duration-1000 group-hover:scale-105"
           src={currentItem.link}

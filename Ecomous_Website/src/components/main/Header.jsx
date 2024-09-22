@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import styles from "./css/Header.module.css";
 import { IoIosArrowDown } from "react-icons/io";
@@ -466,16 +466,15 @@ function MenubarIcon() {
                           { name: "Home Kitchen Wear", link: "/home" },
                         ].map((current, index) => {
                           return (
-                            <>
+                            <Fragment key={current.name}>
                               <NavLink
                                 onClick={handleNavLinkClick}
                                 className="block hover:text-[crimson] cursor-pointer"
                                 to={current.link}
-                                key={current + index}
                               >
                                 {current.name}
                               </NavLink>
-                            </>
+                            </Fragment>
                           );
                         })}
                       </div>
@@ -565,6 +564,7 @@ function MenubarIcon() {
                           },
                         ].map((current, index) => {
                           return (
+                            <Fragment key={index+current.name}>
                             <Accordion
                               type="single"
                               collapsible
@@ -582,7 +582,7 @@ function MenubarIcon() {
                                 <AccordionContent className="mt-3 pl-4">
                                   {current.list.map((current) => {
                                     return (
-                                      <>
+                                      <Fragment key={current.linkName}>
                                         <NavLink
                                           onClick={handleNavLinkClick}
                                           className="block hover:text-[crimson] cursor-pointer leading-[25px]"
@@ -590,12 +590,13 @@ function MenubarIcon() {
                                         >
                                           {current.linkName}
                                         </NavLink>
-                                      </>
+                                      </Fragment>
                                     );
                                   })}
                                 </AccordionContent>
                               </AccordionItem>
                             </Accordion>
+                            </Fragment>
                           );
                         })}
                       </div>
@@ -710,6 +711,7 @@ function MenubarIcon() {
                           },
                         ].map((current, index) => {
                           return (
+                            <Fragment key={current.name+index}>
                             <Accordion
                               type="single"
                               collapsible
@@ -727,7 +729,7 @@ function MenubarIcon() {
                                 <AccordionContent className="mt-3 pl-4">
                                   {current.list.map((current) => {
                                     return (
-                                      <>
+                                      <Fragment key={current.linkName}>
                                         <NavLink
                                           onClick={handleNavLinkClick}
                                           className="block hover:text-[crimson] cursor-pointer leading-[25px]"
@@ -735,12 +737,13 @@ function MenubarIcon() {
                                         >
                                           {current.linkName}
                                         </NavLink>
-                                      </>
+                                      </Fragment>
                                     );
                                   })}
                                 </AccordionContent>
                               </AccordionItem>
                             </Accordion>
+                            </Fragment>
                           );
                         })}
                       </div>
@@ -763,9 +766,9 @@ function MenubarIcon() {
                           { name: "Invoice", link: "/home" },
                           { name: "Timeline", link: "/home" },
                           { name: "Payment Confirmation", link: "/home" },
-                        ].map((current) => {
+                        ].map((current,index) => {
                           return (
-                            <>
+                            <Fragment key={current.name+index}>
                               <NavLink
                                 onClick={handleNavLinkClick}
                                 className="block hover:text-[crimson] cursor-pointer"
@@ -773,7 +776,7 @@ function MenubarIcon() {
                               >
                                 {current.name}
                               </NavLink>
-                            </>
+                            </Fragment>
                           );
                         })}
                       </div>
@@ -791,9 +794,9 @@ function MenubarIcon() {
                           { name: "Right sidebar", link: "/blog" },
                           { name: "Blog list", link: "/blog" },
                           { name: "Single Post", link: "/blog" },
-                        ].map((current) => {
+                        ].map((current,index) => {
                           return (
-                            <>
+                            <Fragment key={current.name + index}>
                               <NavLink
                                 onClick={handleNavLinkClick}
                                 className="block hover:text-[crimson] cursor-pointer"
@@ -801,7 +804,7 @@ function MenubarIcon() {
                               >
                                 {current.name}
                               </NavLink>
-                            </>
+                            </Fragment>
                           );
                         })}
                       </div>

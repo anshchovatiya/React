@@ -1,13 +1,16 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ProductDisplayCard from "./ProductDisplayCard";
+import { Fragment } from "react";
 const CardShowCaseSlider = ({ tittle, products, className }) => {
   const setting = {
     perPage: 4,
-    perMove: 2,
+    perMove: 1,
     gap: "30px",
     dots: false,
     pagination: false,
+    easing: "ease-in-out",
+    duration:"3s",
     breakpoints: {
       768: {
         perPage: 2,
@@ -42,39 +45,15 @@ const CardShowCaseSlider = ({ tittle, products, className }) => {
             </div>
 
             <SplideTrack>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
-              <SplideSlide>
-                <ProductDisplayCard product={products} />
-              </SplideSlide>
+              {products.map((currentProduct, index) => {
+                return (
+                  <Fragment key={index}>
+                    <SplideSlide>
+                      <ProductDisplayCard product={currentProduct}/>
+                    </SplideSlide>
+                  </Fragment>
+                );
+              })}
             </SplideTrack>
           </div>
         </Splide>

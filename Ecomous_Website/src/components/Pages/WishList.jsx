@@ -1,77 +1,54 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PageHeader from "../helpers/PageHeader";
+import { useSelector } from "react-redux";
 import ProductDisplayCard from "../helpers/ProductDisplayCard";
-import img1 from "../../assets/images/black-1.jpg";
-import img2 from "../../assets/images/orange-1.jpg";
-import img3 from "../../assets/images/white-1.jpg";
-
-let Product = [
-  {
-    id: 1,
-    tittle: "Ribbed Tank Top",
-    price: "16.35",
-    colorWithImage: [
-      { color: "#ffa500", image: img2 },
-      { color: "#000000", image: img1 },
-      { color: "#ffffff", image: img3 },
-    ],
-    sizes: ["S", "M", "L", "XL"],
-  },
-  {
-    id: 1,
-    tittle: "Ribbed Tank Top",
-    price: "16.35",
-    colorWithImage: [
-      { color: "#ffa500", image: img2 },
-      { color: "#000000", image: img1 },
-      { color: "#ffffff", image: img3 },
-    ],
-    sizes: ["S", "M", "L", "XL"],
-  },
-  {
-    id: 1,
-    tittle: "Ribbed Tank Top",
-    price: "16.35",
-    colorWithImage: [
-      { color: "#ffa500", image: img2 },
-      { color: "#000000", image: img1 },
-      { color: "#ffffff", image: img3 },
-    ],
-    sizes: ["S", "M", "L", "XL"],
-  },
-  {
-    id: 1,
-    tittle: "Ribbed Tank Top",
-    price: "16.35",
-    colorWithImage: [
-      { color: "#ffa500", image: img2 },
-      { color: "#000000", image: img1 },
-      { color: "#ffffff", image: img3 },
-    ],
-    sizes: ["S", "M", "L", "XL"],
-  },
-  {
-    id: 1,
-    tittle: "Ribbed Tank Top",
-    price: "16.35",
-    colorWithImage: [
-      { color: "#ffa500", image: img2 },
-      { color: "#000000", image: img1 },
-      { color: "#ffffff", image: img3 },
-    ],
-    sizes: ["S", "M", "L", "XL"],
-  },
-];
-
+import { NavLink } from "react-router-dom";
 const WishList = () => {
+  const MainWhishList = useSelector((state) => state.wishlist);
+  console.log(MainWhishList);
   return (
-    <div>
+    <div className="min-h-[500px]">
       <PageHeader tittle="Your Wishlist" />
-      <div className="max-w-[1500px] m-auto lg:px-12 px-[18px] overflow-x-hidden grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8 md:my-11">
-        {/* {Product.map((current, index) => {
-          return <ProductDisplayCard product={current} key={current + index} />;
-        })} */}
-      </div>
+      {MainWhishList.length > 0 ? (
+        <div className="max-w-[1500px] m-auto lg:px-12 px-[18px] overflow-x-hidden grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8 md:my-11">
+          {MainWhishList.map((current, index) => {
+            return (
+              <ProductDisplayCard product={current} key={current + index} />
+            );
+          })}
+        </div>
+      ) : (
+        <div className="max-w-[1500px] m-auto lg:px-12 px-[18px] overflow-x-hidden my-8 md:my-11 flex flex-col gap-5 justify-center items-center min-h-[400px]">
+          <p className="max-w-[500px] text-center text-sm font-semibold">
+            Your wishlist is empty! Create your dream list today by saving your
+            favorite items for easy access later. It’s the perfect way to plan
+            your next purchase or keep track of must-haves. Start adding now and
+            never miss out!
+          </p>
+          <div className="flex  gap-4 *:rounded">
+            {[
+              {
+                path: "/",
+                text: "Back To Home",
+              },
+              {
+                path: "/",
+                text: "Explore",
+              },
+            ].map((currentButton) => {
+              return (
+                <Fragment key={currentButton.text}>
+                  <NavLink to={currentButton.path}>
+                    <button className="text-sm py-2 px-12 border border-black text-black hover:text-white hover:bg-black duration-500 font-semibold rounded">
+                      {currentButton.text}
+                    </button>
+                  </NavLink>
+                </Fragment>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

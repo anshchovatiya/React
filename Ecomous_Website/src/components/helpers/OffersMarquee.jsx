@@ -6,9 +6,9 @@ import { HeroMarqueeData } from "../../data/constants";
 const OfferMarquee = () => {
   return (
     <div className={`${styles.textWrapper} overflow-x-hidden`}>
-      {[1, 2, 3,4].map((index) => {
+      {[1, 2, 3,4].map((index,position) => {
         return (
-          <div>
+          <div key={index+position}>
             {HeroMarqueeData.map((data, index) => {
               return (
                 <Fragment key={data+index}>

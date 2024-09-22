@@ -1,26 +1,51 @@
+import { useSelector } from "react-redux";
 import ProductDisplayCard from "./ProductDisplayCard";
-import img1 from "../../assets/images/black-1.jpg";
-import img2 from "../../assets/images/orange-1.jpg";
-import img3 from "../../assets/images/white-1.jpg";
-
-let Product1 = {
-  id: 1,
-  tittle: "Ribbed Tank Top",
-  price: "16.35",
-  colorWithImage: [
-    { color: "#ffa500", image: img2 },
-    { color: "#000000", image: img1 },
-    { color: "#ffffff", image: img3 },
-  ],
-  sizes: ["S", "M", "L", "XL"],
-};
+import { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function AccountWhishList() {
+  let wishlist = useSelector((state) => state.wishlist);
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-lg:mt-7">
-      <ProductDisplayCard product={Product1} />
-      <ProductDisplayCard product={Product1} />
-      <ProductDisplayCard product={Product1} />
-    </div>
+    <>
+      {wishlist.length > 0 ? (
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-lg:mt-7">
+          {wishlist.map((currentProduct) => {
+            return <ProductDisplayCard product={currentProduct} key={currentProduct.id} />;
+          })}
+        </div>
+      ) : (
+        <div className=" m-auto lg:px-12 px-[18px] overflow-x-hidden my-8 md:my-11 flex flex-col gap-5 justify-center items-center min-h-[200px] md:min-h-[400px]">
+          <p className="max-w-[500px] text-center text-sm font-semibold">
+            Your wishlist is empty! Create your dream list today by saving your
+            favorite items for easy access later. It’s the perfect way to plan
+            your next purchase or keep track of must-haves. Start adding now and
+            never miss out!
+          </p>
+          <div className="flex flex-col md:flex-row justify-center items-center  gap-4 *:rounded">
+            {[
+              {
+                path: "/",
+                text: "Back To Home",
+              },
+              {
+                path: "/",
+                text: "Explore",
+              },
+            ].map((currentButton) => {
+              return (
+                <Fragment key={currentButton.text}>
+                  <NavLink to={currentButton.path}>
+                    <button className="text-sm py-2 px-12 border border-black text-black hover:text-white hover:bg-black duration-500 font-semibold rounded">
+                      {currentButton.text}
+                    </button>
+                  </NavLink>
+                </Fragment>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </>
   );
 }

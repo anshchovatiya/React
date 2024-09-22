@@ -8,18 +8,7 @@ import slideImage2 from "../../assets/images/orange-1.jpg";
 import slideImage3 from "../../assets/images/white-1.jpg";
 
 import CartMainSection from "../main/CartMainSection";
-
-const Products = {
-  id: 1,
-  tittle: "Ribbed Tank Top",
-  price: "16.35",
-  colorWithImage: [
-    { color: "#ffa500", image: slideImage2 },
-    { color: "#000000", image: slideImage1 },
-    { color: "#ffffff", image: slideImage3 },
-  ],
-  sizes: ["S", "M", "L", "XL"],
-};
+import { ProductShowCaseSliderOne } from "../../data/constants";
 
 
 
@@ -39,7 +28,7 @@ const ShopCart = () => {
       </div>
       <CardShowCaseSlider
         tittle="People Also Bought"
-        products={Products}
+        products={ProductShowCaseSliderOne}
         className="my-[15px] md:mt-[40px]  max-w-[1500px] px-[15px] lg:px-12 mx-auto"
       />
     </div>

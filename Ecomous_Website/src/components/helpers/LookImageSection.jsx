@@ -1,6 +1,6 @@
 import { TheLookSectionData } from "../../data/constants";
 import styles from "./css/LookImageSection.module.css";
-import React from "react";
+import React, { Fragment } from "react";
 import Slider from "react-slick";
 
 function SimpleSlider() {
@@ -14,9 +14,9 @@ function SimpleSlider() {
     <div>
       <div className={`slider-container ${styles.ImageContainer}`}>
         <Slider {...settings}>
-          {TheLookSectionData.map((currentImage) => {
+          {TheLookSectionData.map((currentImage,index) => {
             return (
-              <div>
+              <div key={currentImage.altText+index}>
                 <img src={currentImage.link} alt={currentImage.altText} />
               </div>
             );
@@ -24,8 +24,8 @@ function SimpleSlider() {
         </Slider>
       </div>
       <div className={`slider-container ${styles.WithoutSlider}`}>
-        {TheLookSectionData.map((currentImage) => {
-          return <img src={currentImage.link} alt={currentImage.altText} />;
+        {TheLookSectionData.map((currentImage,index) => {
+          return <Fragment key={currentImage+index}><img src={currentImage.link} alt={currentImage.altText} /></Fragment>;
         })}
       </div>
     </div>

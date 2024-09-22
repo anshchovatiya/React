@@ -73,9 +73,9 @@ const TestimonialSlider = () => {
         },
       ]}
     >
-      {TestimonialsHomeData.map((currentTestimonial) => {
+      {TestimonialsHomeData.map((currentTestimonial,index) => {
         return (
-          <div className={styles.Testimonial}>
+          <div className={styles.Testimonial} key={currentTestimonial.title+index}>
             <TestimonialCard review={currentTestimonial} />
           </div>
         );

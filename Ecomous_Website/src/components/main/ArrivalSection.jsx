@@ -14,7 +14,7 @@ import ProductDisplayCard from "../helpers/ProductDisplayCard";
 import img1 from "../../assets/images/black-1.jpg";
 import img2 from "../../assets/images/orange-1.jpg";
 import img3 from "../../assets/images/white-1.jpg";
-import { BestSellerProductData } from "../../data/constants";
+import { NewArrivalProductData } from "../../data/constants";
 
 let Product1 = {
   id: 1,
@@ -172,7 +172,7 @@ const ArrivalSection = () => {
         className={`grid grid-cols-${Columns} gap-[30px] my-[30px] min-1150:px-[30px]`}
       >
         {
-          BestSellerProductData.map((currentItem)=>{
+          NewArrivalProductData.map((currentItem)=>{
             return  <ProductDisplayCard product={currentItem} key={currentItem.id} />
           })
         }

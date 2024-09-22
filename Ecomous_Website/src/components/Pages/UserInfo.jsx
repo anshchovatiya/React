@@ -1,8 +1,11 @@
 import React from "react";
 import PageHeader from "../helpers/PageHeader";
 import { NavLink, Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const UserInfo = () => {
+  let accountInfo = useSelector((state) => state.account);
+
   return (
     <div className=" overflow-x-hidden">
       <PageHeader tittle="My Account" />
@@ -14,7 +17,6 @@ const UserInfo = () => {
             { name: "Address", path: "/account/address" },
             { name: "Account Details", path: "/account/details" },
             { name: "Wishlist", path: "/account/wishlist" },
-            { name: "Logout", path: "/login" },
           ].map((current) => {
             return (
               <NavLink
@@ -27,6 +29,15 @@ const UserInfo = () => {
               </NavLink>
             );
           })}
+
+          <NavLink
+            to={"/login"}
+            className={({ isActive }) => {
+              return isActive && "text-[crimson] bg-[#F0F0F0]";
+            }}
+          >
+            {accountInfo ? "Logout" : "Sign In"}
+          </NavLink>
         </div>
         <Outlet />
       </div>

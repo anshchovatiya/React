@@ -2,7 +2,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
-
 import HomePage from "./components/pages/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PageLayOut, HomeLayout } from "./components/layout/LayoutPaths";
@@ -24,6 +23,9 @@ import AccountAddress from "./components/helpers/AccountAddress";
 import AccountDetails from "./components/helpers/AccountDetails";
 import AccountWhishList from "./components/helpers/AccountWhishlist";
 import UserInfo from "./components/Pages/UserInfo";
+import { Provider } from 'react-redux'
+import { store } from "./store/main";
+import { Toaster } from "@/components/ui/toaster"
 
 let Layout = createBrowserRouter([
   {
@@ -126,7 +128,10 @@ let Layout = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={Layout} />
+      <Provider store={store}>
+        <RouterProvider router={Layout} />
+        <Toaster />
+      </Provider>
     </>
   );
 }

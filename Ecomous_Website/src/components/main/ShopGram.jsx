@@ -3,6 +3,7 @@ import { FaShippingFast } from "react-icons/fa";
 import { MdOutlinePayment } from "react-icons/md";
 import { GiReturnArrow } from "react-icons/gi";
 import { RiCustomerService2Fill } from "react-icons/ri";
+import { Fragment } from "react";
 
 const ShopGram = () => {
   return (
@@ -34,13 +35,15 @@ const ShopGram = () => {
             text: "Premium Support",
             description: "Outstanding premium support",
           },
-        ].map((currentItem) => {
+        ].map((currentItem,index) => {
           return (
+            <Fragment key={currentItem.text + index}>
             <ServicesBox
               icon={currentItem.icon}
               text={currentItem.text}
               description={currentItem.description}
             />
+            </Fragment>
           );
         })}
       </div>
