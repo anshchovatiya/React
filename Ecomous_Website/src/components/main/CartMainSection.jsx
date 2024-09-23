@@ -6,36 +6,13 @@ import SingleProduct from "../helpers/CartSingleProduct";
 import { BsFire } from "react-icons/bs";
 import img1 from "../../assets/images/white-2.jpg";
 import DeliveryProgressBar from "../helpers/DeliveryProgressBar";
+import { useSelector } from "react-redux";
 
-let PRODUCTS = [
-    {
-      image: img1,
-      product_name: "Oversized Printed T-shirt",
-      color: "White",
-      size: "M",
-      price: 18.0,
-      Quantity: 1,
-    },
-    {
-      image: img1,
-      product_name: "Oversized Printed T-shirt",
-      color: "White",
-      size: "M",
-      price: 18.0,
-      Quantity: 1,
-    },
-    {
-      image: img1,
-      product_name: "Oversized Printed T-shirt",
-      color: "White",
-      size: "M",
-      price: 18.0,
-      Quantity: 1,
-    },
-  ];
-  
 
 export default function CartMainSection() {
+
+  let cartItems = useSelector((state)=>state.cart);
+
   return (
     <div className=" max-w-[1500px] px-[18px] lg:px-12 m-auto pt-[35px] pb-[22px] md:pt-[68px] lg:pt-[80px] overflow-x-hidden">
       <div className=" lg:flex justify-between items-center">
@@ -58,7 +35,7 @@ export default function CartMainSection() {
               <p>Quality</p>
               <p>Total</p>
             </div>
-            {PRODUCTS.map((currentProduct) => {
+            {cartItems.map((currentProduct) => {
               return <SingleProduct product={currentProduct} />;
             })}
           </div>

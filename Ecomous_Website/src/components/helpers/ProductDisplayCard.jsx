@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./css/ProductDisplayCard.module.css";
 import { FiShoppingBag } from "react-icons/fi";
 import { FaRegHeart } from "react-icons/fa";
@@ -8,9 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToWishlist, removeFromWishlist } from "../../store/wishlist";
 import { useToast } from "../../hooks/use-toast";
 import { FaHeart } from "react-icons/fa";
+import { addToCart } from "../../store/cart";
 
 
-function compareListWithProduct(wishList,product){
+export function compareListWithProduct(wishList,product){
   let result = wishList.find((currentProduct)=>currentProduct.id === product.id)
   return (result ? true : false);
 }
@@ -49,6 +50,10 @@ const ProductDisplayCard = ({ product }) => {
     });
   }
 
+  function handleAddToCart(){
+    dispatch(addToCart(product));
+  }
+
   return (
     <div className="pb-2 group">
       <div
@@ -69,7 +74,7 @@ const ProductDisplayCard = ({ product }) => {
             />
             <div className="absolute bottom-[4.3%] left-0 w-full">
               <div className="group-hover:flex justify-center gap-2  text-sm   hidden ProductCardIcons px-4">
-                <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:p-4  hover:bg-black hover:text-white duration-300">
+                <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:p-4  hover:bg-black hover:text-white duration-300" onClick={handleAddToCart}>
                   <FiShoppingBag />
                 </div>
 

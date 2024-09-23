@@ -8,7 +8,6 @@ let listItems = localStorage.getItem("wishlist");
 if (listItems) {
     listItems = JSON.parse(listItems);
     initialState = listItems;
-    console.log(initialState);
 }
 
 

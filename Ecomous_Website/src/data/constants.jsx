@@ -65,18 +65,18 @@ export const BestSellerProductData = [
     tittle: "Ribbed Tank Top",
     price: "16.35",
     colorWithImage: [
-        {
-        color: "black",
+      {
+        color: "Black",
         link: "/images/product-image-10.jpg",
         altText: "Sleeveless Blouse in Orange",
       },
       {
-        color: "#AC987F",
+        color: "Tan",
         link: "/images/product-image-02.jpg",
         altText: "Ribbed Tank Top in Black",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-07.jpg",
         altText: "Ribbed Tank Top in White",
       },
@@ -94,17 +94,17 @@ export const BestSellerProductData = [
     price: "18.50",
     colorWithImage: [
       {
-        color: "#977945",
+        color: "SaddleBrown",
         link: "/images/product-image-05.jpg",
         altText: "Sleeveless Blouse in Orange",
       },
       {
-        color: "#d966d9",
+        color: "Violet",
         link: "/images/product-image-06.jpg",
         altText: "Sleeveless Blouse in Black",
       },
       {
-        color: "#caffd6",
+        color: "LightGreen",
         link: "/images/product-image-04.jpg",
         altText: "Sleeveless Blouse in White",
       },
@@ -122,7 +122,7 @@ export const BestSellerProductData = [
     price: "12.99",
     colorWithImage: [
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-13.jpg",
         altText: "V-Neck T-Shirt in Orange",
       },
@@ -139,17 +139,17 @@ export const BestSellerProductData = [
     price: "20.45",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-42.jpg",
         altText: "Printed Crop Top in White",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-14.jpg",
         altText: "Printed Crop Top in Orange",
       },
       {
-        color: "#d966d9",
+        color: "Violet",
         link: "/images/product-image-11.jpg",
         altText: "Printed Crop Top in Black",
       },
@@ -167,12 +167,12 @@ export const BestSellerProductData = [
     price: "22.99",
     colorWithImage: [
       {
-        color: "#977945",
+        color: "FireBrick",
         link: "/images/product-image-09.jpg",
         altText: "Striped Long Sleeve in Orange",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-03.jpg",
         altText: "Striped Long Sleeve in Black",
       },
@@ -190,32 +190,32 @@ export const BestSellerProductData = [
     price: "34.75",
     colorWithImage: [
       {
-        color: "#caffd6",
+        color: "PaleGreen",
         link: "/images/product-image-15.jpg",
         altText: "Oversized Hoodie in Orange",
       },
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-32.jpg",
         altText: "Oversized Hoodie in Black",
       },
       {
-        color: "#a8bcd4",
+        color: "PaleTurquoise",
         link: "/images/product-image-17.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#00008b",
+        color: "MediumBlue",
         link: "/images/product-image-18.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-19.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#d3d3d3",
+        color: "Gainsboro",
         link: "/images/product-image-20.jpg",
         altText: "Oversized Hoodie in White",
       },
@@ -232,27 +232,27 @@ export const BestSellerProductData = [
     price: "14.90",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-21.jpg",
         altText: "Basic Crewneck Tee in Orange",
       },
       {
-        color: "#00008b",
+        color: "SlateGray",
         link: "/images/product-image-22.jpg",
         altText: "Basic Crewneck Tee in Black",
       },
       {
-        color: "#c8ad7f",
+        color: "Wheat",
         link: "/images/product-image-24.jpg",
         altText: "Basic Crewneck Tee in White",
       },
       {
-        color: "#add8e6",
+        color: "LightSkyBlue",
         link: "/images/product-image-25.jpg",
         altText: "Basic Crewneck Tee in White",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-26.jpg",
         altText: "Basic Crewneck Tee in White",
       },
@@ -270,17 +270,17 @@ export const BestSellerProductData = [
     price: "29.80",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-28.jpg",
         altText: "Knitted Cardigan in Black",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-30.jpg",
         altText: "Knitted Cardigan in Orange",
       },
       {
-        color: "#a8bcd4",
+        color: "DodgerBlue",
         link: "/images/product-image-29.jpg",
         altText: "Knitted Cardigan in White",
       },
@@ -440,26 +440,27 @@ export const NewArrivalProductData = [
     price: "16.35",
     colorWithImage: [
       {
-        color: "#ffa500",
-        link: "./images/product-image-01.jpg",
-        altText: "Ribbed Tank Top in Orange",
+        color: "Black",
+        link: "/images/product-image-10.jpg",
+        altText: "Sleeveless Blouse in Orange",
       },
       {
-        color: "#000000",
+        color: "Tan",
         link: "/images/product-image-02.jpg",
         altText: "Ribbed Tank Top in Black",
       },
       {
-        color: "#ffffff",
-        link: "/images/product-image-03.jpg",
+        color: "White",
+        link: "/images/product-image-07.jpg",
         altText: "Ribbed Tank Top in White",
       },
     ],
     hoverImage: {
-      link: "/images/product-image-03.jpg",
+      link: "/images/product-image-02.jpg",
       altText: "Ribbed Tank Top",
     },
     sizes: ["S", "M", "L", "XL"],
+    wishlist: true,
   },
   {
     id: 2,
@@ -467,17 +468,17 @@ export const NewArrivalProductData = [
     price: "18.50",
     colorWithImage: [
       {
-        color: "#977945",
+        color: "SaddleBrown",
         link: "/images/product-image-05.jpg",
         altText: "Sleeveless Blouse in Orange",
       },
       {
-        color: "#d966d9",
+        color: "Violet",
         link: "/images/product-image-06.jpg",
         altText: "Sleeveless Blouse in Black",
       },
       {
-        color: "#caffd6",
+        color: "LightGreen",
         link: "/images/product-image-04.jpg",
         altText: "Sleeveless Blouse in White",
       },
@@ -487,6 +488,7 @@ export const NewArrivalProductData = [
       altText: "Sleeveless Blouse",
     },
     sizes: ["M", "L", "XL", "XXL"],
+    wishlist: true,
   },
   {
     id: 3,
@@ -494,7 +496,7 @@ export const NewArrivalProductData = [
     price: "12.99",
     colorWithImage: [
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-13.jpg",
         altText: "V-Neck T-Shirt in Orange",
       },
@@ -503,6 +505,7 @@ export const NewArrivalProductData = [
       link: "/images/product-image-12.jpg",
       altText: "V-Neck T-Shirt",
     },
+    wishlist: true,
   },
   {
     id: 4,
@@ -510,26 +513,27 @@ export const NewArrivalProductData = [
     price: "20.45",
     colorWithImage: [
       {
-        color: "#ffffff",
+        color: "Black",
+        link: "/images/product-image-42.jpg",
+        altText: "Printed Crop Top in White",
+      },
+      {
+        color: "White",
         link: "/images/product-image-14.jpg",
         altText: "Printed Crop Top in Orange",
       },
       {
-        color: "#d966d9",
+        color: "Violet",
         link: "/images/product-image-11.jpg",
         altText: "Printed Crop Top in Black",
       },
-      {
-        color: "#000000",
-        link: "/images/product-image-10.jpg",
-        altText: "Printed Crop Top in White",
-      },
     ],
     hoverImage: {
-      link: "/images/product-image-10.jpg",
+      link: "/images/product-image-43.jpg",
       altText: "Printed Crop Top",
     },
     sizes: ["S", "M", "L", "XL"],
+    wishlist: true,
   },
   {
     id: 5,
@@ -537,13 +541,13 @@ export const NewArrivalProductData = [
     price: "22.99",
     colorWithImage: [
       {
-        color: "#977945",
+        color: "FireBrick",
         link: "/images/product-image-09.jpg",
         altText: "Striped Long Sleeve in Orange",
       },
       {
-        color: "#ffffff",
-        link: "/images/product-image-07.jpg",
+        color: "White",
+        link: "/images/product-image-03.jpg",
         altText: "Striped Long Sleeve in Black",
       },
     ],
@@ -552,6 +556,7 @@ export const NewArrivalProductData = [
       altText: "Striped Long Sleeve",
     },
     sizes: ["M", "L", "XL"],
+    wishlist: true,
   },
   {
     id: 6,
@@ -559,32 +564,32 @@ export const NewArrivalProductData = [
     price: "34.75",
     colorWithImage: [
       {
-        color: "#caffd6",
+        color: "PaleGreen",
         link: "/images/product-image-15.jpg",
         altText: "Oversized Hoodie in Orange",
       },
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-32.jpg",
         altText: "Oversized Hoodie in Black",
       },
       {
-        color: "#a8bcd4",
+        color: "PaleTurquoise",
         link: "/images/product-image-17.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#00008b",
+        color: "MediumBlue",
         link: "/images/product-image-18.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-19.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#d3d3d3",
+        color: "Gainsboro",
         link: "/images/product-image-20.jpg",
         altText: "Oversized Hoodie in White",
       },
@@ -593,6 +598,7 @@ export const NewArrivalProductData = [
       link: "/images/product-image-16.jpg",
       altText: "Oversized Hoodie",
     },
+    wishlist: true,
   },
   {
     id: 7,
@@ -600,27 +606,27 @@ export const NewArrivalProductData = [
     price: "14.90",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-21.jpg",
         altText: "Basic Crewneck Tee in Orange",
       },
       {
-        color: "#00008b",
+        color: "SlateGray",
         link: "/images/product-image-22.jpg",
         altText: "Basic Crewneck Tee in Black",
       },
       {
-        color: "#c8ad7f",
+        color: "Wheat",
         link: "/images/product-image-24.jpg",
         altText: "Basic Crewneck Tee in White",
       },
       {
-        color: "#add8e6",
+        color: "LightSkyBlue",
         link: "/images/product-image-25.jpg",
         altText: "Basic Crewneck Tee in White",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-26.jpg",
         altText: "Basic Crewneck Tee in White",
       },
@@ -630,6 +636,7 @@ export const NewArrivalProductData = [
       altText: "Basic Crewneck Tee",
     },
     sizes: ["S", "M", "L"],
+    wishlist: true,
   },
   {
     id: 8,
@@ -637,17 +644,17 @@ export const NewArrivalProductData = [
     price: "29.80",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-28.jpg",
         altText: "Knitted Cardigan in Black",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-30.jpg",
         altText: "Knitted Cardigan in Orange",
       },
       {
-        color: "#a8bcd4",
+        color: "DodgerBlue",
         link: "/images/product-image-29.jpg",
         altText: "Knitted Cardigan in White",
       },
@@ -664,12 +671,12 @@ export const NewArrivalProductData = [
     price: "14.95",
     colorWithImage: [
       {
-        color: "#977945",
+        color: "DarkGoldenrod",
         link: "/images/product-image-33.jpg",
         altText: "Patterned Scarf in Brown",
       },
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-34.jpg",
         altText: "Patterned Scarf in Black",
       },
@@ -686,12 +693,12 @@ export const NewArrivalProductData = [
     price: "14.95",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-34.jpg",
         altText: "Turtleneck Sweater in Black",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-35.jpg",
         altText: "Turtleneck Sweater in White",
       },
@@ -708,17 +715,17 @@ export const NewArrivalProductData = [
     price: "14.95",
     colorWithImage: [
       {
-        color: "#cccccc",
+        color: "SlateGray",
         link: "/images/product-image-38.jpg",
         altText: "Turtleneck Sweater in Gray",
       },
       {
-        color: "#fcc6de",
+        color: "Violet",
         link: "/images/product-image-40.jpg",
         altText: "Turtleneck Sweater in Light Pink",
       },
       {
-        color: "#ffb6c1",
+        color: "Thistle",
         link: "/images/product-image-41.jpg",
         altText: "Turtleneck Sweater in Pink",
       },
@@ -735,7 +742,7 @@ export const NewArrivalProductData = [
     price: "14.95",
     colorWithImage: [
       {
-        color: "#111111",
+        color: "Black",
         link: "/images/product-image-42.jpg",
         altText: "Turtleneck Sweater in Black",
       },
@@ -756,26 +763,27 @@ export const ProductShowCaseSliderOne = [
     price: "16.35",
     colorWithImage: [
       {
-        color: "#ffa500",
-        link: "./images/product-image-01.jpg",
-        altText: "Ribbed Tank Top in Orange",
+        color: "Black",
+        link: "/images/product-image-10.jpg",
+        altText: "Sleeveless Blouse in Orange",
       },
       {
-        color: "#000000",
+        color: "Tan",
         link: "/images/product-image-02.jpg",
         altText: "Ribbed Tank Top in Black",
       },
       {
-        color: "#ffffff",
-        link: "/images/product-image-03.jpg",
+        color: "White",
+        link: "/images/product-image-07.jpg",
         altText: "Ribbed Tank Top in White",
       },
     ],
     hoverImage: {
-      link: "/images/product-image-03.jpg",
+      link: "/images/product-image-02.jpg",
       altText: "Ribbed Tank Top",
     },
     sizes: ["S", "M", "L", "XL"],
+    wishlist: true,
   },
   {
     id: 2,
@@ -783,17 +791,17 @@ export const ProductShowCaseSliderOne = [
     price: "18.50",
     colorWithImage: [
       {
-        color: "#977945",
+        color: "SaddleBrown",
         link: "/images/product-image-05.jpg",
         altText: "Sleeveless Blouse in Orange",
       },
       {
-        color: "#d966d9",
+        color: "Violet",
         link: "/images/product-image-06.jpg",
         altText: "Sleeveless Blouse in Black",
       },
       {
-        color: "#caffd6",
+        color: "LightGreen",
         link: "/images/product-image-04.jpg",
         altText: "Sleeveless Blouse in White",
       },
@@ -803,6 +811,7 @@ export const ProductShowCaseSliderOne = [
       altText: "Sleeveless Blouse",
     },
     sizes: ["M", "L", "XL", "XXL"],
+    wishlist: true,
   },
   {
     id: 3,
@@ -810,7 +819,7 @@ export const ProductShowCaseSliderOne = [
     price: "12.99",
     colorWithImage: [
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-13.jpg",
         altText: "V-Neck T-Shirt in Orange",
       },
@@ -819,6 +828,7 @@ export const ProductShowCaseSliderOne = [
       link: "/images/product-image-12.jpg",
       altText: "V-Neck T-Shirt",
     },
+    wishlist: true,
   },
   {
     id: 4,
@@ -826,26 +836,27 @@ export const ProductShowCaseSliderOne = [
     price: "20.45",
     colorWithImage: [
       {
-        color: "#ffffff",
+        color: "Black",
+        link: "/images/product-image-42.jpg",
+        altText: "Printed Crop Top in White",
+      },
+      {
+        color: "White",
         link: "/images/product-image-14.jpg",
         altText: "Printed Crop Top in Orange",
       },
       {
-        color: "#d966d9",
+        color: "Violet",
         link: "/images/product-image-11.jpg",
         altText: "Printed Crop Top in Black",
       },
-      {
-        color: "#000000",
-        link: "/images/product-image-10.jpg",
-        altText: "Printed Crop Top in White",
-      },
     ],
     hoverImage: {
-      link: "/images/product-image-10.jpg",
+      link: "/images/product-image-43.jpg",
       altText: "Printed Crop Top",
     },
     sizes: ["S", "M", "L", "XL"],
+    wishlist: true,
   },
   {
     id: 5,
@@ -853,13 +864,13 @@ export const ProductShowCaseSliderOne = [
     price: "22.99",
     colorWithImage: [
       {
-        color: "#977945",
+        color: "FireBrick",
         link: "/images/product-image-09.jpg",
         altText: "Striped Long Sleeve in Orange",
       },
       {
-        color: "#ffffff",
-        link: "/images/product-image-07.jpg",
+        color: "White",
+        link: "/images/product-image-03.jpg",
         altText: "Striped Long Sleeve in Black",
       },
     ],
@@ -868,6 +879,7 @@ export const ProductShowCaseSliderOne = [
       altText: "Striped Long Sleeve",
     },
     sizes: ["M", "L", "XL"],
+    wishlist: true,
   },
   {
     id: 6,
@@ -875,32 +887,32 @@ export const ProductShowCaseSliderOne = [
     price: "34.75",
     colorWithImage: [
       {
-        color: "#caffd6",
+        color: "PaleGreen",
         link: "/images/product-image-15.jpg",
         altText: "Oversized Hoodie in Orange",
       },
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-32.jpg",
         altText: "Oversized Hoodie in Black",
       },
       {
-        color: "#a8bcd4",
+        color: "PaleTurquoise",
         link: "/images/product-image-17.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#00008b",
+        color: "MediumBlue",
         link: "/images/product-image-18.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-19.jpg",
         altText: "Oversized Hoodie in White",
       },
       {
-        color: "#d3d3d3",
+        color: "Gainsboro",
         link: "/images/product-image-20.jpg",
         altText: "Oversized Hoodie in White",
       },
@@ -909,6 +921,7 @@ export const ProductShowCaseSliderOne = [
       link: "/images/product-image-16.jpg",
       altText: "Oversized Hoodie",
     },
+    wishlist: true,
   },
 ];
 // Product page showcase slider-2 data
@@ -919,27 +932,27 @@ export const ProductShowCaseSliderTwo = [
     price: "14.90",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-21.jpg",
         altText: "Basic Crewneck Tee in Orange",
       },
       {
-        color: "#00008b",
+        color: "SlateGray",
         link: "/images/product-image-22.jpg",
         altText: "Basic Crewneck Tee in Black",
       },
       {
-        color: "#c8ad7f",
+        color: "Wheat",
         link: "/images/product-image-24.jpg",
         altText: "Basic Crewneck Tee in White",
       },
       {
-        color: "#add8e6",
+        color: "LightSkyBlue",
         link: "/images/product-image-25.jpg",
         altText: "Basic Crewneck Tee in White",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-26.jpg",
         altText: "Basic Crewneck Tee in White",
       },
@@ -949,6 +962,7 @@ export const ProductShowCaseSliderTwo = [
       altText: "Basic Crewneck Tee",
     },
     sizes: ["S", "M", "L"],
+    wishlist: true,
   },
   {
     id: 8,
@@ -956,17 +970,17 @@ export const ProductShowCaseSliderTwo = [
     price: "29.80",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-28.jpg",
         altText: "Knitted Cardigan in Black",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-30.jpg",
         altText: "Knitted Cardigan in Orange",
       },
       {
-        color: "#a8bcd4",
+        color: "DodgerBlue",
         link: "/images/product-image-29.jpg",
         altText: "Knitted Cardigan in White",
       },
@@ -983,12 +997,12 @@ export const ProductShowCaseSliderTwo = [
     price: "14.95",
     colorWithImage: [
       {
-        color: "#977945",
+        color: "DarkGoldenrod",
         link: "/images/product-image-33.jpg",
         altText: "Patterned Scarf in Brown",
       },
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-34.jpg",
         altText: "Patterned Scarf in Black",
       },
@@ -1005,12 +1019,12 @@ export const ProductShowCaseSliderTwo = [
     price: "14.95",
     colorWithImage: [
       {
-        color: "#000000",
+        color: "Black",
         link: "/images/product-image-34.jpg",
         altText: "Turtleneck Sweater in Black",
       },
       {
-        color: "#ffffff",
+        color: "White",
         link: "/images/product-image-35.jpg",
         altText: "Turtleneck Sweater in White",
       },
@@ -1027,17 +1041,17 @@ export const ProductShowCaseSliderTwo = [
     price: "14.95",
     colorWithImage: [
       {
-        color: "#cccccc",
+        color: "SlateGray",
         link: "/images/product-image-38.jpg",
         altText: "Turtleneck Sweater in Gray",
       },
       {
-        color: "#fcc6de",
+        color: "Violet",
         link: "/images/product-image-40.jpg",
         altText: "Turtleneck Sweater in Light Pink",
       },
       {
-        color: "#ffb6c1",
+        color: "Thistle",
         link: "/images/product-image-41.jpg",
         altText: "Turtleneck Sweater in Pink",
       },
@@ -1054,7 +1068,7 @@ export const ProductShowCaseSliderTwo = [
     price: "14.95",
     colorWithImage: [
       {
-        color: "#111111",
+        color: "Black",
         link: "/images/product-image-42.jpg",
         altText: "Turtleneck Sweater in Black",
       },
