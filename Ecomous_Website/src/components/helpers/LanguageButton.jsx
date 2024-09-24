@@ -3,7 +3,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -11,7 +10,6 @@ import currncy1 from "../../assets/svg/currency1.svg";
 import currncy2 from "../../assets/svg/currency2.svg";
 import currncy3 from "../../assets/svg/currency3.svg";
 import currncy4 from "../../assets/svg/currency4.svg";
-import { FaAngleDown } from "react-icons/fa";
 import { useState } from "react";
 
 const CurrencySelector = () => {
