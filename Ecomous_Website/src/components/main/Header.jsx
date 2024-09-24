@@ -22,7 +22,6 @@ import {
 
 import productDemoImage1 from "../../assets/images/collection-17.jpg";
 import productDemoImage2 from "../../assets/images/collection-14.jpg";
-import ProductDisplayCard from "../helpers/ProductDisplayCard";
 import {
   Sheet,
   SheetContent,
@@ -36,17 +35,7 @@ import img3 from "../../assets/images/white-1.jpg";
 import { NavLink } from "react-router-dom";
 import { NavMainOptionsData } from "../../data/constants";
 
-let Product1 = {
-  id: 1,
-  tittle: "Ribbed Tank Top",
-  price: "16.35",
-  colorWithImage: [
-    { color: "#ffa500", image: img2 },
-    { color: "#000000", image: img1 },
-    { color: "#ffffff", image: img3 },
-  ],
-  sizes: ["S", "M", "L", "XL"],
-};
+
 
 const Header = () => {
 
@@ -464,7 +453,7 @@ function MenubarIcon() {
                           { name: "Home Setup Gear", link: "/home" },
                           { name: "Home Dog Accessories", link: "/home" },
                           { name: "Home Kitchen Wear", link: "/home" },
-                        ].map((current, index) => {
+                        ].map((current) => {
                           return (
                             <Fragment key={current.name}>
                               <NavLink

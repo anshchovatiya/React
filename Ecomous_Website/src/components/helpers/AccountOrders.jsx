@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 export default function AccountOrders() {
   return (
     <div className="border rounded h-fit grid divide-y  max-lg:mt-7">
@@ -33,33 +35,35 @@ export default function AccountOrders() {
           status: "on hold",
           total: "	$200.0 for 1 items",
         },
-      ].map((current) => {
+      ].map((current, index) => {
         return (
-          <div className="grid md:grid-cols-[15%_25%_15%_25%_20%] w-full px-4 py-4  md:px-4  md:py-[10px] md:text-center md:place-items-center max-md:pb-3 text-sm">
-            <p>
-              {" "}
-              <span className="md:hidden font-semibold">Order : </span>
-              {current.order}
-            </p>
-            <p>
-              {" "}
-              <span className="md:hidden font-semibold">Date : </span>
-              {current.date}
-            </p>
-            <p>
-              {" "}
-              <span className="md:hidden font-semibold">Status : </span>
-              {current.status}
-            </p>
-            <p>
-              {" "}
-              <span className="md:hidden font-semibold">Total : </span>
-              {current.total}
-            </p>
-            <button className="bg-black text-white w-fit m-auto h-6 rounded font-semibold flex justify-center items-center p-3.5 max-md:mt-2.5 max-md:w-1/2 text-sm">
-              View
-            </button>
-          </div>
+          <Fragment key={current.order+index}>
+            <div className="grid md:grid-cols-[15%_25%_15%_25%_20%] w-full px-4 py-4  md:px-4  md:py-[10px] md:text-center md:place-items-center max-md:pb-3 text-sm">
+              <p>
+                {" "}
+                <span className="md:hidden font-semibold">Order : </span>
+                {current.order}
+              </p>
+              <p>
+                {" "}
+                <span className="md:hidden font-semibold">Date : </span>
+                {current.date}
+              </p>
+              <p>
+                {" "}
+                <span className="md:hidden font-semibold">Status : </span>
+                {current.status}
+              </p>
+              <p>
+                {" "}
+                <span className="md:hidden font-semibold">Total : </span>
+                {current.total}
+              </p>
+              <button className="bg-black text-white w-fit m-auto h-6 rounded font-semibold flex justify-center items-center p-3.5 max-md:mt-2.5 max-md:w-1/2 text-sm">
+                View
+              </button>
+            </div>
+          </Fragment>
         );
       })}
     </div>

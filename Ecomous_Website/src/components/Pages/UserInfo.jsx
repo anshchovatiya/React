@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PageHeader from "../helpers/PageHeader";
 import { NavLink, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -19,21 +19,23 @@ const UserInfo = () => {
             { name: "Wishlist", path: "/account/wishlist" },
           ].map((current) => {
             return (
-              <NavLink
-                to={current.path}
-                className={({ isActive }) => {
-                  return isActive && "text-[crimson] bg-[#F0F0F0]";
-                }}
-              >
-                {current.name}
-              </NavLink>
+              <Fragment key={current.name}>
+                <NavLink
+                  to={current.path}
+                  className={({ isActive }) => {
+                    return isActive && "text-[crimson] bg-[#F0F0F0]";
+                  }}
+                >
+                  {current.name}
+                </NavLink>
+              </Fragment>
             );
           })}
 
           <NavLink
             to={"/login"}
             className={({ isActive }) => {
-              return isActive && "text-[crimson] bg-[#F0F0F0]";
+              return isActive ? "text-[crimson] bg-[#F0F0F0]" : "";
             }}
           >
             {accountInfo ? "Logout" : "Sign In"}

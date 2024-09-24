@@ -9,7 +9,6 @@ let listItems = localStorage.getItem("cartItems");
 if (listItems) {
     listItems = JSON.parse(listItems);
     initialState = listItems;
-    console.log(initialState);
 }
 
 

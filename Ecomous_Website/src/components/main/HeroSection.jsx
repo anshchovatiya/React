@@ -5,7 +5,7 @@ import { HeroSliderData } from "../../data/constants";
 
 export default function HeroSection() {
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative overflow-hidden">
       <div className="absolute top-0 z-[999]">
         <Header />
       </div>
