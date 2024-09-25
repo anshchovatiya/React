@@ -71,7 +71,7 @@ const MainTable = <TData, TValue>({
             </svg>
             Delete Selected
           </button>
-          <button className="flex gap-2 bg-green-500 rounded py-2 px-4">
+          <button className="flex gap-2 bg-green-700 rounded py-2 px-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
