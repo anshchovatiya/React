@@ -74,7 +74,7 @@ const Header = () => {
   return (
     <div className={`${styles.headerContainer} w-screen`} ref={Header}>
       <MenubarIcon />
-      <img src="/assets/svg/logo.svg" alt="Ecomous logo" className={styles.logo} />
+      <img src="/svg/logo.svg" alt="Ecomous logo" className={styles.logo} />
       <ul className={styles.navLinks}>
         {NavMainOptionsData.map((currentNavItem, index) => {
           return (<li key={currentNavItem + index}

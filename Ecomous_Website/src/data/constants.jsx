@@ -1195,7 +1195,7 @@ export const HeaderPagesDropDownData = [
     NavLink:"",
   },
   {
-    text : "My Accout",
+    text : "My Account",
     arrow : true,
     NavLink:"",
   },
