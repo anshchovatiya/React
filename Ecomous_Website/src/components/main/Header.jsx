@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "../../assets/images/logo.svg";
 import styles from "./css/Header.module.css";
+
 import { IoIosArrowDown } from "react-icons/io";
 import { FiUser } from "react-icons/fi";
 import { LuHeart } from "react-icons/lu";
 import { PiShoppingCartBold } from "react-icons/pi";
+import { HeaderNavImages, HeaderPagesDropDownData } from "../../data/constants";
 
-import { HeaderNavImages } from "../../data/images";
+
+
+
 import CatagoriesCard from "../helpers/CatagoriesCard";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
@@ -71,10 +74,9 @@ const Header = () => {
   return (
     <div className={`${styles.headerContainer} w-screen`} ref={Header}>
       <MenubarIcon />
-      <img src={logo} alt="Ecomous logo" className={styles.logo} />
+      <img src="/assets/svg/logo.svg" alt="Ecomous logo" className={styles.logo} />
       <ul className={styles.navLinks}>
-
-        {NavMainOptionsData.map((currentNavItem , index) => {
+        {NavMainOptionsData.map((currentNavItem, index) => {
           return (<li key={currentNavItem + index}
             className={styles.navOption}
             onMouseOver={() => handleNavMouseOver(currentNavItem.linkText)}
@@ -87,6 +89,7 @@ const Header = () => {
           </li>);
         })}
 
+
         <li
           className={`${styles.navOption} relative`}
           onMouseOver={() => handleNavMouseOver("pages")}
@@ -98,13 +101,29 @@ const Header = () => {
           </a>
           <NavBarDrawer isVisible={currentDropDown === "pages"}>
             <ul className={`*:text-nowrap`}>
-              <li className="ShopListItem" onClick={handleNavItemClick}>
-                <NavLink to={"/about"}>About us</NavLink>
-              </li>
-              <li className="flex items-center justify-between ShopListItem">
-                <p>Brands</p>
-                <IoIosArrowForward />
-              </li>
+              {
+                HeaderPagesDropDownData.map((current, index) => {
+                  if (current.arrow) {
+                    return (<li key={index + current.text} className="*:flex *:justify-between ShopListItem"
+                      onClick={handleNavItemClick}
+                    >
+                      <NavLink to={current.NavLink}>
+                        <p>{current.text}</p>
+                        <IoIosArrowForward />
+                      </NavLink>
+                    </li>)
+                  }
+                  else {
+                    return (<li key={current.text + index} className="ShopListItem" onClick={handleNavItemClick}>
+                      <NavLink to={current.NavLink}>{current.text}</NavLink>
+                    </li>);
+                  }
+                })
+              }
+
+
+
+
               <li
                 className="*:flex *:justify-between ShopListItem"
                 onClick={handleNavItemClick}

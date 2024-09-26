@@ -1080,3 +1080,128 @@ export const ProductShowCaseSliderTwo = [
     sizes: ["S", "M", "L", "XL"],
   },
 ];
+
+// Header images data on main Header
+export const HeaderNavImages = [
+  {
+    image: "/images/home-dropdown-image-01.jpg",
+    name: "Home Fashion 01",
+    altText: "hero section layout 01"
+  },
+  {
+    image: "/images/home-dropdown-image-02.jpg",
+    name: "Home Fashion 02",
+    altText: "hero section layout 02"
+  },
+  {
+    image: "/images/home-dropdown-image-03.jpg",
+    name: "Home Fashion 03",
+    altText: "hero section layout 03"
+  },
+  {
+    image: "/images/home-dropdown-image-04.jpg",
+    name: "Home Fashion 04",
+    altText: "hero section layout 04"
+  },
+  {
+    image: "/images/home-dropdown-image-05.jpg",
+    name: "Home Fashion 05",
+    altText: "hero section layout 05"
+  },
+  {
+    image: "/images/home-dropdown-image-06.jpg",
+    name: "Home Fashion 06",
+    altText: "hero section layout 06"
+  },
+  {
+    image: "/images/home-dropdown-image-07.jpg",
+    name: "Home Fashion 07",
+    altText: "hero section layout 07"
+  },
+  {
+    image: "/images/home-dropdown-image-08.jpg",
+    name: "Home Fashion 08",
+    altText: "hero section layout 08"
+  },
+  {
+    image: "/images/home-dropdown-image-08.jpg",
+    name: "Home Fashion 09",
+    altText: "hero section layout 09"
+  },
+  {
+    image: "/images/home-dropdown-image-10.jpg",
+    name: "Home Fashion 10",
+    altText: "hero section layout 10"
+  },
+  {
+    image: "/images/home-dropdown-image-11.jpg",
+    name: "Home Fashion 11",
+    altText: "hero section layout 11"
+  },
+  {
+    image: "/images/home-dropdown-image-12.jpg",
+    name: "Home Fashion 12",
+    altText: "hero section layout12"
+  },
+
+]
+
+
+// Header pages dropdown data in main Header
+export const HeaderPagesDropDownData = [
+  {
+    text : "About us",
+    arrow : false,
+    NavLink:"/about",
+  },
+  {
+    text : "Brands",
+    arrow : true,
+    NavLink:"",
+  },
+  {
+    text : "Contact",
+    arrow : true,
+    NavLink:"",
+  },
+  {
+    text : "FAQ",
+    arrow : true,
+    NavLink:"",
+  },
+  {
+    text : "Store",
+    arrow : true,
+    NavLink:"",
+  },
+  {
+    text : "Timeline",
+    arrow : false,
+    NavLink:"",
+  },
+  {
+    text : "View Cart",
+    arrow : false,
+    NavLink:"",
+  },
+  {
+    text : "Check Out",
+    arrow : false,
+    NavLink:"",
+  },
+  {
+    text : "Payment",
+    arrow : true,
+    NavLink:"",
+  },
+  {
+    text : "My Accout",
+    arrow : true,
+    NavLink:"",
+  },
+  {
+    text : "Invoice",
+    arrow : false,
+    NavLink:"",
+  },
+]

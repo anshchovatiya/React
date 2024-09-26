@@ -1,6 +1,3 @@
-import React from "react";
-import logo from "../../assets/images/logo.svg";
-
 import { NavLink } from "react-router-dom";
 
 export default function ErrorPage() {
@@ -17,7 +14,7 @@ export default function ErrorPage() {
           <div className="w-full md:w-1/2">
             <div className="mb-10 lg:mb-20">
               <img
-                src={logo}
+                src="/assets/svg/logo.svg"
                 alt="Ecomous logo"
                 className="h-8 md:h-10 max-md:m-auto lg:h-12"
               />

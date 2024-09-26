@@ -3,9 +3,6 @@ import PageHeader from "../helpers/PageHeader";
 import TestimonialSlider from "../helpers/TestimonialSlider";
 import SectionHead from "../helpers/SectionHead";
 import CardShowCaseSlider from "../helpers/CardShowCaseSlider";
-import slideImage1 from "../../assets/images/black-1.jpg";
-import slideImage2 from "../../assets/images/orange-1.jpg";
-import slideImage3 from "../../assets/images/white-1.jpg";
 
 import CartMainSection from "../main/CartMainSection";
 import { ProductShowCaseSliderOne } from "../../data/constants";

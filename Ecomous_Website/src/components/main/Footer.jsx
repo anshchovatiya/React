@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../assets/images/logo.svg";
 import { FiArrowUpRight } from "react-icons/fi";
 import {
   FaFacebookF,
@@ -17,7 +16,7 @@ const Footer = () => {
     <div className=" max-w-[1500px] m-auto lg:px-12 px-[18px] overflow-x-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  py-[40px] border border-l-0 border-r-0 mt-7 *:text-[14px]">
         <div className="*:leading-[30px]">
-          <img src={logo} alt="logo" className="mb-4" />
+          <img src="/assets/svg/logo.svg" alt="logo" className="mb-4" />
           <p>
             Address : 1234 Fashion Street, Suite 567,
             <br /> New York, NY 10001.
