@@ -74,13 +74,13 @@ const ProductDisplayCard = ({ product }) => {
             />
             <div className="absolute bottom-[4.3%] left-0 w-full">
               <div className="group-hover:flex justify-center gap-2  text-sm   hidden ProductCardIcons px-4">
-                <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:p-4  hover:bg-black hover:text-white duration-300" onClick={handleAddToCart}>
+                <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:px-3.5  hover:bg-black hover:text-white duration-300" onClick={handleAddToCart}>
                   <FiShoppingBag />
                 </div>
 
                 <div className=" ">
                   {!wishListIncludes && (
-                    <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:p-4 hover:bg-black hover:text-white duration-300"
+                    <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:px-3.5 hover:bg-black hover:text-white duration-300"
                       onClick={handleAddToWishlist}
                     >
                       <FaRegHeart />
@@ -88,7 +88,7 @@ const ProductDisplayCard = ({ product }) => {
                   )}
                   {wishListIncludes && (
                     <div
-                      className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:p-4 hover:bg-black hover:text-white duration-300"
+                      className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:px-3.5 hover:bg-black hover:text-white duration-300"
                       onClick={handleRemoveFromWishlist}
                     >
                       <FaHeart className="text-red-600" />
@@ -96,10 +96,10 @@ const ProductDisplayCard = ({ product }) => {
                   )}
                 </div>
 
-                <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:p-4 hover:bg-black hover:text-white duration-300">
+                <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:px-3.5 hover:bg-black hover:text-white duration-300">
                   <TbArrowsCross />
                 </div>
-                <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:p-4 hover:bg-black hover:text-white duration-300">
+                <div className="rounded bg-white font-bold mb-3 p-2 md:p-3 lg:px-3.5 hover:bg-black hover:text-white duration-300">
                   <LuEye />
                 </div>
               </div>

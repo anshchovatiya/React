@@ -1157,47 +1157,47 @@ export const HeaderPagesDropDownData = [
   {
     text : "Brands",
     arrow : true,
-    NavLink:"",
+    NavLink:"/",
   },
   {
     text : "Contact",
     arrow : true,
-    NavLink:"",
+    NavLink:"/contact",
   },
   {
     text : "FAQ",
     arrow : true,
-    NavLink:"",
+    NavLink:"/faq",
   },
   {
     text : "Store",
     arrow : true,
-    NavLink:"",
+    NavLink:"/shop",
   },
   {
     text : "Timeline",
     arrow : false,
-    NavLink:"",
+    NavLink:"/about",
   },
   {
     text : "View Cart",
     arrow : false,
-    NavLink:"",
+    NavLink:"/cart",
   },
   {
     text : "Check Out",
     arrow : false,
-    NavLink:"",
+    NavLink:"/checkout",
   },
   {
     text : "Payment",
     arrow : true,
-    NavLink:"",
+    NavLink:"/home",
   },
   {
     text : "My Account",
     arrow : true,
-    NavLink:"",
+    NavLink:"/account",
   },
   {
     text : "Invoice",
@@ -1238,7 +1238,7 @@ export const HeaderShopDropDownData = [
     ]
   },
   {
-    tittle : "PRODUCT STYLES",
+    tittle : "Features",
     linkData : [
       {
           linkText : "Default",
@@ -1310,8 +1310,7 @@ export const HeaderShopDropDownData = [
 ];
 
 
-
-// Header shop Categories Card data in main header
+// Header Shop Categories Card data in main header
 export const HeaderCategoriesData = [
   {
     image : "/images/home-categories-04.jpg",
@@ -1324,3 +1323,167 @@ export const HeaderCategoriesData = [
     category : "Women"
   }
 ]
+
+// Header Product dropdown data in main Header
+export const HeaderProductDropDownData = [
+    {
+      tittle : "PRODUCT LAYOUT",
+      linkData : [
+        {
+            linkText : "Product Default",
+            link : "/product"
+        },
+        {
+            linkText : "Product grid 1",
+            link : "/product"
+        },
+        {
+            linkText : "Product grid 2",
+            link : "/product"
+        },
+        {
+            linkText : "Product stacked",
+            link : "/product"
+        },
+        {
+            linkText : "Product right thumbnails",
+            link : "/product"
+        },
+        {
+            linkText : "Product bottom thumbnails",
+            link : "/product"
+        },
+        {
+            linkText : "Product drawer sidebar",
+            link : "/product"
+        },
+        {
+            linkText : "Product description accordion",
+            link : "/product"
+        },
+        {
+            linkText : "Product description list",
+            link : "/product"
+        },
+        {
+            linkText : "Product description vertical",
+            link : "/product"
+        },
+      ]
+    },
+    {
+      tittle : "PRODUCT DETAILS",
+      linkData : [
+        {
+            linkText : "Product inner zoom",
+            link : "/product"
+        },
+        {
+            linkText : "Pagination zoom magnifier",
+            link : "/product"
+        },
+        {
+            linkText : "Pagination no zoom",
+            link : "/product"
+        },
+        {
+            linkText : "Product photo-swipe popup",
+            link : "/product"
+        },
+        {
+            linkText : "Product external zoom and photo-swipe popup",
+            link : "/product"
+        },
+        {
+            linkText : "Product video",
+            link : "/product"
+        },
+        {
+            linkText : "Product 3D, AR models",
+            link : "/product"
+        },
+        {
+            linkText : "Product option & customize",
+            link : "/product"
+        },
+        {
+            linkText : "Advanced product types",
+            link : "/product"
+        },
+        {
+            linkText : " Recipient information form for gift card products",
+            link : "/product"
+        },
+      ]
+    },
+    {
+      tittle : "PRODUCT SWATCHES",
+      linkData : [
+        {
+            linkText : "Product color swatch",
+            link : "/product"
+        },
+        {
+            linkText : "Product rectangle",
+            link : "/product"
+        },
+        {
+            linkText : "Product rectangle color",
+            link : "/product"
+        },
+        {
+            linkText : "Product swatch image",
+            link : "/product"
+        },
+        {
+            linkText : "Product swatch dropdown",
+            link : "/product"
+        },
+        {
+            linkText : "Product swatch dropdown color",
+            link : "/product"
+        },
+      ]
+    },
+    {
+      tittle : "PRODUCT FEATURES",
+      linkData : [
+        {
+            linkText : "Frequently bought together",
+            link : "/product"
+        },
+        {
+            linkText : "Product pre-orders",
+            link : "/product"
+        },
+        {
+            linkText : "Product upsell features",
+            link : "/product"
+        },
+        {
+            linkText : "Back in stock notification",
+            link : "/product"
+        },
+        {
+            linkText : "Product pickup",
+            link : "/product"
+        },
+        {
+            linkText : "Variant images grouped",
+            link : "/product"
+        },
+        {
+            linkText : "Complimentary products",
+            link : "/product"
+        },
+        {
+            linkText : "Quick order list",
+            link : "/product"
+        },
+      ]
+    },
+    
+]
+
+// // Header Product card slider data
+// export const HeaderProductDropDownData

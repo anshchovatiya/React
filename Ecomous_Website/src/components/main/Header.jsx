@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import styles from "./css/Header.module.css";
 
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowDown } from "react-icons/io";
 import { FiUser } from "react-icons/fi";
 import { LuHeart } from "react-icons/lu";
 import { PiShoppingCartBold } from "react-icons/pi";
-import { HeaderCategoriesData, HeaderNavImages, HeaderPagesDropDownData, HeaderShopDropDownData } from "../../data/constants";
+import { HeaderCategoriesData, HeaderNavImages, HeaderPagesDropDownData, HeaderProductDropDownData, HeaderShopDropDownData, ProductShowCaseSliderOne } from "../../data/constants";
 
 
 
@@ -17,6 +17,8 @@ import { IoSearch } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { NavMainOptionsData } from "../../data/constants";
 import MenubarIcon from "../helpers/MenubarIcon";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import ProductDisplayCard from "../helpers/ProductDisplayCard";
 
 
 
@@ -114,56 +116,6 @@ const Header = () => {
                   }
                 })
               }
-
-
-
-
-              <li
-                className="*:flex *:justify-between ShopListItem"
-                onClick={handleNavItemClick}
-              >
-                <NavLink to={"/contact"}>
-                  <p>Contact</p>
-                  <IoIosArrowForward />
-                </NavLink>
-              </li>
-              <li
-                className="*:flex *:justify-between ShopListItem"
-                onClick={handleNavItemClick}
-              >
-                <NavLink to={"/faq"}>
-                  <p>FAQ</p>
-                  <IoIosArrowForward />
-                </NavLink>
-              </li>
-
-              <li className="flex items-center justify-between ShopListItem">
-                <p>Store</p>
-                <IoIosArrowForward />
-              </li>
-              <li className="ShopListItem">Timeline</li>
-              <li className="ShopListItem" onClick={handleNavItemClick}>
-                <NavLink to={"/cart"}>View Cart</NavLink>
-              </li>
-              <li className="ShopListItem">
-                <NavLink to={"/checkout"} onClick={handleNavItemClick}>
-                  Check Out
-                </NavLink>
-              </li>
-              <li className="flex items-center justify-between ShopListItem">
-                <p>Payment</p>
-                <IoIosArrowForward />
-              </li>
-              <li
-                className="*:flex *:justify-between ShopListItem"
-                onClick={handleNavItemClick}
-              >
-                <NavLink to={"/account"}>
-                  <p>My Account</p>
-                  <IoIosArrowForward />
-                </NavLink>
-              </li>
-              <li className="ShopListItem">invoice</li>
             </ul>
           </NavBarDrawer>
         </li>
@@ -215,6 +167,8 @@ const Header = () => {
         </span>
       </div>
 
+
+      {/* Home Button Drop Down */}
       <DropDown
         isVisible={currentDropDown === "home"}
         handleNavMouseOver={() => handleNavMouseOver("home")}
@@ -251,9 +205,6 @@ const Header = () => {
       >
         <div className="grid grid-cols-2 py-[15px] px-[16px] max-w-[1500px] m-auto">
           <div className="grid grid-cols-3">
-          
-
-
               {
                 HeaderShopDropDownData.map((currentSection) => {
                   return (
@@ -276,7 +227,7 @@ const Header = () => {
           <div className="grid grid-cols-2 gap-8">
             {
               HeaderCategoriesData.map((currentCategories) => {
-                return <CatagoriesCard key={currentCategories.category} image={currentCategories.image} Text={currentCategories.category} altText={currentCategories.altText} />
+                return <CatagoriesCard key={currentCategories.category} image={currentCategories.image} Text={currentCategories.category} altText={currentCategories.alText} />
               })
             }
           </div>
@@ -289,76 +240,68 @@ const Header = () => {
       >
         <div className="grid grid-cols-[66%_34%] py-[15px] px-[16px] gap-5 max-w-[1500px] m-auto">
           <div className="grid grid-cols-4 gap-3">
-            <div>
-              <h3 className="ShopListTittle">PRODUCT LAYOUT</h3>
-              <ul>
-                <li
-                  className="ShopListItem"
-                  onClick={() => setCurrentDropDown(null)}
-                >
-                  <NavLink to={"/product"}>Product Default</NavLink>
-                </li>
-                <li className="ShopListItem">Product grid 1</li>
-                <li className="ShopListItem">Product grid 2</li>
-                <li className="ShopListItem">Product stacked</li>
-                <li className="ShopListItem">Product right thumbnails</li>
-                <li className="ShopListItem">Product bottom thumbnails</li>
-                <li className="ShopListItem">Product drawer sidebar</li>
-                <li className="ShopListItem">Product description accordion</li>
-                <li className="ShopListItem">Product description list</li>
-                <li className="ShopListItem">Product description vertical</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="ShopListTittle">PRODUCT DETAILS</h3>
-              <ul>
-                <li className="ShopListItem">Product inner zoom</li>
-                <li className="ShopListItem">Pagination zoom magnifier</li>
-                <li className="ShopListItem">Pagination no zoom</li>
-                <li className="ShopListItem">Product photoswipe popup</li>
-                <li className="ShopListItem">
-                  Product external zoom and photoswipe popup
-                </li>
-                <li className="ShopListItem">Product video</li>
-                <li className="ShopListItem">Product 3D, AR models</li>
-                <li className="ShopListItem">Product option & customizer</li>
-                <li className="ShopListItem">Advanced product types</li>
-                <li className="ShopListItem">
-                  Recipient information form for gift card products
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="ShopListTittle">PRODUCT SWATCHES</h3>
-              <ul>
-                <li className="ShopListItem">Product color swatch</li>
-                <li className="ShopListItem">Product rectangle</li>
-                <li className="ShopListItem">Product rectangle color</li>
-                <li className="ShopListItem">Product swatch image</li>
-                <li className="ShopListItem">Product swatch dropdown</li>
-                <li className="ShopListItem">Product swatch dropdown color</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="ShopListTittle">PRODUCT FEATURES</h3>
-              <ul>
-                <li className="ShopListItem">Frequently bought together</li>
-                <li className="ShopListItem">Frequently bought together 2</li>
-                <li className="ShopListItem">Product upsell features</li>
-                <li className="ShopListItem">Product pre-orders</li>
-                <li className="ShopListItem">Back in stock notification</li>
-                <li className="ShopListItem">Product pickup</li>
-                <li className="ShopListItem">Variant images grouped</li>
-                <li className="ShopListItem">Complimentary products</li>
-                <li className="ShopListItem">Quick order list</li>
-              </ul>
-            </div>
+          {
+                HeaderProductDropDownData.map((currentSection) => {
+                  return (
+                    <div key={currentSection.tittle}>
+                      <h3 className="ShopListTittle">{currentSection.tittle}</h3>
+                      <ul>
+                        {currentSection.linkData.map((currentLink) => {
+                          return (<li key={currentLink.linkText}
+                            className="ShopListItem"
+                            onClick={() => setCurrentDropDown(null)}
+                          >
+                            <NavLink to={currentLink.link}>{currentLink.linkText}</NavLink>
+                          </li>);
+                        })}
+                      </ul>
+                    </div>);
+                })
+              }    
+        
+  
           </div>
           <div>
             <h3 className="ShopListTittle">BEST SELLER</h3>
-            <div className="flex gap-6">
-              {/* <ProductDisplayCard product={Product1} />
-              <ProductDisplayCard product={Product1} /> */}
+            <div className="grid grid-cols-1 gap-6">
+            <Splide
+                hasTrack={false}
+                aria-label="..."
+                options={{
+                  perPage: 2,
+                  perMove: 1,
+                  gap: "20px",
+                  dots: false,
+                  pagination: false,
+                  easing: "ease-in-out",
+                  duration: "3s",
+                }}
+                className="group cursor-pointer"
+              >
+                <div className="custom-wrapper">
+                  <div className="splide__arrows">
+                    <button className="splide__arrow splide__arrow--next hover:bg-white !top-[calc(50%-50px)] !h-[50px] !w-[50px] !hidden group-hover:!flex">
+                      <IoIosArrowForward />
+                    </button>
+
+                    <button className="splide__arrow splide__arrow--prev hover:bg-white !top-[calc(50%-50px)] !h-[50px] !w-[50px] !hidden !group-hover:block group-hover:!flex">
+                      <IoIosArrowBack className="!rotate-[-deg] text-[16px]" />
+                    </button>
+                  </div>
+
+                  <SplideTrack>
+                    {ProductShowCaseSliderOne.map((currentProduct, index) => {
+                      return (
+                        <Fragment key={index}>
+                          <SplideSlide>
+                            <ProductDisplayCard product={currentProduct} />
+                          </SplideSlide>
+                        </Fragment>
+                      );
+                    })}
+                  </SplideTrack>
+                </div>
+              </Splide>
             </div>
           </div>
         </div>
