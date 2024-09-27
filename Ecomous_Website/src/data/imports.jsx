@@ -25,7 +25,7 @@ import Header from "../components/main/Header";
 
 // helpers Component import
 import HeroSlide from "../components/helpers/HeroSlide";
-import CatagoriesCard from "../components/helpers/CatagoriesCard";
+import CatagoriesCard from "../components/helpers/CategoriesCard";
 import ProductDisplayCard from "../components/helpers/ProductDisplayCard";
 import SectionHead from "../components/helpers/SectionHead";
 import LookImageSection from "../components/helpers/LookImageSection";

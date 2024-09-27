@@ -1,7 +1,7 @@
 import styles from "./css/CatagoriesCard.module.css";
 import { FiArrowUpRight } from "react-icons/fi";
 
-const CatagoriesCard = ({ image, altText, Text }) => {
+const CategoriesCard = ({ image, altText, Text }) => {
   return (
     <div className={styles.CatagoriesCard}>
       <div className="overflow-hidden">
@@ -16,4 +16,4 @@ const CatagoriesCard = ({ image, altText, Text }) => {
   )
 }
 
-export default CatagoriesCard;
+export default CategoriesCard;

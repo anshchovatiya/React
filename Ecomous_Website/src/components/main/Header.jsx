@@ -5,20 +5,14 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FiUser } from "react-icons/fi";
 import { LuHeart } from "react-icons/lu";
 import { PiShoppingCartBold } from "react-icons/pi";
-import { HeaderNavImages, HeaderPagesDropDownData } from "../../data/constants";
+import { HeaderCategoriesData, HeaderNavImages, HeaderPagesDropDownData, HeaderShopDropDownData } from "../../data/constants";
 
 
 
-
-import CatagoriesCard from "../helpers/CatagoriesCard";
+import CatagoriesCard from "../helpers/CategoriesCard";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 
-
-
-
-import productDemoImage1 from "../../assets/images/collection-17.jpg";
-import productDemoImage2 from "../../assets/images/collection-14.jpg";
 
 import { NavLink } from "react-router-dom";
 import { NavMainOptionsData } from "../../data/constants";
@@ -243,7 +237,7 @@ const Header = () => {
             );
           })}
         </div>
-        <button className="flex items-center px-[30px] leading-[50px] bg-black text-white gap-2 rounded-[4px] m-auto mt-[40px]">
+        <button className="flex items-center px-[30px] leading-[50px] bg-black text-white gap-2 rounded-[4px] m-auto mt-[1.5vw]">
           <span>Shop collection</span>
           <span className="text-[18px]">
             <IoIosArrowForward />
@@ -257,49 +251,34 @@ const Header = () => {
       >
         <div className="grid grid-cols-2 py-[15px] px-[16px] max-w-[1500px] m-auto">
           <div className="grid grid-cols-3">
-            <div>
-              <h3 className="ShopListTittle">SHOP LAYOUT</h3>
-              <ul>
-                <li
-                  className="ShopListItem"
-                  onClick={() => setCurrentDropDown(null)}
-                >
-                  <NavLink to={"/shop"}>Default</NavLink>
-                </li>
-                <li className="ShopListItem">Left sidebar</li>
-                <li className="ShopListItem">Right sidebar</li>
-                <li className="ShopListItem">Full width</li>
-                <li className="ShopListItem">Sub collection</li>
-                <li className="ShopListItem">Collection list</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="ShopListTittle">DEFAULT</h3>
-              <ul>
-                <li className="ShopListItem">Pagination links</li>
-                <li className="ShopListItem">Pagination load more</li>
-                <li className="ShopListItem">Pagination infinite scrolling</li>
-                <li className="ShopListItem">Filter Sidebar</li>
-                <li className="ShopListItem">Filter hidden</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="ShopListTittle">PRODUCT STYLES</h3>
-              <ul>
-                <li className="ShopListItem">Product style list</li>
-                <li className="ShopListItem">Product style 01</li>
-                <li className="ShopListItem">Product style 02</li>
-                <li className="ShopListItem">Product style 03</li>
-                <li className="ShopListItem">Product style 04</li>
-                <li className="ShopListItem">Product style 05</li>
-                <li className="ShopListItem">Product style 06</li>
-                <li className="ShopListItem">Product style 07</li>
-              </ul>
-            </div>
+          
+
+
+              {
+                HeaderShopDropDownData.map((currentSection) => {
+                  return (
+                    <div key={currentSection.tittle}>
+                      <h3 className="ShopListTittle">{currentSection.tittle}</h3>
+                      <ul>
+                        {currentSection.linkData.map((currentLink) => {
+                          return (<li key={currentLink.linkText}
+                            className="ShopListItem"
+                            onClick={() => setCurrentDropDown(null)}
+                          >
+                            <NavLink to={currentLink.link}>{currentLink.linkText}</NavLink>
+                          </li>);
+                        })}
+                      </ul>
+                    </div>);
+                })
+              }     
           </div>
           <div className="grid grid-cols-2 gap-8">
-            <CatagoriesCard image={productDemoImage1} Text="Sunglasses" />
-            <CatagoriesCard image={productDemoImage2} Text="Sunglasses" />
+            {
+              HeaderCategoriesData.map((currentCategories) => {
+                return <CatagoriesCard key={currentCategories.category} image={currentCategories.image} Text={currentCategories.category} altText={currentCategories.altText} />
+              })
+            }
           </div>
         </div>
       </DropDown>

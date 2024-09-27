@@ -1205,3 +1205,122 @@ export const HeaderPagesDropDownData = [
     NavLink:"",
   },
 ]
+
+// Header Shop dropdown data in main Header
+export const HeaderShopDropDownData = [
+  {
+    tittle : "Shop layouts",
+    linkData : [
+      {
+          linkText : "Default",
+          link : "/shop"
+      },
+      {
+          linkText : "Left sidebar",
+          link : "/shop"
+      },
+      {
+          linkText : "Right sidebar",
+          link : "/shop"
+      },
+      {
+          linkText : "Full width",
+          link : "/shop"
+      },
+      {
+          linkText : "Sub collection",
+          link : "/shop"
+      },
+      {
+          linkText : "Collection list",
+          link : "/shop"
+      },
+    ]
+  },
+  {
+    tittle : "PRODUCT STYLES",
+    linkData : [
+      {
+          linkText : "Default",
+          link : "/shop"
+      },
+      {
+          linkText : "Pagination links",
+          link : "/shop"
+      },
+      {
+          linkText : "Pagination load more",
+          link : "/shop"
+      },
+      {
+          linkText : "Pagination infinite scrolling",
+          link : "/shop"
+      },
+      {
+          linkText : "Filter Sidebar",
+          link : "/shop"
+      },
+      {
+          linkText : "Filter hidden",
+          link : "/shop"
+      },
+    ]
+  },
+  {
+    tittle : "PRODUCT STYLES",
+    linkData : [
+      {
+          linkText : "Default",
+          link : "/shop"
+      },
+      {
+          linkText : "Product style list",
+          link : "/shop"
+      },
+      {
+          linkText : "Product style 01",
+          link : "/shop"
+      },
+      {
+          linkText : "Product style 02",
+          link : "/shop"
+      },
+      {
+          linkText : "Product style 03",
+          link : "/shop"
+      },
+      {
+          linkText : "Product style 04",
+          link : "/shop"
+      },
+      {
+          linkText : "Product style 05",
+          link : "/shop"
+      },
+      {
+          linkText : "Product style 06",
+          link : "/shop"
+      },
+      {
+          linkText : "Product style 07",
+          link : "/shop"
+      },
+    ]
+  },
+];
+
+
+
+// Header shop Categories Card data in main header
+export const HeaderCategoriesData = [
+  {
+    image : "/images/home-categories-04.jpg",
+    alText: "Mens Wears Gray T-shirt",
+    category : "Men"
+  },
+  {
+    image : "/images/home-categories-07.jpg",
+    alText: "Woman Wears Pink Dress",
+    category : "Women"
+  }
+]

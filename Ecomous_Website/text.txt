@@ -1,20 +1,3 @@
-1.Home --> completed
-2.Shop Default --> completed
-3.Product Default --> completed
-4.AboutUs --> completed
-5.ContactUs --> completed
-6.Faq --> completed
-7.View Cart --> completed
-8.Checkout --> completed
-9.Blog Grid Layout --> completed
-10.Login Page -> completed
-11.Register Page -> completed
-12.Wishlist Page --> completed
-13.404Error Page --> completed
-14.account page --> completed
-
-
-
 Redux store 
 
 LanguageSlice --> It will store entire store language state and it's reducers
