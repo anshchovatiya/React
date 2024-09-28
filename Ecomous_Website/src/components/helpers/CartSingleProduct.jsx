@@ -7,7 +7,7 @@ import { removeFromCart } from "../../store/cart";
 
 
 export default function SingleProduct({ product }) {
-    let [qty, setQty] = useState(product.Quantity);
+    let [qty, setQty] = useState(product.Qty);
     const dispatch = useDispatch();
   
     function handlePlusQty() {
@@ -48,7 +48,7 @@ export default function SingleProduct({ product }) {
               {product.product_name}
             </p>
             <p className="mt-1">
-              {product.color} / {product.size}
+              {product.colorWithImage[0].color} / {product.sizes[product.sizes.length-1]}
             </p>
             <button className="border-b border-black font-medium leading-3 hover:text-[crimson] hover:border-[crimson] mt-1">
               Remove

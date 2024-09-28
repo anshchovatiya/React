@@ -64,6 +64,7 @@ export const BestSellerProductData = [
     id: 1,
     tittle: "Ribbed Tank Top",
     price: "16.35",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -92,6 +93,7 @@ export const BestSellerProductData = [
     id: 2,
     tittle: "Sleeveless Blouse",
     price: "18.50",
+    Qty:1,
     colorWithImage: [
       {
         color: "SaddleBrown",
@@ -120,6 +122,7 @@ export const BestSellerProductData = [
     id: 3,
     tittle: "V-Neck T-Shirt",
     price: "12.99",
+    Qty:1,
     colorWithImage: [
       {
         color: "White",
@@ -137,6 +140,7 @@ export const BestSellerProductData = [
     id: 4,
     tittle: "Printed Crop Top",
     price: "20.45",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -165,6 +169,7 @@ export const BestSellerProductData = [
     id: 5,
     tittle: "Striped Long Sleeve",
     price: "22.99",
+    Qty:1,
     colorWithImage: [
       {
         color: "FireBrick",
@@ -188,6 +193,7 @@ export const BestSellerProductData = [
     id: 6,
     tittle: "Oversized Hoodie",
     price: "34.75",
+    Qty:1,
     colorWithImage: [
       {
         color: "PaleGreen",
@@ -230,6 +236,7 @@ export const BestSellerProductData = [
     id: 7,
     tittle: "Basic Crewneck Tee",
     price: "14.90",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -268,6 +275,7 @@ export const BestSellerProductData = [
     id: 8,
     tittle: "Knitted Cardigan",
     price: "29.80",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -438,6 +446,7 @@ export const NewArrivalProductData = [
     id: 1,
     tittle: "Ribbed Tank Top",
     price: "16.35",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -466,6 +475,7 @@ export const NewArrivalProductData = [
     id: 2,
     tittle: "Sleeveless Blouse",
     price: "18.50",
+    Qty:1,
     colorWithImage: [
       {
         color: "SaddleBrown",
@@ -494,6 +504,7 @@ export const NewArrivalProductData = [
     id: 3,
     tittle: "V-Neck T-Shirt",
     price: "12.99",
+    Qty:1,
     colorWithImage: [
       {
         color: "White",
@@ -511,6 +522,7 @@ export const NewArrivalProductData = [
     id: 4,
     tittle: "Printed Crop Top",
     price: "20.45",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -539,6 +551,7 @@ export const NewArrivalProductData = [
     id: 5,
     tittle: "Striped Long Sleeve",
     price: "22.99",
+    Qty:1,
     colorWithImage: [
       {
         color: "FireBrick",
@@ -562,6 +575,7 @@ export const NewArrivalProductData = [
     id: 6,
     tittle: "Oversized Hoodie",
     price: "34.75",
+    Qty:1,
     colorWithImage: [
       {
         color: "PaleGreen",
@@ -604,6 +618,7 @@ export const NewArrivalProductData = [
     id: 7,
     tittle: "Basic Crewneck Tee",
     price: "14.90",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -642,6 +657,7 @@ export const NewArrivalProductData = [
     id: 8,
     tittle: "Knitted Cardigan",
     price: "29.80",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -669,6 +685,7 @@ export const NewArrivalProductData = [
     id: 9,
     tittle: "Patterned scarf",
     price: "14.95",
+    Qty:1,
     colorWithImage: [
       {
         color: "DarkGoldenrod",
@@ -691,6 +708,7 @@ export const NewArrivalProductData = [
     id: 10,
     tittle: "Slim Fit Fine-knit Turtleneck Sweater",
     price: "14.95",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -713,6 +731,7 @@ export const NewArrivalProductData = [
     id: 11,
     tittle: "Slim Fit Fine-knit Turtleneck Sweater",
     price: "14.95",
+    Qty:1,
     colorWithImage: [
       {
         color: "SlateGray",
@@ -740,6 +759,7 @@ export const NewArrivalProductData = [
     id: 12,
     tittle: "Slim Fit Fine-knit Turtleneck Sweater",
     price: "14.95",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -761,6 +781,7 @@ export const ProductShowCaseSliderOne = [
     id: 1,
     tittle: "Ribbed Tank Top",
     price: "16.35",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -789,6 +810,7 @@ export const ProductShowCaseSliderOne = [
     id: 2,
     tittle: "Sleeveless Blouse",
     price: "18.50",
+    Qty:1,
     colorWithImage: [
       {
         color: "SaddleBrown",
@@ -817,6 +839,7 @@ export const ProductShowCaseSliderOne = [
     id: 3,
     tittle: "V-Neck T-Shirt",
     price: "12.99",
+    Qty:1,
     colorWithImage: [
       {
         color: "White",
@@ -834,6 +857,7 @@ export const ProductShowCaseSliderOne = [
     id: 4,
     tittle: "Printed Crop Top",
     price: "20.45",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -862,6 +886,7 @@ export const ProductShowCaseSliderOne = [
     id: 5,
     tittle: "Striped Long Sleeve",
     price: "22.99",
+    Qty:1,
     colorWithImage: [
       {
         color: "FireBrick",
@@ -885,6 +910,7 @@ export const ProductShowCaseSliderOne = [
     id: 6,
     tittle: "Oversized Hoodie",
     price: "34.75",
+    Qty:1,
     colorWithImage: [
       {
         color: "PaleGreen",
@@ -930,6 +956,7 @@ export const ProductShowCaseSliderTwo = [
     id: 7,
     tittle: "Basic Crewneck Tee",
     price: "14.90",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -968,6 +995,7 @@ export const ProductShowCaseSliderTwo = [
     id: 8,
     tittle: "Knitted Cardigan",
     price: "29.80",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -995,6 +1023,7 @@ export const ProductShowCaseSliderTwo = [
     id: 9,
     tittle: "Patterned scarf",
     price: "14.95",
+    Qty:1,
     colorWithImage: [
       {
         color: "DarkGoldenrod",
@@ -1017,6 +1046,7 @@ export const ProductShowCaseSliderTwo = [
     id: 10,
     tittle: "Slim Fit Fine-knit Turtleneck Sweater",
     price: "14.95",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -1039,6 +1069,7 @@ export const ProductShowCaseSliderTwo = [
     id: 11,
     tittle: "Slim Fit Fine-knit Turtleneck Sweater",
     price: "14.95",
+    Qty:1,
     colorWithImage: [
       {
         color: "SlateGray",
@@ -1066,6 +1097,7 @@ export const ProductShowCaseSliderTwo = [
     id: 12,
     tittle: "Slim Fit Fine-knit Turtleneck Sweater",
     price: "14.95",
+    Qty:1,
     colorWithImage: [
       {
         color: "Black",
@@ -1145,7 +1177,6 @@ export const HeaderNavImages = [
   },
 
 ]
-
 
 // Header pages dropdown data in main Header
 export const HeaderPagesDropDownData = [
@@ -1485,5 +1516,25 @@ export const HeaderProductDropDownData = [
     
 ]
 
-// // Header Product card slider data
-// export const HeaderProductDropDownData
+export const HeaderBlogDropDownData = [
+  {
+    text : "Grid Layout",
+    NavLink:"/blog",
+  },
+  {
+    text : "Left Slidebar",
+    NavLink:"/blog",
+  },
+  {
+    text : "Right Slidebar",
+    NavLink:"/blog",
+  },
+  {
+    text : "Blog List",
+    NavLink:"/blog",
+  },
+  {
+    text : "Singal Post",
+    NavLink:"/blog",
+  },
+];

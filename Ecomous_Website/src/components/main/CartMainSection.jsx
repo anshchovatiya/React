@@ -35,8 +35,8 @@ export default function CartMainSection() {
               <p>Quality</p>
               <p>Total</p>
             </div>
-            {cartItems.map((currentProduct) => {
-              return <SingleProduct product={currentProduct} />;
+            {cartItems.map((currentProduct,index) => {
+              return <SingleProduct key={index} product={currentProduct} />;
             })}
           </div>
           <div>

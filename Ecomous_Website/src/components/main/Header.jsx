@@ -5,7 +5,7 @@ import { IoIosArrowBack, IoIosArrowDown } from "react-icons/io";
 import { FiUser } from "react-icons/fi";
 import { LuHeart } from "react-icons/lu";
 import { PiShoppingCartBold } from "react-icons/pi";
-import { HeaderCategoriesData, HeaderNavImages, HeaderPagesDropDownData, HeaderProductDropDownData, HeaderShopDropDownData, ProductShowCaseSliderOne } from "../../data/constants";
+import { HeaderBlogDropDownData, HeaderCategoriesData, HeaderNavImages, HeaderPagesDropDownData, HeaderProductDropDownData, HeaderShopDropDownData, ProductShowCaseSliderOne } from "../../data/constants";
 
 
 
@@ -69,8 +69,11 @@ const Header = () => {
 
   return (
     <div className={`${styles.headerContainer} w-screen`} ref={Header}>
+
       <MenubarIcon />
+
       <img src="/svg/logo.svg" alt="Ecomous logo" className={styles.logo} />
+      
       <ul className={styles.navLinks}>
         {NavMainOptionsData.map((currentNavItem, index) => {
           return (<li key={currentNavItem + index}
@@ -130,15 +133,17 @@ const Header = () => {
           </a>
           <NavBarDrawer isVisible={currentDropDown === "blog"}>
             <ul className="*:text-nowrap">
-              <li className="ShopListItem">
-                <NavLink to="/blog" onClick={handleNavItemClick}>
-                  Grid Layout
-                </NavLink>
-              </li>
-              <li className="ShopListItem">Left Sidebar</li>
-              <li className="ShopListItem">Right sidebar</li>
-              <li className="ShopListItem">Blog list</li>
-              <li className="ShopListItem">Single post</li>
+              {
+                HeaderBlogDropDownData.map((currentOption) => {
+                  return (
+                    <li className="ShopListItem" key={currentOption.text}>
+                      <NavLink to={currentOption.NavLink} onClick={handleNavItemClick}>
+                        {currentOption.text}
+                      </NavLink>
+                    </li>
+                  );
+                })
+              }
             </ul>
           </NavBarDrawer>
         </li>
@@ -168,144 +173,11 @@ const Header = () => {
       </div>
 
 
-      {/* Home Button Drop Down */}
-      <DropDown
-        isVisible={currentDropDown === "home"}
-        handleNavMouseOver={() => handleNavMouseOver("home")}
-        handleNavMouseOut={handleNavMouseOut}
-      >
-        <div className="grid grid-cols-3 min-1150:grid-cols-6 gap-x-[20px] gap-y-[25px] px-[50px] max-w-[1500px] m-auto">
-          {HeaderNavImages.map((cur, index) => {
-            return (
-              <div
-                key={index}
-                className="border border-white px-[7px] py-[6px] shadow-[0_8px_20px_rgba(0,0,0,0.06)] rounded-sm overflow-hidden hover:border-black cursor-pointer"
-              >
-                <NavLink to={"/home"}>
-                  <img src={cur.image} alt="Demo web image"></img>
-                </NavLink>
-                <p className="leading-[45px] text-center text-nowrap text-[14px] font-medium">
-                  {cur.name}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-        <button className="flex items-center px-[30px] leading-[50px] bg-black text-white gap-2 rounded-[4px] m-auto mt-[1.5vw]">
-          <span>Shop collection</span>
-          <span className="text-[18px]">
-            <IoIosArrowForward />
-          </span>
-        </button>
-      </DropDown>
-      <DropDown
-        isVisible={currentDropDown === "shop"}
-        handleNavMouseOver={() => handleNavMouseOver("shop")}
-        handleNavMouseOut={handleNavMouseOut}
-      >
-        <div className="grid grid-cols-2 py-[15px] px-[16px] max-w-[1500px] m-auto">
-          <div className="grid grid-cols-3">
-              {
-                HeaderShopDropDownData.map((currentSection) => {
-                  return (
-                    <div key={currentSection.tittle}>
-                      <h3 className="ShopListTittle">{currentSection.tittle}</h3>
-                      <ul>
-                        {currentSection.linkData.map((currentLink) => {
-                          return (<li key={currentLink.linkText}
-                            className="ShopListItem"
-                            onClick={() => setCurrentDropDown(null)}
-                          >
-                            <NavLink to={currentLink.link}>{currentLink.linkText}</NavLink>
-                          </li>);
-                        })}
-                      </ul>
-                    </div>);
-                })
-              }     
-          </div>
-          <div className="grid grid-cols-2 gap-8">
-            {
-              HeaderCategoriesData.map((currentCategories) => {
-                return <CatagoriesCard key={currentCategories.category} image={currentCategories.image} Text={currentCategories.category} altText={currentCategories.alText} />
-              })
-            }
-          </div>
-        </div>
-      </DropDown>
-      <DropDown
-        isVisible={currentDropDown === "product"}
-        handleNavMouseOver={() => handleNavMouseOver("product")}
-        handleNavMouseOut={handleNavMouseOut}
-      >
-        <div className="grid grid-cols-[66%_34%] py-[15px] px-[16px] gap-5 max-w-[1500px] m-auto">
-          <div className="grid grid-cols-4 gap-3">
-          {
-                HeaderProductDropDownData.map((currentSection) => {
-                  return (
-                    <div key={currentSection.tittle}>
-                      <h3 className="ShopListTittle">{currentSection.tittle}</h3>
-                      <ul>
-                        {currentSection.linkData.map((currentLink) => {
-                          return (<li key={currentLink.linkText}
-                            className="ShopListItem"
-                            onClick={() => setCurrentDropDown(null)}
-                          >
-                            <NavLink to={currentLink.link}>{currentLink.linkText}</NavLink>
-                          </li>);
-                        })}
-                      </ul>
-                    </div>);
-                })
-              }    
-        
-  
-          </div>
-          <div>
-            <h3 className="ShopListTittle">BEST SELLER</h3>
-            <div className="grid grid-cols-1 gap-6">
-            <Splide
-                hasTrack={false}
-                aria-label="..."
-                options={{
-                  perPage: 2,
-                  perMove: 1,
-                  gap: "20px",
-                  dots: false,
-                  pagination: false,
-                  easing: "ease-in-out",
-                  duration: "3s",
-                }}
-                className="group cursor-pointer"
-              >
-                <div className="custom-wrapper">
-                  <div className="splide__arrows">
-                    <button className="splide__arrow splide__arrow--next hover:bg-white !top-[calc(50%-50px)] !h-[50px] !w-[50px] !hidden group-hover:!flex">
-                      <IoIosArrowForward />
-                    </button>
+      <HomeButtonDropDown isVisible={currentDropDown === "home"} handleNavMouseOver={handleNavMouseOver} handleNavMouseOut={handleNavMouseOut} setCurrentDropDown={setCurrentDropDown} />
+      <ShopButtonDropDown isVisible={currentDropDown === "shop"} handleNavMouseOver={handleNavMouseOver} handleNavMouseOut={handleNavMouseOut} setCurrentDropDown={setCurrentDropDown} />
+      <ProductButtonDropDown isVisible={currentDropDown === "product"} handleNavMouseOver={handleNavMouseOver} handleNavMouseOut={handleNavMouseOut} setCurrentDropDown={setCurrentDropDown} />
 
-                    <button className="splide__arrow splide__arrow--prev hover:bg-white !top-[calc(50%-50px)] !h-[50px] !w-[50px] !hidden !group-hover:block group-hover:!flex">
-                      <IoIosArrowBack className="!rotate-[-deg] text-[16px]" />
-                    </button>
-                  </div>
 
-                  <SplideTrack>
-                    {ProductShowCaseSliderOne.map((currentProduct, index) => {
-                      return (
-                        <Fragment key={index}>
-                          <SplideSlide>
-                            <ProductDisplayCard product={currentProduct} />
-                          </SplideSlide>
-                        </Fragment>
-                      );
-                    })}
-                  </SplideTrack>
-                </div>
-              </Splide>
-            </div>
-          </div>
-        </div>
-      </DropDown>
     </div>
   );
 };
@@ -342,3 +214,152 @@ function NavBarDrawer({ isVisible, children }) {
   );
 }
 
+function HomeButtonDropDown(props) {
+  return (<>   <DropDown
+    isVisible={props.isVisible}
+    handleNavMouseOver={() => props.handleNavMouseOver("home")}
+    handleNavMouseOut={props.handleNavMouseOut}
+  >
+    <div className="grid grid-cols-3 min-1150:grid-cols-6 gap-x-[20px] gap-y-[25px] px-[50px] max-w-[1500px] m-auto">
+      {HeaderNavImages.map((cur, index) => {
+        return (
+          <div
+            key={index}
+            className="border border-white px-[7px] py-[6px] shadow-[0_8px_20px_rgba(0,0,0,0.06)] rounded-sm overflow-hidden hover:border-black cursor-pointer"
+            onClick={() => setCurrentDropDown(null)}
+          >
+            <NavLink to={"/home"}>
+              <img src={cur.image} alt="Demo web image"></img>
+            </NavLink>
+            <p className="leading-[45px] text-center text-nowrap text-[14px] font-medium">
+              {cur.name}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+    <button className="flex items-center px-[30px] leading-[50px] bg-black text-white gap-2 rounded-[4px] m-auto mt-[1.5vw]">
+      <span>Shop collection</span>
+      <span className="text-[18px]">
+        <IoIosArrowForward />
+      </span>
+    </button>
+  </DropDown>
+  </>);
+}
+
+function ShopButtonDropDown(props) {
+  return (
+    <DropDown
+      isVisible={props.isVisible}
+      handleNavMouseOver={() => props.handleNavMouseOver("shop")}
+      handleNavMouseOut={props.handleNavMouseOut}
+    >
+      <div className="grid grid-cols-2 py-[15px] px-[16px] max-w-[1500px] m-auto">
+        <div className="grid grid-cols-3">
+          {
+            HeaderShopDropDownData.map((currentSection) => {
+              return (
+                <div key={currentSection.tittle}>
+                  <h3 className="ShopListTittle">{currentSection.tittle}</h3>
+                  <ul>
+                    {currentSection.linkData.map((currentLink) => {
+                      return (<li key={currentLink.linkText}
+                        className="ShopListItem"
+                        onClick={() => props.setCurrentDropDown(null)}
+                      >
+                        <NavLink to={currentLink.link}>{currentLink.linkText}</NavLink>
+                      </li>);
+                    })}
+                  </ul>
+                </div>);
+            })
+          }
+        </div>
+        <div className="grid grid-cols-2 gap-8">
+          {
+            HeaderCategoriesData.map((currentCategories) => {
+              return <CatagoriesCard key={currentCategories.category} image={currentCategories.image} Text={currentCategories.category} altText={currentCategories.alText} />
+            })
+          }
+        </div>
+      </div>
+    </DropDown>
+  );
+}
+
+function ProductButtonDropDown(props) {
+  return (<DropDown
+    isVisible={props.isVisible}
+    handleNavMouseOver={() => props.handleNavMouseOver("product")}
+    handleNavMouseOut={props.handleNavMouseOut}
+  >
+    <div className="grid grid-cols-[66%_34%] py-[15px] px-[16px] gap-5 max-w-[1500px] m-auto">
+      <div className="grid grid-cols-4 gap-3">
+        {
+          HeaderProductDropDownData.map((currentSection) => {
+            return (
+              <div key={currentSection.tittle}>
+                <h3 className="ShopListTittle">{currentSection.tittle}</h3>
+                <ul>
+                  {currentSection.linkData.map((currentLink) => {
+                    return (<li key={currentLink.linkText}
+                      className="ShopListItem"
+                      onClick={() => props.setCurrentDropDown(null)}
+                    >
+                      <NavLink to={currentLink.link}>{currentLink.linkText}</NavLink>
+                    </li>);
+                  })}
+                </ul>
+              </div>);
+          })
+        }
+
+
+      </div>
+      <div>
+        <h3 className="ShopListTittle">BEST SELLER</h3>
+        <div className="grid grid-cols-1 gap-6">
+          <Splide
+            hasTrack={false}
+            aria-label="..."
+            options={{
+              perPage: 2,
+              perMove: 1,
+              gap: "20px",
+              dots: false,
+              pagination: false,
+              easing: "ease-in-out",
+              duration: "3s",
+            }}
+            className="group cursor-pointer"
+          >
+            <div className="custom-wrapper">
+              <div className="splide__arrows">
+                <button className="splide__arrow splide__arrow--next hover:bg-white !top-[calc(50%-50px)] !h-[50px] !w-[50px] !hidden group-hover:!flex">
+                  <IoIosArrowForward />
+                </button>
+
+                <button className="splide__arrow splide__arrow--prev hover:bg-white !top-[calc(50%-50px)] !h-[50px] !w-[50px] !hidden !group-hover:block group-hover:!flex">
+                  <IoIosArrowBack className="!rotate-[-deg] text-[16px]" />
+                </button>
+              </div>
+
+              <SplideTrack>
+                {ProductShowCaseSliderOne.map((currentProduct, index) => {
+                  return (
+                    <Fragment key={index}>
+                      <SplideSlide>
+                        <ProductDisplayCard product={currentProduct} />
+                      </SplideSlide>
+                    </Fragment>
+                  );
+                })}
+              </SplideTrack>
+            </div>
+          </Splide>
+        </div>
+      </div>
+    </div>
+  </DropDown>);
+}
