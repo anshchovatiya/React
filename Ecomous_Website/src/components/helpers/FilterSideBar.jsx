@@ -6,9 +6,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-
-
-import React from 'react'
 import { IoFilter } from "react-icons/io5"
 
 const FilterSideBar = () => {

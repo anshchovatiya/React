@@ -76,7 +76,7 @@ const BillingDetail = () => {
             ]
               .sort()
               .map((country) => (
-                <option
+                <option key={country}
                   value={country}
                   selected={country === "India" ? true : false}
                 >

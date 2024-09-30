@@ -15,25 +15,64 @@ import UserInfo from "../components/Pages/UserInfo";
 import WishList from "../components/Pages/WishList";
 
 // Main Component imports
-import HeroSectionSlider from "../components/main/HeroSection";
-import Categories from "../components/main/Categories";
+import AboutUsHeroSection from "../components/main/AboutUsHeroSection";
+import ArrivalSection from "../components/main/ArrivalSection";
 import BestSeller from "../components/main/BestSeller";
-import TheLook from "../components/main/TheLook";
+import BottomNav from "../components/main/BottomNav"
+import CartMainSection from "../components/main/CartMainSection";
+import Categories from "../components/main/Categories";
+import CheckoutBox from "../components/main/CheckoutBox";
+import ContactDetailsForm from "../components/main/ContactDetailsForm";
+import EcomusIntro from "../components/main/EcomusIntro";
+import Footer from "../components/main/Footer";
+import Header from "../components/main/Header";
+import HeroSection from "../components/main/HeroSection";
+import ShopGram from "../components/main/ShopGram";
 import Testimonial from "../components/main/Testimonial";
+import TheLook from "../components/main/TheLook";
+import TopBar from "../components/main/TopBar";
+import HeroSectionSlider from "../components/main/HeroSection";
+import ZoomSection from "../components/main/ZoomSection";
+import TheLook from "../components/main/TheLook";
 import ShopGram from "../components/main/ShopGram";
 import Header from "../components/main/Header";
 
 // helpers Component import
+import AccountAddress from "../components/helpers/AccountAddress";
+import AccountDashboard from "../components/helpers/AccountDashboard";
+import AccountDetails from "../components/helpers/AccountDetails";
+import AccountOrders from "../components/helpers/AccountOrders";
+import AccountWhishList from "../components/helpers/AccountWhishlist";
+import BillingDetail from "../components/helpers/BillingDetail";
+import CardShowCaseSlider from "../components/helpers/CardShowCaseSlider";
+import SingleProduct from "../components/helpers/CartSingleProduct";
+import CategoriesCard from "../components/helpers/CategoriesCard";
+import DeliveryProgressBar from "../components/helpers/DeliveryProgressBar";
+import FaqParseMaker from "../components/helpers/FaqParseMaker";
+import FilterSideBar from "../components/helpers/FilterSideBar";
+import FooterAccording from "../components/helpers/FooterAccording";
+import FooterBottom from "../components/helpers/FooterBottom";
 import HeroSlide from "../components/helpers/HeroSlide";
-import CatagoriesCard from "../components/helpers/CategoriesCard";
+import ImageShowCase from "../components/helpers/ImageShowCase";
+import InfoBox from "../components/helpers/InfoBox";
+import {
+  CurrencySelector,
+  LanguageButton,
+} from "../components/helpers/LanguageButton";
+import LookImageSection from "../components/helpers/LookImageSection";
+import MenubarIcon from "../components/helpers/MenubarIcon";
+import OfferMarquee from "../components/helpers/OffersMarquee";
+import PageHeader from "../components/helpers/PageHeader";
 import ProductDisplayCard from "../components/helpers/ProductDisplayCard";
 import SectionHead from "../components/helpers/SectionHead";
-import LookImageSection from "../components/helpers/LookImageSection";
-import TestimonialSlider from "../components/helpers/TestimonialSlider";
-import TestimonialsBrands from "../components/helpers/TestimonialsBrands";
-import OffersMarquee from "../components/helpers/OffersMarquee";
 import ServicesBox from "../components//helpers/ServicesBox";
-import ImageShowCase from "../components/helpers/ImageShowCase";
+import { ThumbnailsExample } from "../components/helpers/SplideTumbnail";
+import TestimonialCard from "../components/helpers/TestimonialCard";
+import TestimonialsBrands from "../components/helpers/TestimonialsBrands";
+import TestimonialSlider from "../components/helpers/TestimonialSlider";
+import TopBarDropDown from "../components/helpers/TopBarDropDown";
+import TopBarSlider from "../components/helpers/TopBarSlider";
+import YourOrder from "../components/helpers/YourOrder";
 
 // page components exports
 export {
@@ -66,14 +105,43 @@ export {
 
 // helper components exports
 export {
+  AccountAddress,
+  AccountDashboard,
+  AccountDetails,
+  AccountOrders,
+  AccountWhishList,
+  BillingDetail,
+  CardShowCaseSlider,
+  SingleProduct,
+  CategoriesCard,
+  DeliveryProgressBar,
+  FaqParseMaker,
+  FilterSideBar,
+  FooterAccording,
+  FooterBottom,
   HeroSlide,
-  CatagoriesCard,
+  ImageShowCase,
+  InfoBox,
+  CurrencySelector,
+  LanguageButton,
+  LookImageSection,
+  MenubarIcon,
+  OfferMarquee,
+  PageHeader,
   ProductDisplayCard,
   SectionHead,
-  LookImageSection,
-  OffersMarquee,
-  TestimonialSlider,
-  TestimonialsBrands,
   ServicesBox,
-  ImageShowCase
+  ThumbnailsExample,
+  TestimonialCard,
+  TestimonialsBrands,
+  TestimonialSlider,
+  TopBarDropDown,
+  TopBarSlider,
+  YourOrder,
 };
+
+// function imports
+
+import { renderStar } from "../components/helpers/TestimonialCard";
+
+export { renderStar };

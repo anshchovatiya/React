@@ -100,7 +100,7 @@ export default function CartMainSection() {
                           ]
                             .sort()
                             .map((country) => (
-                              <option
+                              <option key={country}
                                 value={country}
                                 selected={country === "India" ? true : false}
                               >

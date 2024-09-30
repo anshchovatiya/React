@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./css/HeroSlide.module.css";
 import { FaAngleRight } from "react-icons/fa";
 

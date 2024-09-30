@@ -3,7 +3,7 @@ import styles from "./css/LookImageSection.module.css";
 import React, { Fragment } from "react";
 import Slider from "react-slick";
 
-function SimpleSlider() {
+function LookImageSection() {
   const settings = {
     infinite: false,
     speed: 500,
@@ -32,4 +32,4 @@ function SimpleSlider() {
   );
 }
 
-export default SimpleSlider;
+export default LookImageSection;

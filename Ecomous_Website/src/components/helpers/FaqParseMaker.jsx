@@ -10,7 +10,7 @@ import { IoIosArrowDown } from "react-icons/io";
       <Accordion.Root className="AccordionRoot" type="single" collapsible>
         {information?.faqPairs.map((CurrentFaq, index) => {
           return (
-            <Accordion.Item
+            <Accordion.Item key={index}
               className="AccordionItem mt-[30px] mb-[15px] border-b pb-2.5"
               value={`item-${index + 1}`}
             >
