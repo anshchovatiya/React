@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import img1 from "../../assets/images/hmgoepprod-5.jpg";
 
 let PRODUCTS = [
   {
-    image: img1,
+    image: "/images/home-categories-02.jpg",
     product_name: "Oversized Printed T-shirt",
     color: "White",
     size: "M",
@@ -13,7 +12,7 @@ let PRODUCTS = [
     Quantity: 1,
   },
   {
-    image: img1,
+    image: "/images/home-categories-02.jpg",
     product_name: "Oversized Printed T-shirt",
     color: "White",
     size: "M",
@@ -21,7 +20,7 @@ let PRODUCTS = [
     Quantity: 1,
   },
   {
-    image: img1,
+    image: "/images/home-categories-02.jpg",
     product_name: "Oversized Printed T-shirt",
     color: "White",
     size: "M",
@@ -29,7 +28,7 @@ let PRODUCTS = [
     Quantity: 1,
   },
   {
-    image: img1,
+    image: "/images/home-categories-02.jpg",
     product_name: "Oversized Printed T-shirt",
     color: "White",
     size: "M",
@@ -37,7 +36,7 @@ let PRODUCTS = [
     Quantity: 1,
   },
   {
-    image: img1,
+    image: "/images/home-categories-02.jpg",
     product_name: "Oversized Printed T-shirt",
     color: "White",
     size: "M",
@@ -45,7 +44,7 @@ let PRODUCTS = [
     Quantity: 1,
   },
   {
-    image: img1,
+    image: "/images/home-categories-02.jpg",
     product_name: "Oversized Printed T-shirt",
     color: "White",
     size: "M",
@@ -53,7 +52,7 @@ let PRODUCTS = [
     Quantity: 1,
   },
   {
-    image: img1,
+    image: "/images/home-categories-02.jpg",
     product_name: "Oversized Printed T-shirt",
     color: "White",
     size: "M",

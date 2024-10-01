@@ -1,9 +1,6 @@
 import ZoomSection from "../main/ZoomSection";
 import InfoBox from "../helpers/InfoBox";
 import CardShowCaseSlider from "../helpers/CardShowCaseSlider";
-import img1 from "../../assets/images/black-1.jpg";
-import img2 from "../../assets/images/orange-1.jpg";
-import img3 from "../../assets/images/white-1.jpg";
 import { ProductShowCaseSliderOne, ProductShowCaseSliderTwo } from "../../data/constants";
 
 

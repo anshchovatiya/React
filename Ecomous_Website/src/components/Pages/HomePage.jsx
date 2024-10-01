@@ -1,6 +1,6 @@
 import {
   HeroSectionSlider,
-  OffersMarquee,
+  OfferMarquee,
   Categories,
   BestSeller,
   TheLook,
@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <>
       <HeroSectionSlider />
-      <OffersMarquee />
+      <OfferMarquee />
       <Categories />
       <BestSeller />
       <TheLook />

@@ -1,49 +1,7 @@
 import PageHeader from "../helpers/PageHeader";
-import img1 from "../../assets/images/blog-3.jpg";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
+import { BlogPageData } from "../../data/constants";
 
-let BLOGS = [
-  {
-    blog_image: img1,
-    type: "Accessories",
-    tittle: "The next generation of leather alternatives",
-  },
-  {
-    blog_image: img1,
-    type: "Accessories",
-    tittle: "The next generation of leather alternatives",
-  },
-  {
-    blog_image: img1,
-    type: "Accessories",
-    tittle: "The next generation of leather alternatives",
-  },
-  {
-    blog_image: img1,
-    type: "Accessories",
-    tittle: "The next generation of leather alternatives",
-  },
-  {
-    blog_image: img1,
-    type: "Accessories",
-    tittle: "The next generation of leather alternatives",
-  },
-  {
-    blog_image: img1,
-    type: "Accessories",
-    tittle: "The next generation of leather alternatives",
-  },
-  {
-    blog_image: img1,
-    type: "Accessories",
-    tittle: "The next generation of leather alternatives",
-  },
-  {
-    blog_image: img1,
-    type: "Accessories",
-    tittle: "The next generation of leather alternatives",
-  },
-];
 
 const BlogGrid = () => {
   return (
@@ -57,7 +15,7 @@ const BlogGrid = () => {
         }
       />
       <div className=" max-w-[1500px] pt-9 m-auto lg:px-12 px-[18px] overflow-x-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {BLOGS.map((currentBlog) => {
+        {BlogPageData.map((currentBlog) => {
           return (
             <div className="md:px-4 pb-8">
               <div className="overflow-hidden relative mb-7 rounded-md cursor-pointer">

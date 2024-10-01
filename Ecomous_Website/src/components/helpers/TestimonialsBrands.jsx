@@ -1,10 +1,5 @@
 import styles from "./css/TestimonialsBrands.module.css";
-import logo1 from "../../assets/images/brand-01.png";
-import logo2 from "../../assets/images/brand-02.png";
-import logo3 from "../../assets/images/brand-03.png";
-import logo4 from "../../assets/images/brand-04.png";
-import logo5 from "../../assets/images/brand-05.png";
-import logo6 from "../../assets/images/brand-06.png";
+
 import Slider from "react-slick";
 
 const TestimonialsBrands = () => {
@@ -20,22 +15,22 @@ const TestimonialsBrands = () => {
     <div className={styles.ProductGridContainer}>
       <div className={styles.ProductGrid}>
         <div className={styles.logoContainer}>
-          <img src={logo1} alt="" />
+          <img src="/images/brand-logo-01.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo2} alt="" />
+          <img src="/images/brand-logo-02.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo3} alt="" />
+          <img src="/images/brand-logo-03.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo4} alt="" />
+          <img src="/images/brand-logo-04.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo5} alt="" />
+          <img src="/images/brand-logo-05.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo6} alt="" />
+          <img src="/images/brand-logo-06.png" alt="" />
         </div>
       </div>
 
@@ -52,22 +47,22 @@ const TestimonialsBrands = () => {
         className={`${styles.ProductGridResponsive} ProductGridResponsive`}
       >
         <div className={styles.logoContainer}>
-          <img src={logo1} alt="" />
+        <img src="/images/brand-logo-01.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo2} alt="" />
+        <img src="/images/brand-logo-02.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo3} alt="" />
+        <img src="/images/brand-logo-03.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo4} alt="" />
+        <img src="/images/brand-logo-04.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo5} alt="" />
+        <img src="/images/brand-logo-05.png" alt="" />
         </div>
         <div className={styles.logoContainer}>
-          <img src={logo6} alt="" />
+        <img src="/images/brand-logo-06.png" alt="" />
         </div>
       </Slider>
     </div>

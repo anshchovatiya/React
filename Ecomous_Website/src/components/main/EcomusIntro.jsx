@@ -1,18 +1,11 @@
 import React, { useRef, useState } from "react";
-import Intro1 from "../../assets/images/collection-69.jpg";
-import Intro2 from "../../assets/images/collection-70.jpg";
-import Intro3 from "../../assets/images/collection-71.jpg";
 import { LuLeaf } from "react-icons/lu";
 import { BiSolidPyramid } from "react-icons/bi";
 import { PiCubeFocusLight } from "react-icons/pi";
 import Slider from "react-slick";
-import quote from "../../assets/images/quote.svg";
 import { renderStar } from "../helpers/TestimonialCard";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-
-import SliderImage1 from "../../assets/images/test3.jpg";
-import SliderImage2 from "../../assets/images/test4.jpg";
 
 function EcomusIntro() {
   return (
@@ -34,7 +27,7 @@ function EcomusIntro() {
       <div className="grid text-center md:text-left md:grid-cols-2 my-12 md:mt-[100px] md:mb-[78px] gap-[30px]">
         <div>
           <img
-            src={Intro1}
+            src="/images/about-intro-1.jpg"
             alt="Establised"
             className="w-full h-full rounded"
           />
@@ -63,9 +56,9 @@ function EcomusIntro() {
           </p>
         </div>
         <div className="relative">
-          <img src={Intro2} alt="Establised" className="w-[80%] pb-[50px]" />
+          <img src="/images/about-intro-2.jpg" alt="Establised" className="w-[80%] pb-[50px]" />
           <img
-            src={Intro3}
+            src="/images/about-intro-3.jpg"
             alt="Establised"
             className="absolute bottom-0 w-[42%] right-0"
           />
@@ -225,7 +218,7 @@ function ReviewSliderItem({ tittle, stars, description, name, image }) {
       <h3 className="text-[22px] md:text-[32px] lg:text-[42px] mb-[20px]">
         {tittle}
       </h3>
-      <img src={quote} alt="Quote" className="mb-4 lg:mb-[22px]" />
+      <img src="" alt="Quote" className="mb-4 lg:mb-[22px]" />
       <div className="flex gap-[7px] text-[#ff7b54] mb-[16px] lg:mb-[24px]">
         {renderStar(stars)}
       </div>
@@ -234,7 +227,7 @@ function ReviewSliderItem({ tittle, stars, description, name, image }) {
       </p>
       <div className="flex gap-[16px]">
         <img
-          src={image}
+          src=""
           alt="slider demo image 1"
           className="md:!hidden h-[70px]"
         />

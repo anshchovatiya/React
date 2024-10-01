@@ -1,10 +1,8 @@
-import { RiTruckLine } from "react-icons/ri";
 import { GoPlus } from "react-icons/go";
 import * as Accordion from "@radix-ui/react-accordion";
 import { PaymentMethodIcons } from "../helpers/FooterBottom";
 import SingleProduct from "../helpers/CartSingleProduct";
 import { BsFire } from "react-icons/bs";
-import img1 from "../../assets/images/white-2.jpg";
 import DeliveryProgressBar from "../helpers/DeliveryProgressBar";
 import { useSelector } from "react-redux";
 

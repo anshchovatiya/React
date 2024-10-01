@@ -4,7 +4,7 @@ import styles from "./css/Categories.module.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { ImArrowUpRight2 } from "react-icons/im";
 import { HomeCategoriesData } from "../../data/constants";
-import { CatagoriesCard } from "../../data/imports";
+import { CategoriesCard } from "../../data/imports";
 
 function Categories() {
   const [isBeginning, setIsBeginning] = useState(true);
@@ -77,7 +77,7 @@ function Categories() {
           {HomeCategoriesData.map((product, index) => {
             return (
               <div key={product.category + index}>
-                <CatagoriesCard
+                <CategoriesCard
                   image={product.link}
                   altText={product.altText}
                   Text={product.category}

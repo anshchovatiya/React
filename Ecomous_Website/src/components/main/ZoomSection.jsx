@@ -5,30 +5,20 @@ import { IoIosArrowForward, IoMdAlarm } from "react-icons/io";
 import { ThumbnailsExample } from "../helpers/SplideTumbnail";
 import { FaRegHeart } from "react-icons/fa6";
 import { TbArrowsCross } from "react-icons/tb";
-import PayPal from "../../assets/images/paypal.png";
-import Compare from "../../assets/svg/compare.svg";
 import { HiQuestionMarkCircle } from "react-icons/hi";
 import { FaShippingFast } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
 import { FaShip } from "react-icons/fa6";
 import { GiReturnArrow } from "react-icons/gi";
 import { MdOutlineSecurity } from "react-icons/md";
-import img1 from "../../assets/images/img-1.png";
-import img2 from "../../assets/images/img-2.png";
-import img3 from "../../assets/images/img-3.png";
-import img4 from "../../assets/images/img-4.png";
-import img5 from "../../assets/images/visa.png";
 
 const ZoomSection = () => {
-
-
   return (
     <div
       className="md:px-[18px] grid lg:grid-cols-2 mt-5 gap-5 overflow-x-hidden"
       id="Parent"
     >
-      <div
-        className=" p-[12px] relative overflow-x-hidden lg:overflow-visible">
+      <div className=" p-[12px] relative overflow-x-hidden lg:overflow-visible">
         <ThumbnailsExample />
         <div
           id="ImageZoomOutPut"
@@ -122,7 +112,7 @@ const ZoomSection = () => {
             <p className="text-[14px] text-[rgb(37,59,128)] font-semibold italic">
               Buy with
             </p>
-            <img src={PayPal} alt="pay pal logo" />
+            <img src="/images/payment-1.png" alt="pay pal logo" />
           </button>
         </div>
         <p className="text-[14px] underline text-center mt-[10px] text-[rgb(134,134,134)]">
@@ -130,7 +120,7 @@ const ZoomSection = () => {
         </p>
         <div className="grid grid-cols-2 gap-[8px] md:grid-cols-4 my-[30px] ">
           <div className="flex gap-[8px] hover:text-[crimson] cursor-pointer">
-            <img src={Compare} alt="color compare" />
+            <img src="" alt="color compare" />
             <p className="text-[14px] font-semibold">Compare color</p>
           </div>
           <div className="flex gap-[8px] items-center hover:text-[crimson] cursor-pointer">
@@ -174,15 +164,14 @@ const ZoomSection = () => {
             <p className="text-[14px] font-semibold">Guarantee Safe Checkout</p>
           </div>
           <div className="grid grid-cols-5 *:w-full gap-3">
-            <img src={img1} alt="payment option" />
-            <img src={img3} alt="payment option" />
-            <img src={img2} alt="payment option" />
-            <img src={img4} alt="payment option" />
-            <img src={img5} alt="payment option" />
+            <img src="" alt="payment option" />
+            <img src="" alt="payment option" />
+            <img src="" alt="payment option" />
+            <img src="" alt="payment option" />
+            <img src="" alt="payment option" />
           </div>
         </div>
       </div>
-
     </div>
   );
 };

@@ -5,13 +5,6 @@ import { TbIroningFilled } from "react-icons/tb";
 import { TbBleachOff } from "react-icons/tb";
 import { TbWashDrycleanOff } from "react-icons/tb";
 import { FaStumbleuponCircle } from "react-icons/fa";
-import img1 from "../../assets/svg/description-image-1.svg"
-import img2 from "../../assets/svg/description-image-2.svg"
-import img3 from "../../assets/svg/description-image-3.svg"
-import img4 from "../../assets/svg/description-image-4.svg"
-import img5 from "../../assets/svg/description-image-5.svg"
-import img6 from "../../assets/svg/description-image-6.svg"
-import img7 from "../../assets/svg/description-image-7.svg"
 
 
 
@@ -120,13 +113,13 @@ const InfoBox = () => {
         <Description isVisible={currentDescription === "Return Policies"}>
             <div className="text-center">
                 <div className="flex justify-center mt-4">
-                    <img src={img1} alt="img1"/>
-                    <img src={img2} alt="img2"/>
-                    <img src={img3} alt="img3"/>
-                    <img src={img4} alt="img4"/>
-                    <img src={img5} alt="img5"/>
-                    <img src={img6} alt="img6"/>
-                    <img src={img7} alt="img7"/>
+                    <img src="" alt="img1"/>
+                    <img src="" alt="img2"/>
+                    <img src="" alt="img3"/>
+                    <img src="" alt="img4"/>
+                    <img src="" alt="img5"/>
+                    <img src="" alt="img6"/>
+                    <img src="" alt="img7"/>
                 </div>
                 <p className="mt-4 text-[rgb(144,144,144)]">LT01: 70% wool, 15% polyester, 10% polyamide, 5% acrylic 900 Grms/mt</p>
             </div>

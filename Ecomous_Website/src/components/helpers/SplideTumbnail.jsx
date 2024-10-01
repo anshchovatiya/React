@@ -1,7 +1,9 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React from "react";
-import { ZoomSectionImages } from "../../data/images";
+import { ZoomSectionSlideImages } from "../../data/constants";
 import "@splidejs/splide/dist/css/splide.min.css";
+
+
 
 export class ThumbnailsExample extends React.Component {
   mainRef = React.createRef();
@@ -42,23 +44,26 @@ export class ThumbnailsExample extends React.Component {
     if (left < 0) left = 0;
     if (top < 0) top = 0;
     if (left + boxWidth > sliderRect.width) left = sliderRect.width - boxWidth;
-    if (top + boxHeight > sliderRect.height) top = sliderRect.height - boxHeight;
+    if (top + boxHeight > sliderRect.height)
+      top = sliderRect.height - boxHeight;
 
     // Update box style
     overlayBox.style.width = `${boxWidth}px`;
     overlayBox.style.height = `${boxHeight}px`;
     overlayBox.style.left = `calc(${left}px + 23%)`;
     overlayBox.style.top = `${top}px`;
-    overlayBox.style.display = 'block';
+    overlayBox.style.display = "block";
 
     // Update the zoomOutput div's background image and position
     const bgPosX = (offsetX / width) * 100;
     const bgPosY = (offsetY / height) * 100;
 
     zoomOutput.style.backgroundImage = `url(${imageSrc})`;
-    zoomOutput.style.backgroundSize = `${width * zoomFactor}px ${height * zoomFactor}px`;
+    zoomOutput.style.backgroundSize = `${width * zoomFactor}px ${
+      height * zoomFactor
+    }px`;
     zoomOutput.style.backgroundPosition = `${bgPosX}% ${bgPosY}%`;
-    zoomOutput.style.display = 'block';
+    zoomOutput.style.display = "block";
   };
 
   handleMouseLeave = () => {
@@ -66,13 +71,13 @@ export class ThumbnailsExample extends React.Component {
     const overlayBox = this.overlayBoxRef.current;
 
     zoomOutput.style.backgroundImage = "none";
-    zoomOutput.style.display = 'none';
-    overlayBox.style.display = 'none';
+    zoomOutput.style.display = "none";
+    overlayBox.style.display = "none";
   };
 
   handleMainSliderMouseEnter = () => {
     const overlayBox = this.overlayBoxRef.current;
-    overlayBox.style.display = 'block';
+    overlayBox.style.display = "block";
   };
 
   handleMainSliderMouseLeave = () => {
@@ -80,13 +85,13 @@ export class ThumbnailsExample extends React.Component {
   };
 
   renderSlides() {
-    return ZoomSectionImages.map((slide) =>
+    return ZoomSectionSlideImages.map((slide,index) =>
       React.createElement(
         SplideSlide,
-        { key: slide.image },
+        { key: index },
         React.createElement("img", {
           src: slide.image,
-          alt: slide.name,
+          alt: slide.altText,
           onMouseMove: (e) => this.handleMouseMove(e, slide.image),
           onMouseLeave: this.handleMouseLeave,
         })
@@ -159,14 +164,18 @@ export class ThumbnailsExample extends React.Component {
           id="ImageZoomOutPut"
           ref={this.zoomOutputRef}
           className="absolute top-0 left-[calc(100%+60px)] w-[90%] min-1400:w-[500px] h-2/3 min-1400:h-[500px] border border-gray-300 z-[999] hidden lg:block"
-          style={{ backgroundSize: 'cover', backgroundPosition: 'center', display: 'none' }}
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            display: "none",
+          }}
         ></div>
 
         {/* Overlay Box */}
         <div
           ref={this.overlayBoxRef}
           className="absolute border border-gray-300 z-[998] ImageZoomOverLayBox hidden opacity-0 lg:opacity-100"
-          style={{ pointerEvents: 'none', position: 'absolute' }}
+          style={{ pointerEvents: "none", position: "absolute" }}
         ></div>
       </div>
     );

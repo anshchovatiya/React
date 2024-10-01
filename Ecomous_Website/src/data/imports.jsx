@@ -29,17 +29,15 @@ import Header from "../components/main/Header";
 import HeroSection from "../components/main/HeroSection";
 import ShopGram from "../components/main/ShopGram";
 import Testimonial from "../components/main/Testimonial";
-import TheLook from "../components/main/TheLook";
 import TopBar from "../components/main/TopBar";
 import HeroSectionSlider from "../components/main/HeroSection";
 import ZoomSection from "../components/main/ZoomSection";
 import TheLook from "../components/main/TheLook";
-import ShopGram from "../components/main/ShopGram";
-import Header from "../components/main/Header";
+
 
 // helpers Component import
 import AccountAddress from "../components/helpers/AccountAddress";
-import AccountDashboard from "../components/helpers/AccountDashboard";
+import {AccountDashboard} from "../components/helpers/AccountDashboard";
 import AccountDetails from "../components/helpers/AccountDetails";
 import AccountOrders from "../components/helpers/AccountOrders";
 import AccountWhishList from "../components/helpers/AccountWhishlist";
