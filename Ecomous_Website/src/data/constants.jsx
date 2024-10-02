@@ -3,25 +3,25 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
-import { LanguageButton } from "./imports";
+
 
 // Hero section main slider content
 export const HeroSliderData = [
   {
-    path: "./images/hero-section-image-01.jpg",
+    path: "/images/hero-section-image-01.jpg",
     altText: "A model wearing a glamorous outfit in a sophisticated setting",
     tittle: "Glamorous Glam",
     description: "From casual to formal, we've got you covered",
   },
   {
-    path: "./images/hero-section-image-02.jpg",
+    path: "/images/hero-section-image-02.jpg",
     altText:
       "A person showcasing a simple yet stylish outfit in a minimalist environment",
     tittle: "Simple Style",
     description: "It’s creativity evolving with culture.",
   },
   {
-    path: "./images/hero-section-image-03.jpg",
+    path: "/images/hero-section-image-03.jpg",
     altText:
       "A timeless and elegant outfit displayed on a model in a classic setting",
     tittle: "Timeless Appeal",
